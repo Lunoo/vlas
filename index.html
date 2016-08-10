@@ -33,7 +33,7 @@
 				<a href="mail:info@vlas.com.ua">info@vlas.com.ua</a>
 			</div>
 			<div class="header-personal">
-				<a href="#" class="cab">Личный кабинет</a>
+				<a href="#enter" class="cab">Личный кабинет</a>
 				<a href="#" class="header-like" data-number="14">Желаемое</a>
 				<div class="description">
 					<h3>Список желаний пуст</h3>
@@ -46,15 +46,91 @@
 					<a href="#">авторизуйтесь.</a>
 				</div>
 				<a href="#" class="header-basket" data-number="14">Корзина</a>
-				<div class="description">
+				<div class="description empty">
 					<h3>Ваша корзина пуста</h3>
 					<p>
 						Добавляйте понравившиеся товары или <a href="#">авторизуйтесь</a>, если добавляли ранее.
 					</p>
 				</div>
+				<!-- <div class="description full">
+					<span>В корзине <em>2 товара</em></span>
+					<span>на сумму <em>4026 грн</em></span>
+					<a href="#" class="offer submit">Оформить заказ</a>
+					<hr>
+					<a href="#" class="basket">Перейти в корзину</a>
+				</div> -->
 			</div>
 		</div>
 	</header>
+
+	<div class="main">
+		<div class="catalog">
+			<h2>Каталог товаров</h2>
+			<ul>
+				<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+				<li><a href="#">Телефоны, MP3</a></li>
+				<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+				<li>
+					<a href="#">Бытовая техника и интерьер</a>
+					<ul>
+						<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+						<li><a href="#">Телефоны, MP3</a></li>
+						<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+						<li>
+							<a href="#">Активная вкладва 2го уровня</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Спортивные товары</a></li>
+								<li><a href="#">Детский мир</a></li>
+								<li><a href="#">Товары для дома</a></li>
+								<li><a href="#">Дача, сад, огород</a></li>
+								<li><a href="#">Инструменты и оборудование</a></li>
+								<li><a href="#">Автотовары NEW</a></li>
+								<li><a href="#">Авиа и ЖД билеты</a></li>
+								<li><a href="#">Одежда, обувь и аксессуары</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Активный отдых и туризм</a></li>
+						<li><a href="#">Спортивные товары</a></li>
+						<li><a href="#">Детский мир</a></li>
+						<li><a href="#">Товары для дома</a></li>
+						<li><a href="#">Дача, сад, огород</a></li>
+						<li><a href="#">Инструменты и оборудование</a></li>
+						<li><a href="#">Автотовары NEW</a></li>
+						<li><a href="#">Авиа и ЖД билеты</a></li>
+						<li><a href="#">Одежда, обувь и аксессуары</a></li>
+						<li><a href="#">Алкогольные напитки и продукты</a></li>
+						<li><a href="#">Ювелирные украшения</a></li>
+						<li><a href="#">Косметика и парфюмерия</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Активный отдых и туризм</a></li>
+				<li><a href="#">Спортивные товары</a></li>
+				<li><a href="#">Детский мир</a></li>
+				<li><a href="#">Товары для дома</a></li>
+				<li><a href="#">Дача, сад, огород</a></li>
+				<li><a href="#">Инструменты и оборудование</a></li>
+				<li><a href="#">Автотовары NEW</a></li>
+				<li><a href="#">Авиа и ЖД билеты</a></li>
+				<li><a href="#">Одежда, обувь и аксессуары</a></li>
+				<li><a href="#">Алкогольные напитки и продукты</a></li>
+				<li><a href="#">Ювелирные украшения</a></li>
+				<li><a href="#">Косметика и парфюмерия</a></li>
+				<li><a href="#">Торговое оборудование </a></li>
+				<li><a href="#">Офис, школа, книги</a></li>
+				<li><a href="#">Зоотовары</a></li>
+			</ul>
+		</div>
+	</div>
 	
 	<footer>
 		<form id="callback">
@@ -69,6 +145,32 @@
 			</label>
 			<button class="submit">Отправить</button>
 			<button class="cancel">Отмена</button>
+		</form>
+		<form id="enter">
+			<div class="left">
+				<h3>Вход в интернет-магазин:</h3>
+				<label>
+					Email:
+					<input type="email" required>
+				</label>
+				<label>
+					Пароль:
+					<input type="text" required>
+				</label>
+				<a href="#" class="forget">Забыл пароль</a>
+				<label class="checkbox">
+					<input type="checkbox" checked>
+					Запомнить меня
+				</label>
+				<button class="submit">Отправить</button>
+				<button class="cancel">Отмена</button>
+			</div>
+			<div class="right">
+				<h3>Войти как пользователь:</h3>
+				<a href="#" class="vk">Вконтакте</a>
+				<a href="#" class="fb">Facebook</a>
+				<a href="#" class="reg">Зарегестрироваться</a>
+			</div>
 		</form>
 		
 	</footer>
