@@ -546,6 +546,7 @@ header
 	float: left
 	width: 275px
 	margin-left: 20px
+	position: relative
 
 	h2
 		position: relative
@@ -573,7 +574,24 @@ header
 		position: relative
 		border: 1px solid #cad2d9
 		border-top: 0
-		&:last-child
+		// z-index: 2
+		// background: #fff
+		// &.submenu
+		// 	z-index: 1
+		// &.shadow
+		// 	z-index: 1
+		// 	background: none
+		// 	border: none
+		// 	position: absolute
+		// 	height: 96%
+		// 	width: 30px
+		// 	box-shadow: 15px 0 15px 0 rgba(0,0,0,0.3)
+		// 	top: 2%
+		// 	right: 5px
+		// 	border-radius: 0 50% 50% 0
+		// &.submenu:hover ~ .shadow
+		// 	display: block
+		&:nth-last-child(1)
 			border-bottom: 4px solid #cad2d9
 
 		ul
@@ -583,6 +601,9 @@ header
 			top: -1px
 			right: -273px
 			border-top: 1px solid #cad2d9
+			box-shadow: inset 10px 0 20px 0 rgba(0, 0, 0, .1)
+			z-index: 1
+			background: #fff
 			&:after
 				position: absolute
 				left: 0
@@ -594,7 +615,7 @@ header
 	a
 		display: block
 		height: 100%
-		padding: 10px 20px
+		padding: 9px 20px
 		font-size: 13px
 		&:hover + ul, & + ul:hover
 			display: block
@@ -617,6 +638,175 @@ header
 	margin: 0 auto
 	height: 3000px
 	padding-top: 50px
+
+.breadcrumbs
+	display: inline-block
+	margin-left: 80px
+	padding-bottom: 2px
+	border-bottom: 1px solid #dee0e1
+	li
+		display: inline-block
+		margin-right: 15px
+		&:nth-child(3) a
+			color: #bd0f0e
+		&:last-child
+			margin-right: 0
+	a
+		font-size: 13px
+		font-weight: 700
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			width: 0
+			height: 3px
+			background: #bd0f0e
+			left: 50%
+			bottom: -3px
+			transition: all .5s ease
+		&.active
+			font-size: 17px
+		&.active, &:hover
+			&:after
+				left: 0%
+				width: 100%
+				transition: all .5s ease
+.slider
+	width: 700px
+	height: 290px
+	overflow: hidden
+	margin: 20px 0 7px
+	position: relative
+
+	ul
+		width: 9999px
+	ul li
+		float: left
+		width: 700px
+		height: 290px
+	.nav
+		position: absolute
+		right: 20px
+		bottom: 20px
+	.nav span
+		opacity: 0.9
+		background: #d4d4d4
+		margin-right: 5px
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		cursor: pointer
+		overflow: hidden
+		display: block
+		float: left
+		box-shadow: 0 1px 2px #000
+		box-shadow: inset 0px 1px 0.97px 0.03px rgba(22, 23, 24, 0.69)
+		&.on
+			background: #2e9419
+
+.main-content
+	margin-left: 320px
+
+	aside
+		width: 500px
+		float: right
+
+.news
+	margin-top: 23px
+	width: 700px
+	overflow: hidden
+.news-wrapper
+	display: inline-block
+	width: 10000px
+	position: relative
+	.news-single
+		float: left
+		width: 220px
+		height: 300px
+		margin-left: 17px
+		border: 1px solid #cad2d9
+		line-height: 1.2
+		transition: border-color .2s ease
+		&:first-child
+			margin-left: 0
+
+		h4
+			margin: 18px 15px 15px
+			font-size: 14px
+			font-weight: 700
+
+		.date
+			margin-bottom: 13px
+			width: 85px
+			height: 30px
+			padding-left: 15px
+			line-height: 30px
+			display: block
+			border-radius: 0 3px 3px 0
+			background: #485158
+			color: #fff
+			font-style: italic
+			font-size: 11px
+
+		img
+			width: 100%
+
+		p
+			font-size: 12px
+			margin: 15px
+			height: 144px
+		img + p
+			height: 52px
+
+		.more
+			position: relative
+			display: block
+			height: 30px
+			text-align: center
+			background: #ecf0f5
+			font-size: 13px
+			line-height: 30px
+			font-weight: 700
+			text-indent: 10px
+			color: #707a87
+			border-top: 1px solid #cad2d9
+			transition-duration: .2s
+			&:before
+				position: absolute
+				top: 13px
+				left: 56px
+				content: ''
+				background: url('../img/icons/dots.png') no-repeat
+				height: 5px
+				width: 16px
+		&:hover
+			border-color: #c12227
+			transition: border-color .2s ease
+			.more
+				transition-duration: .2s
+				background: #c12227
+				border-color: #c12227
+				color: #fff
+				&:before
+					background: url('../img/icons/dots-white.png') no-repeat
+.news-nav
+	>*
+		display: inline-block
+	span
+		width: 35px
+		height: 35px
+		border: 1px solid #cad2d9
+		cursor: pointer
+		&.prev
+			background: url('../img/icons/arrow-left.png') no-repeat center
+		&.next
+			background: url('../img/icons/arrow-right.png') no-repeat center
+
+
+
+
+
+
 
 
 
