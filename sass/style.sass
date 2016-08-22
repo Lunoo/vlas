@@ -1,6 +1,8 @@
 @import "reset"
+//@import "compass/helpers"
 
 $red: #bd1818
+$social: twitter vk in fb youtube ok instagram
 
 // FONT
 @font-face
@@ -65,6 +67,12 @@ a
 
 em
 	font-weight: 700
+.clearfix:after
+	display: table
+	content: ''
+	clear: both
+textarea
+	resize: none
 
 // POPUP
 
@@ -87,8 +95,8 @@ em
 		background: $red url('../img/icons/close.png') no-repeat center
 		border-color: $red
 
-#callback, #enter
-	color: #282828
+#callback, #enter, #review
+	color: #797b80
 	text-align: center
 	h3
 		text-align: center
@@ -100,7 +108,7 @@ em
 		text-align: right
 		margin-bottom: 15px
 		font-size: 13px
-	[type="text"], [type="email"]
+	[type="text"], [type="email"], textarea
 		margin-left: 5px
 		padding: 0 5px
 		border: 1px solid #d5dee5
@@ -109,6 +117,10 @@ em
 		box-shadow: inset 0px 1px 5px 0px rgba(213, 222, 229, 0.5)
 		width: 205px
 		height: 25px
+		&:focus
+			outline: none
+			border-color: transparent
+			box-shadow: inset 0px 1px 5px 0px rgba(213, 222, 229, 0.5), 0 0 3px 1px #de9813
 	button
 		position: relative
 		margin: 30px 5px 0
@@ -128,7 +140,7 @@ em
 			width: 100%
 			height: 5px
 			box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .16)
-	.submit
+	.button-green
 		background-image: linear-gradient( to top, rgb(64,194,24) 0%, rgb(0,255,1) 100%)
 		&:hover
 			background: #03bc02
@@ -203,9 +215,60 @@ em
 		&:before
 			background: url('../img/icons/enter-fb.png') no-repeat center
 
+#review
+	z-index: 1
+	position: absolute
+	top: 125px
+	background: #fff
+	padding: 16px 0 20px
+	width: 490px
+	border: 1px solid #cad2d9
+	box-shadow: 0px 2px 18.63px 8.37px rgba(202, 210, 217, 0.4)
+	h3
+		border: none
+		margin-bottom: 0
+	label
+		width: 445px
+		span
+			position: relative
+			top: -65px
+	textarea
+		height: 75px
+		padding: 5px
+	[type="email"], [type="text"], textarea
+		width: 300px
+	button
+		margin-top: 15px
+	.rating
+		display: block
+		margin-top: -7px
+		i
+			position: relative
+			display: inline-block
+			width: 30px
+			height: 43px
+			margin: 0 12px
+			background: url('../img/icons/star.png') no-repeat
+			background-size: contain
+			cursor: pointer
+			transition-duration: .2s
+			&:after
+				position: absolute
+				bottom: 0
+				left: -50%
+				content: attr(data-text)
+				width: 65px
+				font-weight: 700
+				font-size: 9px
+			&.active, &.hover
+				background: url('../img/icons/star-active.png') no-repeat
+				background-size: contain
+				transition-duration: .2s
+ 
+
 // BUTTONS
 
-.submit, .reg
+.button-green, .reg, .button-gold
 	position: relative
 	display: inline-block
 	border: none
@@ -215,8 +278,6 @@ em
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3)
 	color: #fff
 	cursor: pointer
-	&:hover
-		background: #03bc02
 	&:after
 		position: absolute
 		content: ''
@@ -225,8 +286,14 @@ em
 		width: 100%
 		height: 5px
 		box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, .16)
-.submit
+.button-green
 	background-image: linear-gradient( to top, rgb(64,194,24) 0%, rgb(0,255,1) 100%)
+	&:hover
+		background: #03bc02
+.button-gold
+	background-image: linear-gradient( to top, #ff9002 0%, #ffd500 100%)
+	&:hover
+		background: #ff8b02
 .reg
 	transition: all .3s
 	width: 175px
@@ -280,8 +347,11 @@ header
 			display: inline-block
 			margin: 0 7px
 			font-size: 13px
+		a
+			border-bottom: 0px dotted transparent
 		a:hover
-			text-decoration: underline
+			color: #bd0f0e
+			border-bottom: 1px dotted #bd0f0e
 		form
 			width: 660px
 			position: relative
@@ -301,7 +371,7 @@ header
 			&:after
 				right: -4px
 				top: -4px
-		input
+		[type="text"]
 			position: relative
 			z-index: 1
 			box-shadow: inset 0px 1px 5px 0px rgba(213, 222, 229, 0.5)
@@ -318,16 +388,18 @@ header
 			i
 				border-bottom: 1px dotted #485259
 
-			&:before
-				position: absolute
-				top: 0
-				right: 0
-				z-index: 1
-				content: ''
-				width: 39px
-				height: 35px
-				border-left: 1px solid #d5dee5
-				background: url('../img/icons/search.png') center no-repeat
+		[type="submit"]
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 1
+			border: none
+			width: 39px
+			height: 35px
+			border-left: 1px solid #d5dee5
+			text-indent: 999px
+			background: url('../img/icons/search.png') center no-repeat
+			cursor: pointer
 
 	.header-contacts
 		float: left
@@ -365,6 +437,11 @@ header
 			margin-top: -10px
 			margin-left: 20px
 			background: url('../img/icons/call.png') 8px no-repeat
+			transition-duration: .3s
+			&:hover
+				background: url('../img/icons/call-hover.png') 8px no-repeat
+				border-color: #580808
+				transition-duration: .3s
 
 	.header-personal
 		width: 150px
@@ -544,8 +621,7 @@ header
 
 .catalog
 	float: left
-	width: 275px
-	margin-left: 20px
+	width: 270px
 	position: relative
 
 	h2
@@ -634,49 +710,66 @@ header
 .main
 	background: #fff
 	box-shadow: 0px 10px 50px 0px rgba(0,0,0,.1)
-	max-width: 1550px
-	margin: 0 auto
-	height: 3000px
-	padding-top: 50px
+	max-width: 1510px
+	margin: 0 auto 100px
+	padding: 50px 20px 40px
 
 .breadcrumbs
 	display: inline-block
-	margin-left: 80px
+	margin-left: 55px
 	padding-bottom: 2px
 	border-bottom: 1px solid #dee0e1
 	li
 		display: inline-block
+		text-align: center
 		margin-right: 15px
-		&:nth-child(3) a
-			color: #bd0f0e
+		width: 80px
+		&:nth-child(2)
+			width: 80px
+		&:nth-child(3)
+			width: 60px
+		&:nth-child(4)
+			width: 55px
+		&:nth-child(5)
+			width: 50px
+		&:nth-child(6)
+			width: 70px
 		&:last-child
+			width: 170px
 			margin-right: 0
 	a
 		font-size: 13px
 		font-weight: 700
 		position: relative
+		transition: all .4s ease
+		//position: absolute
 		&:after
 			position: absolute
 			content: ''
 			width: 0
 			height: 3px
+			border-radius: 3px
 			background: #bd0f0e
 			left: 50%
 			bottom: -3px
-			transition: all .5s ease
-		&.active
-			font-size: 17px
+			transition: all .4s ease
+		&:hover
+			//position: absolute
 		&.active, &:hover
+			font-size: 16px
+			color: #bd0f0e
+			transition: all .4s ease
 			&:after
 				left: 0%
 				width: 100%
-				transition: all .5s ease
+				transition: all .4s ease
 .slider
 	width: 700px
 	height: 290px
 	overflow: hidden
 	margin: 20px 0 7px
 	position: relative
+	border: 1px solid #cdd4db
 
 	ul
 		width: 9999px
@@ -702,24 +795,24 @@ header
 		box-shadow: 0 1px 2px #000
 		box-shadow: inset 0px 1px 0.97px 0.03px rgba(22, 23, 24, 0.69)
 		&.on
-			background: #2e9419
+			background: #de9813
 
 .main-content
-	margin-left: 320px
+	margin-left: 290px
 
 	aside
 		width: 500px
 		float: right
 
-.news
+.carousel
 	margin-top: 23px
 	width: 700px
 	overflow: hidden
-.news-wrapper
+.carousel-wrapper
 	display: inline-block
 	width: 10000px
 	position: relative
-	.news-single
+	.carousel-block
 		float: left
 		width: 220px
 		height: 300px
@@ -747,17 +840,15 @@ header
 			color: #fff
 			font-style: italic
 			font-size: 11px
-
 		img
 			width: 100%
-
+			height: 75px
 		p
 			font-size: 12px
 			margin: 15px
 			height: 144px
 		img + p
 			height: 52px
-
 		.more
 			position: relative
 			display: block
@@ -789,18 +880,436 @@ header
 				color: #fff
 				&:before
 					background: url('../img/icons/dots-white.png') no-repeat
-.news-nav
+.carousel-nav
+	width: 222px
+	float: right
+	margin-top: 10px
 	>*
 		display: inline-block
+		margin: 0 5px 10px 0
+		vertical-align: top
+		border: 1px solid #cad2d9
+		transition-duration: .2s
+		&:hover
+			border-color: #c12227
+			color: #c12227
+			transition-duration: .2s
 	span
-		width: 35px
-		height: 35px
+		width: 31px
+		height: 31px
 		border: 1px solid #cad2d9
 		cursor: pointer
 		&.prev
 			background: url('../img/icons/arrow-left.png') no-repeat center
+		&.prev:hover
+			background: url('../img/icons/arrow-left-red.png') no-repeat center
 		&.next
 			background: url('../img/icons/arrow-right.png') no-repeat center
+			margin-right: 0
+		&.next:hover
+			background: url('../img/icons/arrow-right-red.png') no-repeat center
+.all
+	position: relative
+	height: 31px
+	line-height: 31px
+	width: 135px
+	font-size: 14px
+	text-align: center
+	text-indent: 15px
+	&:before
+		content: ''
+		position: absolute
+		top: 9px
+		left: 8px
+		width: 16px
+		height: 14px
+		background: url('../img/icons/news.png') no-repeat
+	&:hover:before
+		background: url('../img/icons/news-hover.png') no-repeat
+
+aside
+	margin-top: 20px
+	img
+		width: 100%
+		height: 100%
+	.slider
+		width: 100%
+		overflow: hidden
+		margin: 0
+		ul li
+			width: 500px
+	h4
+		font-size: 15px
+		font-weight: 700
+		margin-bottom: 30px
+		color: #485259
+		text-transform: uppercase
+	.aside-social
+		margin-top: 23px
+		text-align: center
+		padding: 25px 0
+		border: 1px solid #cad2d9
+		
+		a
+			display: inline-block
+			height: 35px
+			margin: 0 5px
+			&.social-twitter
+				background: url('../img/icons/social-twitter.png') no-repeat center
+				width: 30px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 37px
+					transition-duration: .2s
+			&.social-vk
+				background: url('../img/icons/social-vk.png') no-repeat center
+				width: 37px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 44px
+					transition-duration: .2s
+			&.social-in
+				background: url('../img/icons/social-in.png') no-repeat center
+				width: 29px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 36px
+					transition-duration: .2s
+			&.social-fb
+				background: url('../img/icons/social-fb.png') no-repeat center
+				width: 18px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 23px
+					transition-duration: .2s
+			&.social-youtube
+				background: url('../img/icons/social-youtube.png') no-repeat center
+				width: 31px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 38px
+					transition-duration: .2s
+			&.social-ok
+				background: url('../img/icons/social-ok.png') no-repeat center
+				width: 17px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 22px
+					transition-duration: .2s
+			&.social-instagram
+				background: url('../img/icons/social-instagram.png') no-repeat center
+				width: 31px
+				background-size: contain
+				transition-duration: .2s
+				&:hover
+					width: 38px
+					transition-duration: .2s
+	form
+		margin-top: 10px
+		text-align: center
+		padding: 14px 0
+		border: 1px solid #cad2d9
+		h4
+			margin-bottom: 0
+		input
+			width: 265px
+			margin-top: 13px
+			border-radius: 3px
+		[type="email"]
+			height: 27px
+			border: 1px solid #cad2d9
+			padding: 0 9px
+			box-sizing: border-box
+			&:focus
+				outline: none
+				border-color: #de9813
+		[type="submit"]
+			height: 45px
+			line-height: 45px
+			text-align: center
+			background: #c12227
+			color: #fff
+			font-weight: 700
+			border: none
+			cursor: pointer
+			text-transform: uppercase
+			box-shadow: 0px 4px 5px 0px rgba(22, 23, 24, 0.31)
+			transition-duration: .3s
+			&:hover
+				background: #a12024
+				transition-duration: .3s
+			&:after
+				position: absolute
+				content: ''
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 5px
+				box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .16)
+h3.head
+	margin: 45px 0 35px 20px
+	font-size: 22px
+	font-weight: 700
+	text-transform: uppercase
+	color: #485259
+.gods
+	float: left
+	.carousel
+		width: 991px
+		padding: 3px
+	.carousel-block
+		width: 235px
+		height: 520px
+		display: inline-block
+		vertical-align: top
+		border: none
+		outline: 1px solid #cad2d9
+		transition: outline .1s ease
+		cursor: pointer
+		&:hover
+			transition: outline .1s ease
+			outline: 2px solid #de9813
+	figure
+		display: flex
+		height: 235px
+	img.gods-img
+		max-width: 100%
+		width: auto
+		height: auto
+		display: block
+		margin: auto
+	.gods-text
+		border-top: 1px solid #cad2d9
+		box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .1)
+		color: #485259
+		padding: 0 8px
+		h4
+			height: 32px
+			font-size: 13px
+			font-weight: 700
+			margin: 20px 0
+		>div
+			display: inline-block
+			padding: 12px 12px 15px
+			background: #fff6ce
+			margin-top: 5px
+	.gods-price
+		display: block
+		margin-bottom: 10px
+		width: 80px
+		height: 30px
+		line-height: 30px
+		font-size: 14px
+		text-align: center
+		border-radius: 3px
+	.gods-rating
+		display: inline-block
+		vertical-align: middle
+		margin: 5px 15px 0 5px
+		i
+			display: inline-block
+			width: 22px
+			height: 22px
+			margin-right: -2px
+			&.off
+				background: url('../img/icons/star.png') no-repeat center
+				background-size: contain
+			&.on
+				background: url('../img/icons/star-active.png') no-repeat center
+				background-size: contain
+	.gods-buy
+		float: left
+		clear: left
+		margin-top: 10px
+		width: 95px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		text-transform: uppercase
+		&.button-green
+			margin-top: 0
+	.gods-like
+		float: right
+		width: 90px
+		height: 90px
+		margin-left: 7px
+		display: inline-block
+		background: #fff
+		border: 1px solid #e09c1b
+		border-radius: 3px
+		&:before
+			content: ''
+			position: relative
+			top: 28px
+			left: 0
+			right: 0
+			margin: auto
+			width: 37px
+			height: 37px
+			display: block
+			background: url('../img/icons/like.png') no-repeat center
+			background-size: contain
+			transition-duration: .3s
+		&:hover
+			border-color: #f38202
+			transition-duration: .3s
+			&:before
+				transition-duration: .3s
+				background: url('../img/icons/like-hover.png') no-repeat center
+				background-size: contain
+
+		&.active
+			border-color: #e09c1b
+
+	.gods-review
+		display: inline-block
+		vertical-align: middle
+		padding: 6px 0
+		width: 58px
+		height: 26px
+		background: #ededed
+		border: 1px solid #e09c1b
+		border-radius: 3px
+		text-align: center
+		font-weight: 700
+		font-size: 10px
+		.number
+			font-size: 14px
+	.carousel-nav
+		width: 75px
+		float: right
+		margin-top: 10px
+		span
+			border: 1px solid #cad2d9
+			&:hover
+				border-color: #e09c1b
+			&.prev:hover
+				background: url('../img/icons/arrow-left-gold.png') no-repeat center
+			&.next:hover
+				background: url('../img/icons/arrow-right-gold.png') no-repeat center
+.special
+	float: right
+	.carousel
+		width: 495px
+		margin-top: 125px
+	.carousel-block
+		width: 495px
+	figure, .carousel-block img
+		height: auto
+.blog
+	width: 1000px
+	float: left
+	.carousel-wrapper .carousel-block
+		width: 235px
+	.carousel-nav
+		width: 239px
+		.all
+			width: 152px
+.review
+	float: right
+	width: 490px
+	position: relative
+	h3.review-head
+		margin-top: 69px
+	.review-list
+		width: calc(100% - 30px)
+		border: 1px solid #cad2d9
+		padding: 15px
+		border: 1px solid #cad2d9
+		cursor: pointer
+		transition-duration: .3s
+		&:hover
+			border-color: #c12227
+			transition-duration: .3s
+			li
+				border-color: #c12227
+				transition-duration: .3s
+	li
+		border-bottom: 1px solid #cad2d9
+		padding: 20px 0
+		&:last-child
+			border-bottom: none
+			padding-bottom: 0
+		&:first-child
+			padding-top: 0
+	.review-author
+		font-weight: 700
+		font-size: 14px
+		float: left
+	.review-date
+		font-size: 12px
+		color: #a0a0a0
+		float: right
+	.review-rating
+		display: block
+		clear: both
+		i
+			display: inline-block
+			width: 13px
+			height: 13px
+			margin: 8px 0px 0 -3px
+			background: url('../img/icons/star.png') no-repeat
+			background-size: contain
+			cursor: pointer
+			&.active
+				background: url('../img/icons/star-active.png') no-repeat
+				background-size: contain
+	p
+		margin-top: 6px
+		clear: both
+		color: #485259
+		font-size: 12px
+		line-height: 1.2
+	.review-nav
+		float: right
+		margin-top: 15px
+		width: 185px
+		.all
+			display: inline-block
+			border: 1px solid #cad2d9
+			box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .39)
+			transition-duration: .2s
+			&:before
+				background: url("../img/icons/news.png") no-repeat
+			&:hover
+				position: relative
+				top: 2px
+				box-shadow: 0 0px 3px 0 rgba(0, 0, 0, .39)
+				transition-duration: .2s
+		.review-icon
+			position: relative
+			top: 0
+			width: 31px
+			height: 31px
+			display: inline-block
+			vertical-align: bottom
+			border: 1px solid #cad2d9
+			background: url('../img/icons/review-icon.png') no-repeat center
+			cursor: pointer
+			box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .39)
+			transition-duration: .2s
+			&:hover
+				position: relative
+				top: 2px
+				box-shadow: 0 0px 3px 0 rgba(0, 0, 0, .39)
+				transition-duration: .2s
+.info
+	clear: both
+	margin-top: 75px
+	p
+		font-size: 14px
+		line-height: 1.2
+		margin: 20px 0 0 20px
+		color: #282828
+
+
+
 
 
 

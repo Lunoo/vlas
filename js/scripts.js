@@ -11,6 +11,10 @@ $(function(){
         console.log($(this).parents('#callback').find('.close'));
         $(this).parents('.fancybox-skin').find('.fancybox-close').click();
     });
+    $('#review .fancybox-close, #review .cancel').click(function(e){
+        e.preventDefault();
+        $(this).parents('#review').fadeOut(200);
+    })
 
     // SLIDER
 
@@ -42,32 +46,52 @@ $(function(){
     //BLOG SLIDER
 
     //Обработка клика на стрелку вправо
-    $(document).on('click', ".news-nav .next", function(){ 
-        var carusel = $(this).parents('.news');
+    $(document).on('click', ".carousel-nav .next", function(){ 
+        var carusel = $(this).parents('.carousel');
         right_carusel(carusel);
         return false;
     });
     //Обработка клика на стрелку влево
-    $(document).on('click',".news-nav .prev", function(){ 
-        var carusel = $(this).parents('.news');
+    $(document).on('click',".carousel-nav .prev", function(){ 
+        var carusel = $(this).parents('.carousel');
         left_carusel(carusel);
         return false;
     });
     function left_carusel(carusel){
-       var block_width = $(carusel).find('.news-single').outerWidth() + 17;
+       var block_width = $(carusel).find('.carousel-block').outerWidth() + 17;
        console.log(block_width);
-       $(carusel).find(".news-wrapper .news-single").eq(-1).clone().prependTo($(carusel).find(".news-wrapper")); 
-       $(carusel).find(".news-wrapper").css({"left":"-"+block_width+"px"});
-       $(carusel).find(".news-wrapper .news-single").eq(-1).remove();    
-       $(carusel).find(".news-wrapper").animate({left: "0px"}, 200); 
+       $(carusel).find(".carousel-wrapper .carousel-block").eq(-1).clone().prependTo($(carusel).find(".carousel-wrapper")); 
+       $(carusel).find(".carousel-wrapper").css({"left":"-"+block_width+"px"});
+       $(carusel).find(".carousel-wrapper .carousel-block").eq(-1).remove();    
+       $(carusel).find(".carousel-wrapper").animate({left: "0px"}, 200); 
        
     }
     function right_carusel(carusel){
-       var block_width = $(carusel).find('.news-single').outerWidth() + 17;
-       $(carusel).find(".news-wrapper").animate({left: "-"+ block_width+"px"}, 200, function(){
-          $(carusel).find(".news-wrapper .news-single").eq(0).clone().appendTo($(carusel).find(".news-wrapper")); 
-          $(carusel).find(".news-wrapper .news-single").eq(0).remove(); 
-          $(carusel).find(".news-wrapper").css({"left":"0px"}); 
+       var block_width = $(carusel).find('.carousel-block').outerWidth() + 17;
+       $(carusel).find(".carousel-wrapper").animate({left: "-"+ block_width+"px"}, 200, function(){
+          $(carusel).find(".carousel-wrapper .carousel-block").eq(0).clone().appendTo($(carusel).find(".carousel-wrapper")); 
+          $(carusel).find(".carousel-wrapper .carousel-block").eq(0).remove(); 
+          $(carusel).find(".carousel-wrapper").css({"left":"0px"}); 
        }); 
     }
+
+    // RATING
+    var oldRating = $('#review i.active').length; 
+    $('#review i').on('mouseover', function(){
+        console.log(oldRating);
+        var index = $(this).index();
+        $('.rating i').removeClass('active');
+        $(this).prevAll().andSelf().addClass('hover');
+    }).on('mouseleave', function(){
+        $('.rating i').removeClass('hover');
+        if(oldRating == 0){
+            return;
+        }
+        $('#review i').eq(oldRating - 1).prevAll().andSelf().addClass('active');
+    }).on('click', function(){
+        var index = $(this).index();
+        $('.rating i').removeClass('hover');
+        $(this).prevAll().andSelf().addClass('active');
+        oldRating = $('#review i.active').length;
+    })
 })
