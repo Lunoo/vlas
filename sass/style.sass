@@ -55,6 +55,11 @@ $social: twitter vk in fb youtube ok instagram
 	src: url('../fonts/MuseoSansCyrl_900_Italic.otf') format('opentype')
 	font-weight: 900
 	font-style: italic
+@font-face
+	font-family: 'Vesna'
+	src: url('../fonts/Vesna.ttf') format('truetype')
+	font-weight: 400
+	font-style: normal
 
 // UTILITY
 
@@ -172,6 +177,11 @@ textarea
 		font-size: 12px
 		margin-left: -50px
 		border-bottom: 1px dotted #282828
+		transition-duration: .3s
+		&:hover
+			color: #c12227
+			border-color: #c12227
+			transition-duration: .3s
 	.checkbox
 		text-align: left
 		margin: 20px 0 0 80px
@@ -313,6 +323,7 @@ textarea
 body
 	font-family: 'MuseoSansCyrl', sans-serif
 	font-size: 16px
+	background: #fcfcfc
 
 header
 	background: #fff url('../img/bg-header.png') center repeat-x
@@ -510,6 +521,7 @@ header
 		.header-like + .description, .header-basket + .description
 			position: absolute
 			opacity: 0
+			z-index: 1
 			transition: opacity .3s ease .7s
 			width: 275px
 			padding: 20px
@@ -711,8 +723,9 @@ header
 	background: #fff
 	box-shadow: 0px 10px 50px 0px rgba(0,0,0,.1)
 	max-width: 1510px
-	margin: 0 auto 100px
+	margin: 0 auto
 	padding: 50px 20px 40px
+	border-bottom: 2px solid #e6a93b
 
 .breadcrumbs
 	display: inline-block
@@ -1010,48 +1023,49 @@ aside
 				&:hover
 					width: 38px
 					transition-duration: .2s
-	form
-		margin-top: 10px
-		text-align: center
-		padding: 14px 0
+form.subscribe
+	input
+		width: 265px
+		margin-top: 13px
+		border-radius: 3px
+	[type="email"]
+		height: 27px
 		border: 1px solid #cad2d9
-		h4
-			margin-bottom: 0
-		input
-			width: 265px
-			margin-top: 13px
-			border-radius: 3px
-		[type="email"]
-			height: 27px
-			border: 1px solid #cad2d9
-			padding: 0 9px
-			box-sizing: border-box
-			&:focus
-				outline: none
-				border-color: #de9813
-		[type="submit"]
-			height: 45px
-			line-height: 45px
-			text-align: center
-			background: #c12227
-			color: #fff
-			font-weight: 700
-			border: none
-			cursor: pointer
-			text-transform: uppercase
-			box-shadow: 0px 4px 5px 0px rgba(22, 23, 24, 0.31)
+		padding: 0 9px
+		box-sizing: border-box
+		&:focus
+			outline: none
+			border-color: #de9813
+	[type="submit"]
+		height: 45px
+		line-height: 45px
+		text-align: center
+		background: #c12227
+		color: #fff
+		font-weight: 700
+		border: none
+		cursor: pointer
+		text-transform: uppercase
+		box-shadow: 0px 4px 5px 0px rgba(22, 23, 24, 0.31)
+		transition-duration: .3s
+		&:hover
+			background: #a12024
 			transition-duration: .3s
-			&:hover
-				background: #a12024
-				transition-duration: .3s
-			&:after
-				position: absolute
-				content: ''
-				left: 0
-				bottom: 0
-				width: 100%
-				height: 5px
-				box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .16)
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 5px
+			box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .16)
+.aside-subscribe
+	margin-top: 10px
+	text-align: center
+	padding: 14px 0
+	border: 1px solid #cad2d9
+	h4
+		margin-bottom: 0
 h3.head
 	margin: 45px 0 35px 20px
 	font-size: 22px
@@ -1266,9 +1280,12 @@ h3.head
 		color: #485259
 		font-size: 12px
 		line-height: 1.2
+		height: 70px
+		overflow: hidden
+		text-overflow: ellipsis
 	.review-nav
 		float: right
-		margin-top: 15px
+		margin-top: 10px
 		width: 185px
 		.all
 			display: inline-block
@@ -1304,13 +1321,212 @@ h3.head
 	margin-top: 75px
 	p
 		font-size: 14px
-		line-height: 1.2
+		line-height: 1.5
 		margin: 20px 0 0 20px
 		color: #282828
+		text-align: justify
 
-
-
-
+div.subscribe
+	width: 900px
+	margin: 15px auto 10px
+	>*
+		display: inline-block
+		vertical-align: middle
+	h4
+		font-size: 37px
+		font-family: "Vesna"
+		color: #bd1818
+	form.subscribe
+		width: 200px
+		margin: 0 30px 0 40px
+		input
+			width: 100%
+			height: 43px
+			line-height: 43px
+	.subscribe-img
+		width: 120px
+		height: 120px
+		background: url('../img/cubics.svg') no-repeat center -65px
+		background-size: 270px 385px
+footer
+	background: #f0f0f0
+	border-top: 2px solid #eab652
+	color: #525a61
+	padding-bottom: 30px
+	.footer-wrapper
+		max-width: 1500px
+		margin: 30px auto 0
+		>div
+			float: left
+			height: 320px
+			border-right: 1px solid #9a9a9a
+			&:nth-child(1)
+				width: 250px
+				text-align: center
+			&:nth-child(2)
+				width: 250px
+				padding: 0 50px
+			&:nth-child(3)
+				width: 155px
+				padding: 0 55px
+				li:last-child
+					margin-top: 0
+			&:nth-child(4)
+				width: 180px
+				padding: 0 70px
+			&:nth-child(5)
+				width: 270px
+				padding-left: 40px
+				border-right: 0
+	.footer-logo
+		display: inline-block
+		width: 130px
+		height: 120px
+		margin-top: 20px
+		background: url('../img/footer-logo.png') no-repeat
+		background-size: contain
+		&-text
+			margin: 13px 0 50px
+			font-size: 19px
+			font-family: "Vesna"
+			font-weight: 600
+			color: #bd1818
+			display: block
+	.footer-copy
+		display: inline-block
+		width: 210px
+		font-size: 13px
+		line-height: 2
+	li
+		font-size: 13px
+		margin-top: 10px
+		h6
+			margin: 20px 0 15px
+			font-weight: 700
+		a
+			position: relative
+			display: inline-block
+			height: 26px
+			margin: 5px 10px 0 0
+			border-bottom: 1px dotted transparent
+			transition-duration: .3s
+			&:not(:empty)
+				height: 16px
+				&:hover
+					transition-duration: .3s
+					color: #c12227
+					border-bottom: 1px dotted #c12227
+			&.visa-master
+				width: 64px
+				background: url('../img/icons/visa-master.png') no-repeat center top
+			&.privat24logo
+				width: 78px
+				background: url('../img/icons/privat24logo.png') no-repeat center top
+			&.cards
+				margin-left: 22px
+				height: 16px
+				&:before
+					position: absolute
+					top: -5px
+					left: -24px
+					display: inline-block
+					content: ''
+					width: 21px
+					height: 21px
+					background: url('../img/icons/cards.png') no-repeat left top
+			&.new-mail
+				width: 60px
+				background: url('../img/icons/new-mail.png') no-repeat center top
+			&.intime
+				width: 54px
+				background: url('../img/icons/intime.png') no-repeat center top
+			&.autolux
+				width: 84px
+				background: url('../img/icons/autolux.png') no-repeat center top
+			&.delivery-icon
+				margin-left: 20px
+				height: 16px
+				&:before
+					position: absolute
+					top: -2px
+					left: -24px
+					display: inline-block
+					content: ''
+					width: 19px
+					height: 20px
+					background: url('../img/icons/delivery-icon.png') no-repeat left top
+			&.visa
+				width: 27px
+				background: url('../img/icons/partners.png') no-repeat 0 top
+			&.master
+				width: 28px
+				background: url('../img/icons/partners.png') no-repeat -41px top
+			&.qiwi
+				width: 33px
+				background: url('../img/icons/partners.png') no-repeat -85px top
+			&.webmoney
+				width: 64px
+				background: url('../img/icons/partners.png') no-repeat -132px top
+			&.scrill
+				width: 30px
+				background: url('../img/icons/partners.png') no-repeat -206px top
+			&.google-play
+				width: 155px
+				height: 37px
+				background: url('../img/icons/google-play.png') no-repeat center top
+				transition-duration: .3s
+				&:hover
+					transition-duration: .3s
+					background: url('../img/icons/google-play-hover.png') no-repeat center top
+			&.appstore
+				width: 138px
+				height: 43px
+				transition-duration: .3s
+				background: url('../img/icons/appstore.png') no-repeat center top
+				&:hover
+					transition-duration: .3s
+					background: url('../img/icons/appstore-hover.png') no-repeat center top
+			&[class*="footer"]
+				margin-left: 24px
+				&:before
+					content: ''
+					position: absolute
+					top: -2px
+					left: -30px
+					width: 23px
+					height: 17px
+			&.footer-rules:before
+				background: url('../img/icons/footer-rules.png') no-repeat center
+			&.footer-gifts:before
+				background: url('../img/icons/footer-gifts.png') no-repeat center
+			&.footer-ok:before
+				background: url('../img/icons/footer-ok.png') no-repeat center
+			&.footer-agreement:before
+				background: url('../img/icons/footer-agreement.png') no-repeat center
+			&.footer-close:before
+				background: url('../img/icons/footer-close.png') no-repeat center
+			&.footer-public:before
+				background: url('../img/icons/footer-public.png') no-repeat center
+			&.footer-partners:before
+				background: url('../img/icons/footer-partners.png') no-repeat center
+			&.footer-loyalty:before
+				background: url('../img/icons/footer-loyalty.png') no-repeat center
+	h4
+		margin-top: 25px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		&.footer-info
+			position: relative
+			margin-left: 22px
+			&:before
+				content: ''
+				position: absolute
+				top: -2px
+				left: -22px
+				width: 7px
+				height: 22px
+				background: url('../img/icons/footer-info.png')
 
 
 
