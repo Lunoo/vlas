@@ -417,14 +417,17 @@ header
 		margin-left: 75px
 		padding-top: 15px
 		width: 275px
+		.header-tel
+			width: 170px
+		.header-tel-open
+			display: none
 		a
-			position: relative
 			display: block
 			padding-left: 29px
 			font-size: 13px
 			line-height: 1.65
-		[href*="tel"], [href*="mail"]
-			float: left
+		.header-tel, [href*="mail"]
+			position: relative
 			&:before
 				position: absolute
 				top: 2px
@@ -432,27 +435,41 @@ header
 				width: 16px
 				height: 15px
 				content: ''
-		[href*="tel"]:nth-child(2):before
+		.header-tel:before
+			top: 24px
 			background: url('../img/icons/tel.png') center no-repeat
 		[href*="mail"]
 			margin-top: 10px
 		[href*="mail"]:before
 			background: url('../img/icons/mail.png') center no-repeat
 		.callme
+			position: relative
 			height: 32px
+			width: 66px
 			line-height: 32px
 			border: 1px solid $red
 			border-radius: 3px
 			float: right
-			padding: 0 14px 0 36px
 			margin-top: -10px
 			margin-left: 20px
-			background: url('../img/icons/call.png') 8px no-repeat
 			transition-duration: .3s
+			cursor: pointer
 			&:hover
-				background: url('../img/icons/call-hover.png') 8px no-repeat
 				border-color: #580808
 				transition-duration: .3s
+				&:before
+					transition-duration: .3s
+					background: url('../img/icons/call-hover.png') no-repeat
+					background-size: contain
+			&:before
+				position: absolute
+				top: 8px
+				left: 8px
+				content: ''
+				width: 14px
+				height: 15px
+				background: url('../img/icons/call.png') no-repeat
+				background-size: contain
 
 	.header-personal
 		width: 150px
@@ -659,54 +676,55 @@ header
 			box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, .16)
 
 	li
-		position: relative
 		border: 1px solid #cad2d9
 		border-top: 0
-		// z-index: 2
-		// background: #fff
-		// &.submenu
-		// 	z-index: 1
-		// &.shadow
-		// 	z-index: 1
-		// 	background: none
-		// 	border: none
-		// 	position: absolute
-		// 	height: 96%
-		// 	width: 30px
-		// 	box-shadow: 15px 0 15px 0 rgba(0,0,0,0.3)
-		// 	top: 2%
-		// 	right: 5px
-		// 	border-radius: 0 50% 50% 0
-		// &.submenu:hover ~ .shadow
-		// 	display: block
 		&:nth-last-child(1)
 			border-bottom: 4px solid #cad2d9
-
-		ul
-			width: 273px
+		&.submenu>ul
+			width: 1245px
+			height: 658px
 			display: none
+			flex-direction: column
+			flex-wrap: wrap
 			position: absolute
-			top: -1px
-			right: -273px
-			border-top: 1px solid #cad2d9
-			box-shadow: inset 10px 0 20px 0 rgba(0, 0, 0, .1)
+			top: 0
+			right: -1245px
+			border: 1px solid #cad2d9
+			border-top: 4px solid #cad2d9
+			border-bottom: 4px solid #cad2d9
 			z-index: 1
 			background: #fff
-			&:after
-				position: absolute
-				left: 0
-				top: 0
-				content: ''
-				height: 100%
-				width: 18px
-				background: url('../img/icons/shadow.png') repeat-y
+			>li>a
+				font-weight: 700
+				font-size: 16px
+				//border-bottom: 1px solid #cad2d9
+			li
+				width: 273px
+				border: none
+				li
+					padding-left: 20px
+			>li
+				padding-left: 20px
+				position: relative
+				&:before
+					position: absolute
+					z-index: 1
+					top: 2px
+					left: 5px
+					content: ''
+					width: 30px
+					height: 30px
+					background: #ccc
+					border-radius: 50%
+		&.submenu>a:hover + ul, &.submenu>a + ul:hover
+			display: block
+			display: flex
 	a
+		position: relative
 		display: block
 		height: 100%
 		padding: 9px 20px
 		font-size: 13px
-		&:hover + ul, & + ul:hover
-			display: block
 		&:hover
 			background: #fef2da
 			color: #be1818
@@ -720,6 +738,7 @@ header
 				background: url('../img/icons/arrow-right-hover-red.png') no-repeat
 
 .main
+	position: relative
 	background: #fff
 	box-shadow: 0px 10px 50px 0px rgba(0,0,0,.1)
 	max-width: 1510px
@@ -790,6 +809,9 @@ header
 		float: left
 		width: 700px
 		height: 290px
+	img
+		width: 100%
+		height: 100%
 	.nav
 		position: absolute
 		right: 20px
@@ -812,10 +834,6 @@ header
 
 .main-content
 	margin-left: 290px
-
-	aside
-		width: 500px
-		float: right
 
 .carousel
 	margin-top: 23px
@@ -860,8 +878,11 @@ header
 			font-size: 12px
 			margin: 15px
 			height: 144px
+			overflow: hidden
 		img + p
-			height: 52px
+			height: 54px
+			overflow: hidden
+			margin-bottom: 13px
 		.more
 			position: relative
 			display: block
@@ -941,7 +962,11 @@ header
 		background: url('../img/icons/news-hover.png') no-repeat
 
 aside
+	position: absolute
+	top: 70px
+	right: 20px
 	margin-top: 20px
+	width: 500px
 	img
 		width: 100%
 		height: 100%
@@ -954,6 +979,7 @@ aside
 	h4
 		font-size: 15px
 		font-weight: 700
+		line-height: 1.2
 		margin-bottom: 30px
 		color: #485259
 		text-transform: uppercase
@@ -1026,7 +1052,7 @@ aside
 form.subscribe
 	input
 		width: 265px
-		margin-top: 13px
+		margin-top: 9px
 		border-radius: 3px
 	[type="email"]
 		height: 27px
@@ -1062,7 +1088,7 @@ form.subscribe
 .aside-subscribe
 	margin-top: 10px
 	text-align: center
-	padding: 14px 0
+	padding: 11px 0 14px
 	border: 1px solid #cad2d9
 	h4
 		margin-bottom: 0
@@ -1078,6 +1104,7 @@ h3.head
 		width: 991px
 		padding: 3px
 	.carousel-block
+		position: relative
 		width: 235px
 		height: 520px
 		display: inline-block
@@ -1089,6 +1116,21 @@ h3.head
 		&:hover
 			transition: outline .1s ease
 			outline: 2px solid #de9813
+		&.discont
+			&:before
+				position: absolute
+				z-index: 1
+				top: -15px
+				right: -15px
+				content: attr(data-discont)
+				height: 47px
+				width: 47px
+				line-height: 47px
+				background: url('../img/icons/discont.png') no-repeat
+				text-align: center
+				font-size: 15px
+				font-weight: 700
+				color: #fff
 	figure
 		display: flex
 		height: 235px
@@ -1211,14 +1253,106 @@ h3.head
 	float: right
 	.carousel
 		width: 495px
-		margin-top: 125px
+		//margin-top: 125px
 	.carousel-block
 		width: 495px
 	figure, .carousel-block img
 		height: auto
+	figure.brands
+		display: block
+		margin: 10px auto
+		width: 410px
+		cursor: auto
+	[class*="brand-"]
+		width: 50px
+		height: 50px
+		display: inline-block
+		margin: 0 3px 12px 4px
+		padding: 3px
+		background: url('../img/brands/brands.jpg') no-repeat
+		cursor: pointer
+		border: 1px solid transparent
+		border-radius: 3px
+		transition-duration: .3s
+		&:hover
+			border-color: #a02b21
+			transition-duration: .3s
+	.brand-1
+		background-position: -8px -8px
+	.brand-2
+		background-position: -79px -8px
+	.brand-3
+		background-position: -150px -8px
+	.brand-4
+		background-position: -221px -8px
+	.brand-5
+		background-position: -292px -8px
+	.brand-6
+		background-position: -363px -8px
+	.brand-7
+		background-position: -8px -81px
+	.brand-8
+		background-position: -79px -81px
+	.brand-9
+		background-position: -150px -81px
+	.brand-10
+		background-position: -221px -81px
+	.brand-11
+		background-position: -292px -81px
+	.brand-12
+		background-position: -363px -81px
+	.brand-13
+		background-position: -8px -150px
+	.brand-14
+		background-position: -79px -150px
+	.brand-15
+		background-position: -150px -150px
+	.brand-16
+		background-position: -221px -150px
+	.brand-17
+		background-position: -292px -150px
+	.brand-18
+		background-position: -363px -150px
+	.brand-19
+		background-position: -8px -221px
+	.brand-20
+		background-position: -79px -221px
+	.brand-21
+		background-position: -150px -221px
+	.brand-22
+		background-position: -221px -221px
+	.brand-23
+		background-position: -292px -221px
+	.brand-24
+		background-position: -363px -221px
+	.brand-25
+		background-position: -8px -292px
+	.brand-26
+		background-position: -79px -292px
+	.brand-27
+		background-position: -150px -292px
+	.brand-28
+		background-position: -221px -292px
+	.brand-29
+		background-position: -292px -292px
+	.brand-30
+		background-position: -363px -292px
+	.brand-31
+		background-position: -8px -363px
+	.brand-32
+		background-position: -79px -363px
+	.brand-33
+		background-position: -150px -363px
+	.brand-34
+		background-position: -221px -363px
+	.brand-35
+		background-position: -292px -363px
+	.brand-36
+		background-position: -363px -363px
 .blog
 	width: 1000px
 	float: left
+	margin-bottom: 75px
 	.carousel-wrapper .carousel-block
 		width: 235px
 	.carousel-nav
@@ -1318,13 +1452,36 @@ h3.head
 				transition-duration: .2s
 .info
 	clear: both
-	margin-top: 75px
+	font-size: 12px
+	h3
+		margin-bottom: 20px
+	&-left
+		float: left
+		width: 48%
+		margin-left: 20px
+	&-right
+		float: right
+		width: 48%
+		margin-right: 20px
+	h4
+		font-weight: 700
+		margin-top: 30px
 	p
 		font-size: 14px
 		line-height: 1.5
-		margin: 20px 0 0 20px
+		margin: 20px 0 0 0px
 		color: #282828
 		text-align: justify
+		a
+			text-decoration: underline
+			color: #1299DC
+			&:hover
+				text-decoration: none
+	ul
+		list-style: disc
+		margin: 20px 0 0 25px
+	li
+		margin-top: 8px
 
 div.subscribe
 	width: 900px
@@ -1352,10 +1509,10 @@ footer
 	background: #f0f0f0
 	border-top: 2px solid #eab652
 	color: #525a61
-	padding-bottom: 30px
 	.footer-wrapper
 		max-width: 1500px
 		margin: 30px auto 0
+		padding-bottom: 30px
 		>div
 			float: left
 			height: 320px
@@ -1527,15 +1684,323 @@ footer
 				width: 7px
 				height: 22px
 				background: url('../img/icons/footer-info.png')
+	.footer-foot
+		display: none
 
+// RESPONSIVE
+@media screen and (max-width: 1580px)
+	body
+		font-size: 14px
+	header
+		height: 120px
+		.header-logo
+			width: 175px
+			height: 85px
+			background-size: 110px
+			&:before
+				content: ''
+				height: 85px
+				width: 100px
+				background: url("../img/logo.png") no-repeat
+				background-size: 60px
+		.header-nav
+			ul
+				display: none
+			form
+				width: 375px
+				p
+					margin-top: 8px
+		.header-contacts
+			position: relative
+			width: 265px
+			margin: -10px 0 0 148px
+			padding-top: 0
+			[href*="mail"]
+				float: right
+				margin-top: 8px
+			.header-tel-open
+				position: relative
+				z-index: 1
+				display: inline-block
+				height: 34px
+				float: right
+				width: 30px
+				margin-left: 15px
+				padding-left: 0
+				&:before
+					top: 10px
+					position: absolute
+					left: 2px
+					width: 16px
+					height: 15px
+					content: ""
+					background: url("../img/icons/tel.png") center no-repeat
+				&:after
+					position: absolute
+					top: 15px
+					right: 0
+					content: ''
+					width: 8px
+					height: 4px
+					background: url("../img/icons/arrow-down.png") no-repeat
+			#header-tel
+				display: none
+				position: absolute
+				z-index: 1
+				left: 155px
+				top: 35px
+				background: #fff
+				padding: 10px
+				width: 140px
+				border-radius: 5px
+				text-align: center
+				box-shadow: 0px 2px 18.63px 8.37px rgba(202, 210, 217, 0.4)
+				border: 1px solid #cad2d9
+				a
+					padding-left: 0
+				&:before
+					top: -9px
+					left: 10px
+					height: 0
+					width: 0
+					background: none
+					border-bottom: 9px solid #ccc
+					border-left: 7px solid transparent
+					border-right: 7px solid transparent
+				&:after
+					position: absolute
+					content: ''
+					top: -7px
+					left: 10px
+					height: 0
+					width: 0
+					background: none
+					border-bottom: 9px solid #fff
+					border-left: 7px solid transparent
+					border-right: 7px solid transparent
+				&:target
+					display: block
+			.callme
+				margin-top: 4px
+				padding-left: 20px
+				width: 40px
+				height: 23px
+				line-height: 23px
+				font-size: 9.5px
+				&:before
+					left: 5px
+					top: 5px
+					width: 13px
+					height: 12px
+		.header-personal
+			margin-top: -66px
+			width: 140px
+			[class*="header"]
+				width: 50px
+				height: 50px
+				border-color: transparent!important
+				font-size: 0
+				vertical-align: top
+				&:after
+					top: 0
+					right: 0
+			.header-like:before
+				background: url("../img/icons/like.png") center no-repeat
+				background-size: contain
+				top: 10px
+				height: 21px
+			.header-basket:before
+				background: url("../img/icons/basket.png") center no-repeat
+				background-size: contain
+				top: 4px
+				height: 32px
+			div.description
+				display: none
+	.main
+		max-width: 726px
+		padding: 50px 7px 40px
+	.main-content
+		margin-left: 200px
+		position: relative
+	.catalog
+		width: 190px
+		a
+			padding: 6px 14px	
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			&:hover:after
+				top: 11px
+				right: 6px
+		li:nth-last-child(1)
+			border-bottom-width: 2px
+		h2
+			height: 44px
+			line-height: 44px
+	
+	aside
+		position: static
+		width: 100%
+		display: inline-block
+		margin-top: 0
+		.slider
+			display: none
+		.aside-social
+			padding-top: 0
+			float: left
+			width: 48%
+			border: none
+		.aside-subscribe
+			float: right
+			width: 48%
+			border: none
 
+	.breadcrumbs
+		margin-left: 0
+		position: absolute
+		left: -35px
+		top: -30px
+		width: 555px
+		li
+			width: auto !important
+			a:hover
+				font-size: 13px
+				&.active
+					font-size: 16px
+	.slider
+		margin-top: 0
+		width: 523px
+		height: 220px
+		ul li
+			width: 525px
+			height: 220px
+	.main-content .carousel
+		width: 525px
+		.carousel-wrapper
+			.carousel-block
+				width: 161px
+				height: 220px
+				h4
+					font-size: 12px
+					margin: 11px
+				.date
+					font-size: 10px
+					height: 22px
+					width: 72px
+					line-height: 22px
+				img
+					height: 60px
+				p
+					margin: 5px 11px
+					height: 99px
+				img + p
+					height: 30px
+				.more
+					&:before
+						left: 27px
+		&-nav
+			width: 77px
+	.all
+		display: none
+	h3.head
+		margin: 27px 0 35px 0
+		font-size: 20px
+	.gods
+		position: relative
+		left: 11px
+		.carousel
+			width: 247px
+			float: left
+			margin-left: -11px
+			.carousel-wrapper .carousel-block
+				width: 235px
+				height: 520px
+				background: #fff
+			img.gods-img
+				height: 160px
+		.carousel-nav
+			width: 86px
+	.special .carousel
+		width: 720px
+		.carousel-wrapper .carousel-block
+			width: 720px
+			img
+				height: auto
+				width: auto
+				display: block
+				margin: auto
+		.carousel:first-child
+			.carousel-block
+				height: 300px
+			figure.brands
+				width: auto
+			[class*="brand-"]
+				margin: 0 9px 9px 9px
+	.blog.carousel
+		margin-bottom: 0
+		width: 720px
+		.carousel-wrapper .carousel-block
+			width: 226px
+		.carousel-nav
+			width: 77px
+	.review h3.review-head
+		margin-top: 20px
+	.review
+		float: none
+		clear: left
+		margin: auto
+		width: auto
+		.review-author
+			font-size: 20px
+		.review-date
+			font-size: 17px
+		.review-rating i
+			width: 19px
+			height: 18px
+		p
+			font-size: 15px
+			height: 100px
 
-
-
-
-
-
-
-  
+	#review
+		left: 0
+		right: 0
+		margin: auto
+	.info
+		margin-top: 100px
+		&-left
+			width: 46%
+			margin-left: 10px
+		&-right
+			width: 46%
+			margin-right: 10px
+	div.subscribe
+		width: 720px
+		margin-top: 10px
+		h4
+			font-size: 30px
+		form.subscribe
+			width: 180px
+			input
+				line-height: 36px
+				height: 36px
+	footer
+		.footer-wrapper
+			>div
+				border-right: none
+				&:nth-child(-n+2)
+					display: none
+				&:nth-child(3)
+					padding: 0 30px
+				&:nth-child(4)
+					padding: 0 40px
+		.footer-foot
+			display: block
+			padding: 5px 0
+			border-top: 2px solid #eab652
+			text-align: center
+			background: #fff
+			span
+				display: block
+				margin: 10px 0
 
 
