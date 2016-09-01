@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Дядя Влас</title>
 	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
@@ -13,10 +14,22 @@
 			<a href="#" class="header-logo"></a>
 			<div class="header-nav">
 				<ul>
+					<li class="close"></li>
 					<li><a href="#">О нас</a></li>
 					<li><a href="#">Кредит</a></li>
 					<li><a href="#">Гарантия и возврат</a></li>
 					<li><a href="#">Доставки и оплата</a></li>
+				</ul>
+				<ul class="mobile">
+					<li><a href="#" class="header-info">Полезная информация</a></li>
+					<li><a href="#" class="header-rules">Условия аренды</a></li>
+					<li><a href="#" class="header-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="header-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="header-agreement">Договор аренды</a></li>
+					<li><a href="#" class="header-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="header-public">Публичная оферта</a></li>
+					<li><a href="#" class="header-partners">Партнерская программа</a></li>
+					<li><a href="#" class="header-loyalty">Программа лояльности</a></li>
 				</ul>
 				<form action="#">
 					<p>
@@ -68,7 +81,7 @@
 	</header>
 
 	<div class="main clearfix">
-		<div class="catalog">
+		<div class="catalog active">
 			<h2>Каталог товаров</h2>
 			<ul>
 				<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
@@ -171,7 +184,8 @@
 			</ul>
 		</div>
 		<div class="main-content">
-			<ul class="breadcrumbs">
+			<ul class="main-navigation">
+				<li class="close">Меню</li>
 				<li><a href="#">Для мамы</a></li>
 				<li><a href="#">Для папы</a></li>
 				<li><a href="#">Аренда</a></li>
@@ -182,13 +196,13 @@
 			</ul>
 			<div class="slider">
 				<ul>
-					<li>
+					<li data-src="img/slider-image-1.jpg">
 						<img src="img/slider-image-1.jpg" alt="slider-image-1">
 					</li>
-					<li>
+					<li data-src="img/slider-image-2.jpg">
 						<img src="img/slider-image-2.jpg" alt="slider-image-2">
 					</li>
-					<li>
+					<li data-src="img/slider-image-2.jpg">
 						<img src="img/slider-image-2.jpg" alt="slider-image-2">
 					</li>
 				</ul>
@@ -210,7 +224,9 @@
 						<span class="date">
 							21.03.2015
 						</span>
-						<img src="img/blog-image.jpg" alt="blog-image">
+						<figure data-src="img/blog-image.jpg">
+							<img src="img/blog-image.jpg" alt="blog-image">
+						</figure>
 						<p>
 							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
 						</p>
@@ -231,7 +247,9 @@
 						<span class="date">
 							21.03.2015
 						</span>
-						<img src="img/blog-image.jpg" alt="blog-image">
+						<figure data-src="img/blog-image.jpg">
+							<img src="img/blog-image.jpg" alt="blog-image">
+						</figure>
 						<p>
 							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
 						</p>
@@ -777,7 +795,9 @@
 					<span class="date">
 						21.03.2015
 					</span>
-					<img src="img/blog-image.jpg" alt="blog-image">
+					<figure data-src="img/blog-image.jpg">
+						<img src="img/blog-image.jpg" alt="blog-image">
+					</figure>
 					<p>
 						С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
 					</p>
@@ -798,7 +818,9 @@
 					<span class="date">
 						21.03.2015
 					</span>
-					<img src="img/blog-image.jpg" alt="blog-image">
+					<figure  data-src="img/blog-image.jpg">
+						<img src="img/blog-image.jpg" alt="blog-image">
+					</figure>
 					<p>
 						С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
 					</p>
@@ -809,7 +831,9 @@
 					<span class="date">
 						21.03.2015
 					</span>
-					<img src="img/blog-image.jpg" alt="blog-image">
+					<figure  data-src="img/blog-image.jpg">
+						<img src="img/blog-image.jpg" alt="blog-image">
+					</figure>
 					<p>
 						С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
 					</p>

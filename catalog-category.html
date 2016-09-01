@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Дядя Влас</title>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<a href="#" class="header-logo"></a>
+			<div class="header-nav">
+				<ul>
+					<li class="close"></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Кредит</a></li>
+					<li><a href="#">Гарантия и возврат</a></li>
+					<li><a href="#">Доставки и оплата</a></li>
+				</ul>
+				<ul class="mobile">
+					<li><a href="#" class="header-info">Полезная информация</a></li>
+					<li><a href="#" class="header-rules">Условия аренды</a></li>
+					<li><a href="#" class="header-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="header-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="header-agreement">Договор аренды</a></li>
+					<li><a href="#" class="header-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="header-public">Публичная оферта</a></li>
+					<li><a href="#" class="header-partners">Партнерская программа</a></li>
+					<li><a href="#" class="header-loyalty">Программа лояльности</a></li>
+				</ul>
+				<form action="#">
+					<p>
+						<input type="text" placeholder="Поиск по сайту">
+					</p>
+					<input type="submit">
+					<span>Напр.: <i>Коляска</i></span>
+				</form>
+			</div>
+			<div class="header-contacts">
+				<a href="#callback" class="callme">Call me</a>
+				<a href="#header-tel" class="header-tel-open"></a>
+				<div class="header-tel" id="header-tel">
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+				</div>
+				<a href="mail:info@vlas.com.ua">info@vlas.com.ua</a>
+			</div>
+			<div class="header-personal">
+				<a href="#enter" class="cab">Личный кабинет</a>
+				<a href="#" class="header-like" data-number="14">Желаемое</a>
+				<div class="description">
+					<h3>Список желаний пуст</h3>
+					<p>
+						Добавляйте товары в список желаний, делитесь списками с друзьями и обсуждайте товары вместе.
+					</p>
+					<span>
+						Если у вас уже есть списки желаний, 
+					</span>
+					<a href="#">авторизуйтесь.</a>
+				</div>
+				<a href="#" class="header-basket" data-number="14">Корзина</a>
+				<div class="description empty">
+					<h3>Ваша корзина пуста</h3>
+					<p>
+						Добавляйте понравившиеся товары или <a href="#">авторизуйтесь</a>, если добавляли ранее.
+					</p>
+				</div>
+				<!-- <div class="description full">
+					<span>В корзине <em>2 товара</em></span>
+					<span>на сумму <em>4026 грн</em></span>
+					<a href="#" class="offer submit button-green">Оформить заказ</a>
+					<hr>
+					<a href="#" class="basket">Перейти в корзину</a>
+				</div> -->
+			</div>
+		</div>
+	</header>
+
+	<div class="main clearfix">
+		<div class="catalog active">
+			<h2>Каталог товаров</h2>
+			<ul>
+				<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+				<li><a href="#">Телефоны, MP3</a></li>
+				<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+				<li class="submenu">
+					<a href="#">Бытовая техника и интерьер</a>
+					<ul>
+						<li>
+							<a href="#">Ноутбуки, планшеты и компьютеры</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Телефоны, MP3</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">ТВ, Аудио, Видео, Фото</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активная вкладва 2го уровня</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Авиа и ЖД билеты</a></li>
+								<li><a href="#">Одежда, обувь и аксессуары</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активный отдых и туризм</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Спортивные товары</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Активный отдых и туризм</a></li>
+				<li><a href="#">Спортивные товары</a></li>
+				<li><a href="#">Детский мир</a></li>
+				<li><a href="#">Товары для дома</a></li>
+				<li><a href="#">Дача, сад, огород</a></li>
+				<li><a href="#">Инструменты и оборудование</a></li>
+				<li><a href="#">Автотовары NEW</a></li>
+				<li><a href="#">Авиа и ЖД билеты</a></li>
+				<li><a href="#">Одежда, обувь и аксессуары</a></li>
+				<li><a href="#">Алкогольные напитки и продукты</a></li>
+				<li><a href="#">Ювелирные украшения</a></li>
+				<li><a href="#">Косметика и парфюмерия</a></li>
+				<li><a href="#">Торговое оборудование </a></li>
+				<li><a href="#">Офис, школа, книги</a></li>
+				<li><a href="#">Зоотовары</a></li>
+			</ul>
+		</div>
+		<div class="filter">
+			<div class="filter-block">
+				<h2>Цена (грн):</h2>
+				<div id="range-0"></div>
+				<input type="text" value="0" class="min num">
+				<input type="text" value="200" class="max num">
+				<button class="button-gold">OK</button>
+			</div>
+			<div class="filter-block dropdown opened">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-01">
+					<label for="gods-01">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-02">
+					<label for="gods-02">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-03">
+					<label for="gods-03">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-04">
+					<label for="gods-04">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-05">
+					<label for="gods-05">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-06">
+					<label for="gods-06">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-07">
+					<label for="gods-07">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-11">
+					<label for="gods-11">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-12">
+					<label for="gods-12">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-13">
+					<label for="gods-13">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-14">
+					<label for="gods-14">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-15">
+					<label for="gods-15">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-16">
+					<label for="gods-16">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-17">
+					<label for="gods-17">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-21">
+					<label for="gods-21">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-22">
+					<label for="gods-22">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-23">
+					<label for="gods-23">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-24">
+					<label for="gods-24">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-25">
+					<label for="gods-25">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-26">
+					<label for="gods-26">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-27">
+					<label for="gods-27">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-31">
+					<label for="gods-31">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-32">
+					<label for="gods-32">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-33">
+					<label for="gods-33">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-34">
+					<label for="gods-34">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-35">
+					<label for="gods-35">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-36">
+					<label for="gods-36">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-37">
+					<label for="gods-37">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-41">
+					<label for="gods-41">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-42">
+					<label for="gods-42">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-43">
+					<label for="gods-43">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-44">
+					<label for="gods-44">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-45">
+					<label for="gods-45">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-46">
+					<label for="gods-46">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-47">
+					<label for="gods-47">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-51">
+					<label for="gods-51">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-52">
+					<label for="gods-52">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-53">
+					<label for="gods-53">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-54">
+					<label for="gods-54">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-55">
+					<label for="gods-55">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-56">
+					<label for="gods-56">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-57">
+					<label for="gods-57">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+			<div class="filter-block dropdown closed">
+				<h2>Цена (грн):</h2>
+				<div>
+					<input type="checkbox" id="gods-61">
+					<label for="gods-61">
+						Классические (63)
+					</label>
+					<input type="checkbox" id="gods-62">
+					<label for="gods-62">
+						Коляски для двойни (27)
+					</label>
+					<input type="checkbox" id="gods-63">
+					<label for="gods-63">
+						Коляски-трансформеры (10)
+					</label>
+					<input type="checkbox" id="gods-64">
+					<label for="gods-64">
+						Коляски-трости (62)
+					</label>
+					<input type="checkbox" id="gods-65">
+					<label for="gods-65">
+						Прогулочные (177)
+					</label>
+					<input type="checkbox" id="gods-66">
+					<label for="gods-66">
+						Универсальные коляски 2 в 1
+					</label>
+					<input type="checkbox" id="gods-67">
+					<label for="gods-67">
+						Универсальные коляскв 1 (31)
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<ul class="main-navigation">
+				<li class="close">Меню</li>
+				<li><a href="#">Для мамы</a></li>
+				<li><a href="#">Для папы</a></li>
+				<li><a href="#">Аренда</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#" class="active">Блог</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Благотворительность</a></li>
+			</ul>
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Коляски</a></li>
+			</ul>
+			<div class="content-text">
+				<h2>Коляски</h2>
+				<p>
+					Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны реализация намеченных плановых заданий позволяет оценить значение новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание соответствующий условий активизации. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что новая модель организационной деятельности требуют определения и уточнения форм развития.
+				</p>
+			</div>
+			<div class="gods content-gods">
+				<div class="gods-layout">
+					<input type="radio" name="layout" id="layout-1">
+					<label for="layout-1"></label>
+					<input type="radio" name="layout" id="layout-2">
+					<label for="layout-2"></label>
+					<div class="dropdown-list">
+						<span>Сортировка</span>
+						<ul>
+							<li>По цене (убывание)</li>
+							<li>По цене (возрастание)</li>
+							<li>По популярности</li>
+							<li>По размеру</li>
+						</ul>
+					</div>
+				</div>
+				<div class="carousel">
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-01">
+								<label for="size-01">55</label>
+								<input type="radio" name="size" id="size-02">
+								<label for="size-02">65</label>
+								<input type="radio" name="size" id="size-03">
+								<label for="size-03">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-01">
+								<label for="color-01">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-02">
+								<label for="color-02">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-03">
+								<label for="color-03">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-04">
+								<label for="color-04">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-05">
+								<label for="color-05">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-11">
+								<label for="size-11">55</label>
+								<input type="radio" name="size" id="size-12">
+								<label for="size-12">65</label>
+								<input type="radio" name="size" id="size-13">
+								<label for="size-13">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-11">
+								<label for="color-11">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-12">
+								<label for="color-12">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-13">
+								<label for="color-13">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-14">
+								<label for="color-14">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-15">
+								<label for="color-15">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-21">
+								<label for="size-21">55</label>
+								<input type="radio" name="size" id="size-22">
+								<label for="size-22">65</label>
+								<input type="radio" name="size" id="size-23">
+								<label for="size-23">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-21">
+								<label for="color-21">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-22">
+								<label for="color-22">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-23">
+								<label for="color-23">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-24">
+								<label for="color-24">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-25">
+								<label for="color-25">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-31">
+								<label for="size-31">55</label>
+								<input type="radio" name="size" id="size-32">
+								<label for="size-32">65</label>
+								<input type="radio" name="size" id="size-33">
+								<label for="size-33">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-31">
+								<label for="color-31">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-32">
+								<label for="color-32">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-33">
+								<label for="color-33">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-34">
+								<label for="color-34">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-35">
+								<label for="color-35">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-41">
+								<label for="size-41">55</label>
+								<input type="radio" name="size" id="size-42">
+								<label for="size-42">65</label>
+								<input type="radio" name="size" id="size-43">
+								<label for="size-43">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-41">
+								<label for="color-41">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-42">
+								<label for="color-42">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-43">
+								<label for="color-43">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-44">
+								<label for="color-44">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-45">
+								<label for="color-45">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-51">
+								<label for="size-51">55</label>
+								<input type="radio" name="size" id="size-52">
+								<label for="size-52">65</label>
+								<input type="radio" name="size" id="size-53">
+								<label for="size-53">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-51">
+								<label for="color-51">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-52">
+								<label for="color-52">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-53">
+								<label for="color-53">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-54">
+								<label for="color-54">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-55">
+								<label for="color-55">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-61">
+								<label for="size-61">55</label>
+								<input type="radio" name="size" id="size-62">
+								<label for="size-62">65</label>
+								<input type="radio" name="size" id="size-63">
+								<label for="size-63">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-61">
+								<label for="color-61">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-62">
+								<label for="color-62">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-63">
+								<label for="color-63">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-64">
+								<label for="color-64">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-65">
+								<label for="color-65">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<div class="carousel-inner">
+							<figure>
+								<img src="img/products/product-1-big.jpg" alt="product-1" class="gods-img">
+							</figure>
+							<div class="gods-text">
+								<h4>Детская коляска Roan Marita</h4>
+								<span class="gods-rating">
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="on"></i>
+									<i class="off"></i>
+								</span>
+								<span class="gods-review">
+									<span class="number">232</span> Отзывов
+								</span>
+								<div>
+									<span class="gods-price">5 999 грн</span>
+									<a href="#" class="gods-like"></a>
+									<a href="#" class="gods-buy button-green">Купить</a>
+									<a href="#" class="gods-buy button-gold">В кредит</a>
+								</div>
+								<h6>Размер:</h6>
+								<input type="radio" name="size" id="size-71">
+								<label for="size-71">55</label>
+								<input type="radio" name="size" id="size-72">
+								<label for="size-72">65</label>
+								<input type="radio" name="size" id="size-73">
+								<label for="size-73">75</label>
+								<h6>Цвет:</h6>
+								<input type="radio" name="color" id="color-71">
+								<label for="color-71">
+									<img src="img/icons/color-1.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-72">
+								<label for="color-72">
+									<img src="img/icons/color-2.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-73">
+								<label for="color-73">
+									<img src="img/icons/color-3.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-74">
+								<label for="color-74">
+									<img src="img/icons/color-4.png" alt="icons">
+								</label>
+								<input type="radio" name="color" id="color-75">
+								<label for="color-75">
+									<img src="img/icons/color-5.png" alt="icons">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<h3 class="head">Дядя Влас - Интернет магазин</h3>
+			<div class="info-left">
+				<h4>PANAMA ПРИНОСИТ МАЛЫШАМ РАДОСТЬ</h4>
+				<p>
+					Интернет магазин детских товаров – это великолепная возможность принести радость себе и ребёнку, не выходя из дома. Всего за несколько минут вы можете заказать необходимую вещь для своего малыша, будь то игрушка или удобная качественная одежда. Заходите к нам в гости, не стесняйтесь! У нас есть все-все-все, что нужно деткам. В детском интернет магазине Панама огромный выбор, удобная система поиска и навигации, поэтому найти нужную вещь вы сможете легко и быстро.
+				</p>
+				<p>
+					Яркие образы, любимые герои, популярные игрушки и многое другое – на страницах нашего магазина игрушек! Мы предложим очень широкий спектр товаров, в число которых вошла даже обувь для детей, и все это для того, чтобы мамам и папам не пришлось тратить время на поиски.
+				</p>
+				<h4>ВСЁ ЛУЧШЕЕ — ДЕТЯМ!</h4>
+				<p>
+					<a href="#">Игрушки</a> и коляски, мебель и канцелярские принадлежности. Мы гарантируем, что все это сделано из лучших материалов и с огромной любовью. Самое главное, что готов предложить интернет магазин детских товаров – качество. Одежда отвечает высоким мировым стандартам, а игрушки выполнены из экологичных материалов, не представляющих никакой угрозы детскому здоровью.
+				</p>
+				<p>
+					Мебель для детской имеет большое значение, хотя взрослым иногда кажется, что малыш не понимает, какая у него кроватка, но это не так. Коляски должны быть, в первую очередь, удобными. Все вещи малышам, конечно же, выбирает мама, но как приятно, когда ребенок любит свой первый транспорт и с удовольствием ездит на нем. Детский интернет магазин Panama.ua исполняет мечты малышей и дарит родителям уверенность в том, что ребенок растет в безопасности и комфорте.
+				</p>
+			</div>
+			<div class="info-right">
+				<p>
+					Наш магазин старается создать волшебный и добрый мир для детишек на своих страницах. Именно для этого каждый день трудятся талантливые взрослые – дизайнеры и художники, инженеры и программисты, производители товаров и поставщики. Для заботливых родителей будет приятной новостью то, что все товары на Panama.ua можно приобрести по доступной цене.
+				</p>
+				<h4>ТВОРЧЕСТВО ДЛЯ САМЫХ МАЛЕНЬКИХ</h4>
+				<p>
+					Талантливые детки смогут развить свои способности благодаря развивающим игрушкам. Для того, чтобы детство вашего ребёнка было по-настоящему ярким, познавательным и запоминающимся, вы можете подарить ему такие приятные и полезные товары, как:
+				</p>
+				<ul>
+					<li>наборы для творчества;</li>
+					<li>мозаики;</li>
+					<li>фоторамки;</li>
+					<li>наборы для маленьких учёных;</li>
+					<li>модели для сборки;</li>
+					<li>рамки для слепков и многое другое.</li>
+				</ul>
+				<h4>ВСЕГДА НА СВЯЗИ</h4>
+				<p>
+					Мы постарались предусмотреть всевозможные способы связи с магазином: вы сможете написать на нашу электронную почту, позвонить по нескольким телефонам или заказать обратный звонок. <a href="#">Магазин игрушек</a> в Киеве делает все для того, чтобы покупателям было максимально удобно. Персонал детского магазина в Киеве всегда готов прийти на помощь, оказать своевременную консультацию, в том числе в онлайн режиме. Мы всегда вам рады.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<h4>Для мам, пап и киндерят!</h4>
+		<form action="#" class="subscribe">
+			<input type="email" required placeholder="Ваш e-mail:">
+			<input type="submit" value="Подписаться">
+		</form>
+		<span class="subscribe-img"></span>
+	</div>
+	<footer>
+		<div class="footer-wrapper clearfix">
+			<div>
+				<a href="#" class="footer-logo"></a>
+				<span class="footer-logo-text">Для мам, пап и киндерят!</span>
+				<span class="footer-copy">
+					&copy; Компания «Дядя Влас» 2016. Все права защищены
+				</span>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<h6>Способы оплаты:</h6>
+						<a href="#" class="visa-master"></a>
+						<a href="#" class="privat24logo"></a>
+						<a href="#" class="cards">- налич. и безналич. расчет.</a>
+					</li>
+					<li>
+						<h6>Способы доставки:</h6>
+						<a href="#" class="new-mail"></a>
+						<a href="#" class="intime"></a>
+						<a href="#" class="autolux"></a>
+						<a href="#" class="delivery-icon">- доставку курьером на дом</a>
+					</li>
+					<li>
+						<h6>Наши пратнеры:</h6>
+						<a href="#" class="visa"></a>
+						<a href="#" class="master"></a>
+						<a href="#" class="qiwi"></a>
+						<a href="#" class="webmoney"></a>
+						<a href="#" class="scrill"></a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4>О компании</h4>
+				<ul>
+					<li><a href="#">Отзывы о нас</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Новости и события</a></li>
+					<li><a href="#" class="google-play"></a></li>
+					<li><a href="#" class="appstore"></a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Покупателям</h4>
+				<ul>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Для учреждений</a></li>
+					<li><a href="#">Просмотренные товары</a></li>
+					<li><a href="#">Товары с акциями</a></li>
+					<li><a href="#">Товары новинки</a></li>
+					<li><a href="#">Товары популярные</a></li>
+					<li><a href="#">Бренды</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="footer-info">Полезная информация</h4>
+				<ul>
+					<li><a href="#" class="footer-rules">Условия аренды</a></li>
+					<li><a href="#" class="footer-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="footer-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="footer-agreement">Договор аренды</a></li>
+					<li><a href="#" class="footer-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="footer-public">Публичная оферта</a></li>
+					<li><a href="#" class="footer-partners">Партнерская программа</a></li>
+					<li><a href="#" class="footer-loyalty">Программа лояльности</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-foot">
+			<span>&copy; Компания «Дядя Влас» 2016.</span> 
+			<span>Все права защищены</span>
+		</div>
+		<form id="callback">
+			<h3>Заказать обратный звонок</h3>
+			<label>
+				Ваше имя:
+				<input type="text" required>
+			</label>
+			<label>
+				Ваш телефон:
+				<input type="text" required>
+			</label>
+			<button class="submit button-green">Отправить</button>
+			<button class="cancel">Отмена</button>
+		</form>
+		<form id="enter">
+			<div class="left">
+				<h3>Вход в интернет-магазин:</h3>
+				<label>
+					Email:
+					<input type="email" required>
+				</label>
+				<label>
+					Пароль:
+					<input type="text" required>
+				</label>
+				<a href="#" class="forget">Забыл пароль</a>
+				<label class="checkbox">
+					<input type="checkbox" checked>
+					Запомнить меня
+				</label>
+				<button class="submit button-green">Отправить</button>
+				<button class="cancel">Отмена</button>
+			</div>
+			<div class="right">
+				<h3>Войти как пользователь:</h3>
+				<a href="#" class="vk">Вконтакте</a>
+				<a href="#" class="fb">Facebook</a>
+				<a href="#" class="reg">Зарегестрироваться</a>
+			</div>
+		</form>
+	</footer>
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

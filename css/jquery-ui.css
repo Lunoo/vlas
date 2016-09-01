@@ -1,0 +1,68 @@
+/* Ширина слайдера */
+.ui-slider {
+	position: relative;
+}
+/* Ползунок */
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 19px;	/* Задаем нужную ширину */
+	height: 19px;	 /* и высоту */
+	background: #fff;
+	border-style: solid;
+  	border-width: 1px;
+  	border-color: rgb(202, 210, 217);
+	box-shadow: 0px 2px 1px 0px rgba(202, 210, 217, 0.43);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.ui-state-default:focus{
+	outline: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	overflow: hidden;
+}
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+	height: 5px;   /* задаем высоту согласно дизайна */
+}
+/* позиционируем ползунки */
+.ui-slider-horizontal .ui-slider-handle {
+	top: -9px;
+	margin-left: -9px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+
+/* оформление полосы по которой ходит ползунок */
+
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	border-width: 1px;
+  	border-color: rgb(202, 210, 217);
+  	border-radius: 3px;
+	background: #ffffff;
+	box-shadow: 0px 2px 1px 0px rgba(202, 210, 217, 0.43);
+	margin: 0 15px;
+
+}
+
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header {
+	border: none;
+	background: #de9813;
+	transition: background .3s ease;
+	cursor: pointer;
+}
+.ui-widget-header:hover{
+	background: #ed9d06;
+	transition-duration: .3s;
+}

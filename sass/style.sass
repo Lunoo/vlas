@@ -78,6 +78,64 @@ em
 	clear: both
 textarea
 	resize: none
+.dropdown-list
+	position: relative
+	width: 240px
+	height: 30px
+	border: 1px solid #cad2d9
+	font-size: 12px
+	span
+		box-sizing: border-box
+		display: block
+		height: 30px
+		background: #fbfbfc
+		box-shadow: 0px 1px 3px 0px rgba(202, 210, 217, 0.004)
+		color: #282828
+		padding: 8px 14px
+		cursor: pointer
+		&:after
+			position: absolute
+			top: 12px
+			right: 15px
+			content: ''
+			width: 8px
+			height: 4px
+			transition-duration: .3s
+			background: url('../img/icons/arrow-dropdown-closed.png') no-repeat center
+	ul
+		position: absolute
+		left: -1px
+		top: 30px
+		width: 100%
+		max-height: 0
+		background: #fff
+		border: 1px solid #cad2d9
+		border-top-color: transparent
+		border-radius: 0 0 4px 4px
+		z-index: 1
+		overflow: hidden
+		transition-duration: .3s
+	li
+		box-sizing: border-box
+		padding: 8px 14px
+		white-space: nowrap
+		text-overflow: ellipsis
+		color: #cad2d9
+		cursor: pointer
+		transition: all .2s linear
+		&:hover
+			transition: all .2s linear
+			color: #bd1818
+	&.opened
+		ul
+			border-top-color: #cad2d9
+			max-height: 150px
+			box-shadow: 0 4px 5px 0 rgba(22, 23, 24, .31)
+			transition-duration: .3s
+		span:after
+			transition-duration: .3s
+			background: url('../img/icons/arrow-dropdown-opened.png') no-repeat center
+
 
 // POPUP
 
@@ -353,11 +411,14 @@ header
 
 		ul
 			margin-left: 70px
-
+			&.mobile
+				display: none
 		li
 			display: inline-block
 			margin: 0 7px
 			font-size: 13px
+			&.close
+				display: none
 		a
 			border-bottom: 0px dotted transparent
 		a:hover
@@ -674,7 +735,11 @@ header
 			width: 100%
 			height: 5px
 			box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, .16)
-
+	ul
+		opacity: 0
+		max-height: 0
+		overflow: hidden
+		transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding .3s ease-out
 	li
 		border: 1px solid #cad2d9
 		border-top: 0
@@ -682,30 +747,26 @@ header
 			border-bottom: 4px solid #cad2d9
 		&.submenu>ul
 			width: 1245px
-			height: 658px
-			display: none
-			flex-direction: column
-			flex-wrap: wrap
+			height: 652px
+			box-sizing: border-box
+			// display: flex
+			// flex-direction: column
+			// flex-wrap: wrap
 			position: absolute
 			top: 0
-			right: -1245px
-			border: 1px solid #cad2d9
-			border-top: 4px solid #cad2d9
-			border-bottom: 4px solid #cad2d9
+			right: -1244px
+			border: none
 			z-index: 1
 			background: #fff
-			>li>a
-				font-weight: 700
-				font-size: 16px
-				//border-bottom: 1px solid #cad2d9
-			li
-				width: 273px
-				border: none
-				li
-					padding-left: 20px
+			overflow: hidden
+			padding: 0
+			max-height: 0
 			>li
 				padding-left: 20px
 				position: relative
+				>a
+					font-weight: 700
+					font-size: 16px
 				&:before
 					position: absolute
 					z-index: 1
@@ -716,9 +777,25 @@ header
 					height: 30px
 					background: #ccc
 					border-radius: 50%
+			li
+				width: 273px
+				border: none
+				li
+					padding-left: 20px
+			a
+				background: none
+				&:after
+					display: none
+				
 		&.submenu>a:hover + ul, &.submenu>a + ul:hover
-			display: block
-			display: flex
+			//display: block
+			//display: flex
+			border: 1px solid #cad2d9
+			border-top: 4px solid #cad2d9
+			border-bottom: 4px solid #cad2d9
+			padding: 25px
+			opacity: 1
+			max-height: 1000px
 	a
 		position: relative
 		display: block
@@ -737,6 +814,12 @@ header
 				top: 13px
 				background: url('../img/icons/arrow-right-hover-red.png') no-repeat
 
+	&.active
+		ul
+			display: block
+			max-height: 900px
+			opacity: 1
+			transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding .3s ease-out
 .main
 	position: relative
 	background: #fff
@@ -746,8 +829,9 @@ header
 	padding: 50px 20px 40px
 	border-bottom: 2px solid #e6a93b
 
-.breadcrumbs
+.main-navigation
 	display: inline-block
+	height: 17px
 	margin-left: 55px
 	padding-bottom: 2px
 	border-bottom: 1px solid #dee0e1
@@ -756,15 +840,17 @@ header
 		text-align: center
 		margin-right: 15px
 		width: 80px
-		&:nth-child(2)
-			width: 80px
+		&.close
+			display: none
 		&:nth-child(3)
-			width: 60px
+			width: 80px
 		&:nth-child(4)
-			width: 55px
+			width: 60px
 		&:nth-child(5)
-			width: 50px
+			width: 55px
 		&:nth-child(6)
+			width: 50px
+		&:nth-child(7)
 			width: 70px
 		&:last-child
 			width: 170px
@@ -774,7 +860,6 @@ header
 		font-weight: 700
 		position: relative
 		transition: all .4s ease
-		//position: absolute
 		&:after
 			position: absolute
 			content: ''
@@ -785,8 +870,6 @@ header
 			left: 50%
 			bottom: -3px
 			transition: all .4s ease
-		&:hover
-			//position: absolute
 		&.active, &:hover
 			font-size: 16px
 			color: #bd0f0e
@@ -837,7 +920,7 @@ header
 
 .carousel
 	margin-top: 23px
-	width: 700px
+	width: 701px
 	overflow: hidden
 .carousel-wrapper
 	display: inline-block
@@ -846,7 +929,7 @@ header
 	.carousel-block
 		float: left
 		width: 220px
-		height: 300px
+		height: 302px
 		margin-left: 17px
 		border: 1px solid #cad2d9
 		line-height: 1.2
@@ -879,8 +962,8 @@ header
 			margin: 15px
 			height: 144px
 			overflow: hidden
-		img + p
-			height: 54px
+		figure + p
+			height: 53px
 			overflow: hidden
 			margin-bottom: 13px
 		.more
@@ -1253,7 +1336,6 @@ h3.head
 	float: right
 	.carousel
 		width: 495px
-		//margin-top: 125px
 	.carousel-block
 		width: 495px
 	figure, .carousel-block img
@@ -1453,6 +1535,7 @@ h3.head
 .info
 	clear: both
 	font-size: 12px
+	color: #485259
 	h3
 		margin-bottom: 20px
 	&-left
@@ -1466,11 +1549,11 @@ h3.head
 	h4
 		font-weight: 700
 		margin-top: 30px
+		color: #282828
 	p
 		font-size: 14px
 		line-height: 1.5
 		margin: 20px 0 0 0px
-		color: #282828
 		text-align: justify
 		a
 			text-decoration: underline
@@ -1687,13 +1770,315 @@ footer
 	.footer-foot
 		display: none
 
+// FILTER
+
+.filter
+	float: left
+	clear: left
+	width: 270px
+	margin-top: 20px
+	color: #485259
+	&-block
+		margin-top: 10px
+		border: 1px solid #cad2d9
+		border-bottom-width: 5px
+		border-radius: 4px
+		padding-bottom: 20px
+		box-sizing: border-box
+		max-height: 600px
+		overflow: hidden
+		transition: max-height .3s ease
+		h2
+			position: relative
+			height: 55px
+			line-height: 55px
+			padding-left: 20px
+			background-image: -moz-linear-gradient( to top, rgb(202,210,217) 0%, rgba(202,210,217,0) 100%)
+			background-image: -webkit-linear-gradient( to top, rgb(202,210,217) 0%, rgba(202,210,217,0) 100%)
+			background-image: -ms-linear-gradient( to top, rgb(202,210,217) 0%, rgba(202,210,217,0) 100%)
+			background-image: linear-gradient( to top, rgb(202,210,217) 0%, rgba(202,210,217,0) 100%)
+			border-bottom: 1px solid #cad2d9
+			border-radius: 4px
+			cursor: pointer
+			transition-duration: .3s
+			&:after
+				position: absolute
+				top: 25px
+				right: 17px
+				content: ''
+				height: 6px
+				width: 8px
+				background: url('../img/icons/arrow-opened.png') no-repeat center
+				transition-duration: .1s
+			&:hover
+				transition-duration: .3s
+				color: #c12227
+				&:after
+					transition-duration: .1s
+					background: url('../img/icons/arrow-opened-hover.png') no-repeat center
+		&.closed
+			max-height: 56px
+			transition: max-height .3s ease
+			h2:after
+				background: url('../img/icons/arrow-closed.png') no-repeat center
+			h2:hover:after
+				background: url('../img/icons/arrow-closed-hover.png') no-repeat center
+		.num
+			width: 60px
+			height: 25px
+			border: 1px solid #d5dee5
+			border-radius: 3px
+			box-shadow: inset 0px 1px 5px 0px rgba(213, 222, 229, 0.5)
+			text-align: center
+			color: #485259
+			&.min
+				margin: 0 60px 0 35px
+		[id*="range"]
+			margin: 28px 20px 18px
+
+		.button-gold
+			display: block
+			width: 75px
+			height: 35px
+			background: #de9813
+			margin: 35px auto 0
+			font-size: 14px
+			transition-duration: .3s
+			&:focus
+				outline: none
+			&:hover
+				background: #ed9d06
+				box-shadow: 0px 2px 6px 0px rgba(22, 23, 24, 0.6)
+				transition-duration: .3s
+		>div
+			padding: 0 20px
+		[type="checkbox"]
+			display: none
+			&:checked + label:before
+				background: url('../img/icons/checkbox-ok.png') no-repeat center
+		label
+			position: relative
+			display: block
+			height: 20px
+			margin-top: 15px
+			font-size: 14px
+			padding-left: 24px
+			cursor: pointer
+			transition-duration: .2s
+			&:before
+				transition-duration: .2s
+				position: absolute
+				top: -4px
+				left: 0
+				content: ''
+				height: 17px
+				width: 17px
+				border: 1px solid #d5dee6
+				box-shadow: inset 0px 1px 5px 0px rgba(213, 222, 230, 0.5)
+			&:hover
+				color: #c12227
+				transition: color .2s
+				&:before
+					box-shadow: none
+					transition: border .2s, background-image .2s
+					border-color: #c12227
+					background: url('../img/icons/checkbox-ok-hover.png') no-repeat center !important
+
+		&:first-child
+			margin-top: 0
+.breadcrumbs
+	font-size: 0
+	margin-top: 22px
+	li
+		display: inline-block
+		position: relative
+		border-top: 1px solid #cad2d9
+		border-bottom: 1px solid #cad2d9
+		background: #fff
+		&:first-child
+			border-left: 1px solid #cad2d9
+		&:after, &:before
+			z-index: 1
+			position: absolute
+			content: ''
+		&:before
+			top: -1px
+			right: -8px
+			border-top: 17px solid transparent
+			border-bottom: 17px solid transparent
+			border-left: 8px solid #cad2d9
+		&:after
+			top: 0
+			right: -7px
+			border-top: 16px solid transparent
+			border-bottom: 16px solid transparent
+			border-left: 7px solid #fff
+		&:hover
+			background: #fef2da
+			&:after
+				border-left-color: #fef2da
+	a
+		display: block
+		height: 32px
+		line-height: 32px
+		padding: 0 17px
+		color: #485259
+		font-size: 13px
+		&:hover
+			color: #be1818
+.content
+	margin-left: 290px
+	&-text
+		color: #282828
+		h2
+			font-size: 30px
+			font-weight: 700
+			margin: 20px 0 35px
+		p
+			line-height: 1.2
+			font-size: 14px
+			text-align: justify
+.gods-layout
+	float: right
+	font-size: 0
+	margin: 24px 0
+	input
+		display: none
+	label
+		display: inline-block
+		height: 30px
+		width: 40px
+		cursor: pointer
+		border: 1px solid #cad2d9
+		&[for="layout-1"]
+			border-right: none
+			border-radius: 3px 0 0 3px
+			background: url('../img/icons/layout-tile.png') no-repeat center
+			transition-duration: .2s
+			&:hover
+				transition-duration: .2s
+				background: url('../img/icons/layout-tile-active.png') no-repeat center
+		&[for="layout-2"]
+			border-radius: 0 3px 3px 0
+			background: url('../img/icons/layout-list.png') no-repeat center
+			transition-duration: .2s
+			&:hover
+				transition-duration: .2s
+				background: url('../img/icons/layout-list-active.png') no-repeat center
+	input:checked + label
+		box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.2)
+			
+.content-gods
+	float: none
+	display: inline-block
+	.carousel
+		clear: right
+		overflow: visible
+		width: auto
+		&-block
+			height: 405px
+			width: 230px
+			margin: 0 12px 15px 0
+			.carousel-inner
+				position: relative
+				width: 230px
+				height: 405px
+				left: 0
+				top: 0
+			&:nth-child(5n)
+				margin-right: 0
+			.gods-like, .gods-buy, .gods-text > div ~ *
+				display: none
+			.gods-text> div
+				width: calc(100% - 20px)
+				padding: 5px 10px
+			.gods-price
+				margin: 0
+			img.gods-img
+				height: 160px
+		&-block:hover
+			outline: none 
+			.carousel-inner
+				background: #fff
+				position: absolute
+				z-index: 1
+				top: -25px
+				left: -25px
+				height: 660px
+				width: 280px
+				outline: 2px solid #de9813
+				box-shadow: 0px 0px 22px 5px rgba(202, 210, 217, 1)
+				transition: width .5s ease, top .5s ease, left .5s ease
+			figure
+				height: 260px
+			img.gods-img
+				height: 226px
+			.gods-text
+				padding: 0 27px
+				transition: all .5s ease
+				h4
+					color: #bd2126
+				>div
+					padding-bottom: 15px
+			.gods-like, .gods-buy
+				display: inline-block
+			h6
+				display: block
+				margin: 8px 0
+				font-size: 13px
+				font-weight: 700
+			label[for*="size"]
+				box-sizing: border-box
+				display: inline-block
+				width: 36px
+				height: 28px
+				margin-right: 2px
+				border: 1px solid #c1c1c1
+				border-bottom-width: 3px
+				border-radius: 3px
+				line-height: 28px
+				text-align: center
+				font-size: 15px
+				font-weight: 700
+				cursor: pointer
+			[type="radio"]:checked + label[for*="size"]
+				color: #fff
+				border: none
+				background-image: -moz-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+				background-image: -webkit-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+				background-image: -ms-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+				background-image: linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+				box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.18)
+			label[for*="color"]
+				box-sizing: border-box
+				display: inline-block
+				width: 34px
+				height: 34px
+				padding: 4px
+				border: 1px solid transparent
+				border-radius: 50%
+				cursor: pointer
+				img
+					width: 25px
+					height: 25px
+			[type="radio"]:checked + label[for*="color"]
+				border-color: #de9813
+
+.dropdown-list
+	float: right
+	margin-left: 15px
+
 // RESPONSIVE
 @media screen and (max-width: 1580px)
 	body
 		font-size: 14px
 	header
 		height: 120px
+		.wrapper
+			position: relative
+			max-width: 800px
 		.header-logo
+			margin-left: 57px
 			width: 175px
 			height: 85px
 			background-size: 110px
@@ -1704,16 +2089,84 @@ footer
 				background: url("../img/logo.png") no-repeat
 				background-size: 60px
 		.header-nav
+			margin-left: 15px
 			ul
-				display: none
+				position: absolute
+				left: 15px
+				top: 45px
+				text-indent: 999px
+				margin-left: 0
+				width: 31px
+				//height: 26px
+				box-sizing: border-box
+				max-height: 26px
+				overflow: hidden
+				//transition: max-height 1s ease, padding 1s ease
+				li
+					display: block
+					&.close
+						position: absolute
+						display: block
+						right: 0
+						top: 0
+						width: 31px
+						height: 26px
+						background: url('../img/icons/menu.png') no-repeat
+						background-size: contain
+						margin: 0
+				a
+					font-size: 0
+				&.active
+					max-height: 200px
+					transition: max-height .3s ease, padding .3s ease
+					z-index: 2
+					top: 0
+					left: 0
+					width: 180px
+					//height: auto
+					background: rgba(255, 255, 255, .95)
+					text-indent: 0
+					border: 1px solid #e0e0e0
+					padding: 25px 0
+					li:not(.close)
+						a
+							position: relative
+							padding: 10px 0
+							display: block
+							padding-left: 25px
+							border-bottom: 1px solid #e0e0e0
+							font-size: 13px
+							&:before
+								position: absolute
+								content: ''
+								width: 20px
+								height: 20px
+								left: 0
+								top: 6px
+					li:nth-child(2) a:before
+						background: url('../img/icons/menu-about.png') no-repeat center
+					li:nth-child(3) a:before
+						background: url('../img/icons/menu-credit.png') no-repeat center
+					li:nth-child(4) a:before
+						background: url('../img/icons/menu-back.png') no-repeat center
+					li:nth-child(5) a:before
+						background: url('../img/icons/menu-deliver.png') no-repeat center
+					li.close
+						position: absolute
+						display: block
+						right: 0
+						top: 5px
+						width: 21px
+						height: 19px
+						background: url('../img/icons/close-menu.png') no-repeat
 			form
-				width: 375px
+				width: 365px
 				p
 					margin-top: 8px
 		.header-contacts
 			position: relative
 			width: 265px
-			margin: -10px 0 0 148px
+			margin: -10px 0 0 114px
 			padding-top: 0
 			[href*="mail"]
 				float: right
@@ -1855,7 +2308,7 @@ footer
 			width: 48%
 			border: none
 
-	.breadcrumbs
+	.main-navigation
 		margin-left: 0
 		position: absolute
 		left: -35px
@@ -1883,17 +2336,20 @@ footer
 				h4
 					font-size: 12px
 					margin: 11px
+					height: 28px
+					overflow: hidden
 				.date
 					font-size: 10px
 					height: 22px
 					width: 72px
 					line-height: 22px
-				img
+				img, figure
 					height: 60px
 				p
 					margin: 5px 11px
 					height: 99px
-				img + p
+				figure + p
+					margin: 7px 11px
 					height: 30px
 				.more
 					&:before
@@ -1985,14 +2441,17 @@ footer
 				height: 36px
 	footer
 		.footer-wrapper
+			max-width: 800px
 			>div
 				border-right: none
 				&:nth-child(-n+2)
 					display: none
 				&:nth-child(3)
-					padding: 0 30px
+					padding: 0 10px
 				&:nth-child(4)
-					padding: 0 40px
+					padding: 0 60px
+				&:nth-child(5)
+					padding-left: 0
 		.footer-foot
 			display: block
 			padding: 5px 0
@@ -2003,4 +2462,364 @@ footer
 				display: block
 				margin: 10px 0
 
-
+@media screen and (max-width: 768px)
+	#enter
+		width: 100%
+		max-width: 400px
+		> *
+			padding: 25px 10px 15px
+		.left, .right
+			float: none
+			width: calc(100% - 20px)
+			height: auto
+		[type="text"], [type="email"]
+			width: 185px
+	.wrapper
+		max-width: 320px
+	header
+		height: 65px
+		.wrapper
+			z-index: 1
+		.header-logo
+			position: absolute
+			top: 125px
+			left: 9px
+			margin-left: 0
+			width: 73px
+			height: 25px
+			background: url('../img/logo-text.png') no-repeat
+			background-size: contain
+			&:before
+				position: absolute
+				top: -50px
+				left: 15px
+				width: 40px
+				height: 45px
+				background-size: 36px
+		.header-contacts
+			margin-left: 165px
+			margin-top: 15px
+			width: auto
+			[href*="mail"], .callme
+				display: none
+			.header-tel-open
+				margin-left: -20px
+				&:after
+					display: none
+				&:before
+					top: 7px
+					width: 19px
+					height: 21px
+					background: url("../img/icons/tel-mobile.png") center no-repeat
+			#header-tel:target
+				left: -45px
+				top: 40px
+				&:before, &:after
+					left: 28px
+		.header-nav
+			ul 
+				width: 20px
+				height: 16px
+				left: 8px
+				top: 25px
+				&.active
+					width: 320px
+					padding-bottom: 0
+					li:last-child a
+						border-bottom: none
+				li.close
+					width: 20px
+					height: 16px
+				&.mobile
+					width: 320px
+					height: auto
+					top: 161px
+					left: 0
+					padding: 0
+					background: rgba(255, 255, 255, 0.95)
+					text-indent: 0
+					border: 1px solid #e0e0e0
+					&.active
+						display: block
+					li
+						display: block
+						a[class*="header"]
+							display: block
+							position: relative
+							padding: 10px 0
+							padding-left: 25px
+							&:before
+								content: ''
+								position: absolute
+								top: 7px
+								left: -7px
+								width: 23px
+								height: 17px
+							&.header-info:before
+								background: url('../img/icons/footer-info.png') no-repeat center
+							&.header-rules:before
+								background: url('../img/icons/footer-rules.png') no-repeat center
+							&.header-gifts:before
+								background: url('../img/icons/footer-gifts.png') no-repeat center
+							&.header-ok:before
+								background: url('../img/icons/footer-ok.png') no-repeat center
+							&.header-agreement:before
+								background: url('../img/icons/footer-agreement.png') no-repeat center
+							&.header-close:before
+								background: url('../img/icons/footer-close.png') no-repeat center
+							&.header-public:before
+								background: url('../img/icons/footer-public.png') no-repeat center
+							&.header-partners:before
+								background: url('../img/icons/footer-partners.png') no-repeat center
+							&.header-loyalty:before
+								background: url('../img/icons/footer-loyalty.png') no-repeat center
+			form
+				position: absolute
+				width: 232px
+				top: 88px
+				left: 80px
+				[type="text"]
+					height: 28px
+				[type="submit"]
+					height: 28px
+				p
+					margin-top: 0
+				span
+					display: none
+		.header-personal
+			width: 120px
+			margin-top: 10px
+			padding-top: 0
+			.cab
+				display: inline-block
+				height: 22px
+				width: 22px
+				margin-left: 0
+				font-size: 0
+				border-bottom: none
+				&:before
+					top: 2px
+					left: 3px
+					width: 16px
+					height: 21px
+					background-size: contain
+			[class*="header"]
+				margin-top: 5px
+				height: 35px
+				width: 35px
+	.catalog
+		position: absolute
+		top: -65px
+		left: 0
+		width: 100%
+		h2
+			position: absolute
+			top: 15px
+			left: 40px
+			height: 34px
+			width: 82px
+			line-height: 36px
+			overflow: hidden
+			box-shadow: none
+			&:after
+				display: none
+		ul
+			width: calc(100vw - 10px)
+			max-width: 400px
+			position: absolute
+			top: 60px
+			left: 0
+			right: 0
+			margin: auto
+			z-index: 2
+			background: #fff
+			border-top: 1px solid #cad2d9
+			max-height: 700px
+			opacity: 1
+		&.active ul
+			max-height: 0
+			opacity: 0
+				
+	.main-navigation
+		width: 100px
+		border-bottom: none
+		left: 0
+		right: 0
+		margin: auto
+		top: -38px
+		transition: top .3s ease-out
+		li
+			&.close
+				display: block
+				height: 20px
+				line-height: 22px
+				width: 100px !important
+				background: #de9916
+				border-radius: 5px/3px
+				text-transform: uppercase
+				color: #fff
+				font-size: 12px
+				font-weight: 900
+			&:not(.close)
+				display: inline-block
+				max-height: 0
+				opacity: 0
+				overflow: hidden
+				transition: opacity .3s ease-out
+		&.active
+			z-index: 1
+			width: 300px
+			top: -90px
+			text-align: center
+			transition: top .3s ease-out
+			& + .slider
+				margin-top: 52px
+				transition: margin .3s ease-out
+			li
+				&.close
+					margin: 0 auto 15px
+				&:not(.close)
+					margin: 5px 0 0 -.3em
+					padding-right: 10px
+					border-bottom: 1px solid #cfd1d2
+					max-height: 30px
+					opacity: 1
+					transition: opacity .3s ease-out
+	.main
+		padding-top: 110px
+	.main-content
+		margin-left: 0
+	.slider
+		position: relative
+		width: 100%
+		height: 200px
+		margin-top: 0
+		transition: margin .3s ease-out
+		ul li
+			width: calc(100vw - 10px)
+			height: 200px
+			background-size: cover
+			background-position: center
+		img
+			display: none
+	.main-content .carousel
+		width: 100%
+		.carousel-wrapper .carousel-block
+			width: calc(48vw - 7px)
+			margin-left: 9px
+			&:first-child
+				margin-left: 0
+			figure
+				height: 60px
+				background-size: cover
+				background-position: center
+			img
+				display: none
+			.more:before
+				left: 20px
+	h3.head
+		font-size: 15px
+	.gods
+		width: calc(100% - 10px)
+	.gods .carousel
+		margin-top: 0
+		width: calc(100% + 10px)
+		.carousel-wrapper .carousel-block
+			width: calc(48vw - 7px)
+			height: 339px
+			margin-left: 9px
+			&:first-child
+				margin-left: 0
+			figure
+				height: 140px
+			img
+				height: 100px
+			.gods-rating
+				margin: 5px 8px 0 0
+				i
+					height: 13px
+					width: 13px
+			.gods-review
+				width: 48px
+				height: 20px
+				padding: 4px 0
+				font-size: 9px
+				.number
+					font-size: 9px
+			.gods-text
+				> div
+					width: calc(100% - 10px)
+					padding: 5px
+				h4
+					margin: 17px 0
+			.gods-price
+				height: auto
+				line-height: 1
+				font-size: 12px
+				text-align: left
+			.gods-like
+				width: 55px
+				height: 55px
+				margin-left: 0
+				&:before
+					top: 18px
+					width: 23px
+					height: 23px
+			.gods-buy
+				width: calc(100% - 62px)
+				height: 23px
+				line-height: 23px
+				font-size: 10px
+			&.discont:before
+				top: -8px
+				right: -8px
+				height: 35px
+				line-height: 35px
+				width: 35px
+				background-size: contain
+				font-size: 12px
+		&-nav
+			width: 79px
+	.special
+		left: 0
+		width: calc(100% - 8px)
+		.carousel
+			&:first-child
+				display: none
+			.carousel-wrapper .carousel-block
+				width: calc(100vw - 12px)
+				figure
+					height: 100%
+				img
+					height: auto
+					max-height: 100%
+					max-width: 100%
+		.carousel-nav
+			width: 75px
+	aside
+		h4
+			display: none
+		.aside-social, .aside-subscribe
+			float: none
+			width: 100%
+		.aside-social
+			padding: 0
+		.aside-subscribe
+			[type="submit"]
+				font-size: 13px
+			input
+				width: 80%
+	div.subscribe
+		width: 325px
+		h4
+			font-size: 24px
+		.subscribe-img
+			height: 42px
+			width: 42px
+			background: url("../img/cubics.svg") no-repeat center -22px
+			background-size: 95px 135px
+			
+	.blog.carousel, .review, .info, .subscribe form.subscribe, .footer-wrapper
+		display: none
+	footer .footer-foot
+		border-top: none
