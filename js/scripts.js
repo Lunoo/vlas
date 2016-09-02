@@ -211,4 +211,10 @@ $(function(){
         $this.parents('.dropdown-list').find('span').text($this.text());
         $this.parents('.dropdown-list').removeClass('opened');
     })
+    $('.gods-layout #layout-1').click(function(){
+        $(this).parents('.content-gods').removeClass('list');
+    })
+    $('.gods-layout #layout-2').click(function(){
+        $(this).parents('.content-gods').addClass('list');
+    })
 })
