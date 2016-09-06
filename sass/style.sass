@@ -1577,6 +1577,7 @@ h3.head
 	ul
 		list-style: disc
 		margin: 20px 0 0 25px
+		font-size: 14px
 	li
 		margin-top: 8px
 
@@ -1892,6 +1893,9 @@ footer
 
 		&:first-child
 			margin-top: 0
+
+// CATALOG
+
 .breadcrumbs
 	font-size: 0
 	margin-top: 22px
@@ -1936,10 +1940,11 @@ footer
 	margin-left: 290px
 	margin-bottom: 70px
 	&-text
-		color: #282828
+		color: #435259
 		h2
 			font-size: 30px
 			font-weight: 700
+			text-transform: uppercase
 			margin: 20px 0 35px
 		p
 			line-height: 1.2
@@ -2212,6 +2217,91 @@ footer
 					background: url('../img/icons/arrow-pag-right.png') no-repeat
 				&:hover:before
 					background: url('../img/icons/arrow-pag-right-hover.png') no-repeat
+
+// CATEGORY
+
+.sidebar
+	float: left
+	clear: left
+	width: 270px
+	.carousel
+		width: 100%
+		&-wrapper
+			width: 100%
+		&-block
+			float: none
+			display: block
+			height: 300px
+			margin: 22px auto 0
+			&:first-child
+				margin-left: auto
+			figure + p
+				height: 54px
+		&-nav
+			width: 161px
+			margin-top: 17px
+
+.category
+	margin-top: 40px
+	&-block
+		width: 285px
+		height: 385px
+		float: left
+		margin: 0 23px 23px 0
+		outline: 1px solid #cad2d9
+		color: #435259
+		transition: outline-color .2s
+		&:nth-child(4n)
+			margin-right: 0
+		&:hover
+			outline: 2px solid #de9813
+			transition: outline-color .2s
+			figcaption
+				transition-duration: .2s
+				color: #c12227
+				border-color: #c12227
+		figure
+			height: 205px
+			padding-top: 25px
+		figcaption
+			display: inline-block
+			margin: 0 0 35px 30px
+			font-size: 25px
+			border-bottom: 1px dashed transparent
+			transition-duration: .2s
+		img
+			display: block
+			margin: auto
+			height: 125px
+			max-width: 100%
+		li a
+			display: block
+			height: 30px
+			line-height: 30px
+			padding: 0 10px 0 30px
+			font-size: 13px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			border-top: 1px solid #cad2d9
+			&:before
+				position: relative
+				display: none
+				float: left
+				top: 12px
+				left: 0
+				content: ''
+				height: 6px
+				width: 12px
+				background: url('../img/icons/arrow-category.png') no-repeat
+			&.link-special, &:hover
+				color: #c12227
+				transition-duration: .2s
+				&:before
+					display: inline-block
+			&:hover
+				background: #fef2da
+
 
 // RESPONSIVE
 @media screen and (max-width: 1580px)
@@ -2727,6 +2817,41 @@ footer
 	.gods-pagination-pages
 		float: none
 		margin-top: 40px
+	// CATEGORY
+	
+	.sidebar
+		width: 190px
+		.carousel
+			&-block
+				height: 245px
+				width: auto
+				h4
+					font-size: 12px
+					margin: 15px 11px 11px
+				.date
+					width: 80px
+					height: 25px
+					margin-bottom: 7px
+					line-height: 25px
+					font-size: 10px
+				p
+					margin: 12px 11px
+					height: 111px
+				figure + p
+					margin: 2px 11px 4px
+					height: 43px
+				.more
+					font-size: 12px
+					&:before
+						left: 40px
+	.category
+		&-block
+			margin: 0 12px 20px 0
+			width: calc(50% - 6px)
+			&:nth-child(2n)
+				margin-right: 0
+			figcaption
+				font-size: 23px
 
 
 @media screen and (max-width: 768px)
@@ -3154,16 +3279,16 @@ footer
 				margin: 0 60px 0 50px
 	.content
 		margin-left: 0
-	.filter + .content
+	.filter + .content, .sidebar + .content
 		margin-top: 60px
 		.main-navigation
 			width: 100%
 			top: -65px
-		.close
-			display: none
-		li
-			opacity: 1
-			max-height: 20px
+			.close
+				display: none
+			li
+				opacity: 1
+				max-height: 20px
 	.content-text 
 		h2
 			font-size: 18px
@@ -3229,3 +3354,15 @@ footer
 		&:before
 			top: 12px
 			left: 30px
+
+	// CATEGORY
+	
+	.sidebar
+		display: none
+	.content-text p, .slider, aside
+		display: none
+	.category
+		margin-top: 0
+		&-block
+			margin: 20px 30px
+			width: calc(100% - 60px)

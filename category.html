@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Дядя Влас</title>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<a href="#" class="header-logo"></a>
+			<div class="header-nav">
+				<ul>
+					<li class="close"></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Кредит</a></li>
+					<li><a href="#">Гарантия и возврат</a></li>
+					<li><a href="#">Доставки и оплата</a></li>
+				</ul>
+				<ul class="mobile">
+					<li><a href="#" class="header-info">Полезная информация</a></li>
+					<li><a href="#" class="header-rules">Условия аренды</a></li>
+					<li><a href="#" class="header-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="header-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="header-agreement">Договор аренды</a></li>
+					<li><a href="#" class="header-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="header-public">Публичная оферта</a></li>
+					<li><a href="#" class="header-partners">Партнерская программа</a></li>
+					<li><a href="#" class="header-loyalty">Программа лояльности</a></li>
+				</ul>
+				<form action="#">
+					<p>
+						<input type="text" placeholder="Поиск по сайту">
+					</p>
+					<input type="submit">
+					<span>Напр.: <i>Коляска</i></span>
+				</form>
+			</div>
+			<div class="header-contacts">
+				<a href="#callback" class="callme">Call me</a>
+				<a href="#header-tel" class="header-tel-open"></a>
+				<div class="header-tel" id="header-tel">
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+				</div>
+				<a href="mail:info@vlas.com.ua">info@vlas.com.ua</a>
+			</div>
+			<div class="header-personal">
+				<a href="#enter" class="cab">Личный кабинет</a>
+				<a href="#" class="header-like" data-number="14">Желаемое</a>
+				<div class="description">
+					<h3>Список желаний пуст</h3>
+					<p>
+						Добавляйте товары в список желаний, делитесь списками с друзьями и обсуждайте товары вместе.
+					</p>
+					<span>
+						Если у вас уже есть списки желаний, 
+					</span>
+					<a href="#">авторизуйтесь.</a>
+				</div>
+				<a href="#" class="header-basket" data-number="14">Корзина</a>
+				<div class="description empty">
+					<h3>Ваша корзина пуста</h3>
+					<p>
+						Добавляйте понравившиеся товары или <a href="#">авторизуйтесь</a>, если добавляли ранее.
+					</p>
+				</div>
+				<!-- <div class="description full">
+					<span>В корзине <em>2 товара</em></span>
+					<span>на сумму <em>4026 грн</em></span>
+					<a href="#" class="offer submit button-green">Оформить заказ</a>
+					<hr>
+					<a href="#" class="basket">Перейти в корзину</a>
+				</div> -->
+			</div>
+		</div>
+	</header>
+
+	<div class="main clearfix">
+		<div class="catalog">
+			<h2>Каталог товаров</h2>
+			<ul>
+				<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+				<li><a href="#">Телефоны, MP3</a></li>
+				<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+				<li class="submenu">
+					<a href="#">Бытовая техника и интерьер</a>
+					<ul>
+						<li>
+							<a href="#">Ноутбуки, планшеты и компьютеры</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Телефоны, MP3</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">ТВ, Аудио, Видео, Фото</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активная вкладва 2го уровня</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Авиа и ЖД билеты</a></li>
+								<li><a href="#">Одежда, обувь и аксессуары</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активный отдых и туризм</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Спортивные товары</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Активный отдых и туризм</a></li>
+				<li><a href="#">Спортивные товары</a></li>
+				<li><a href="#">Детский мир</a></li>
+				<li><a href="#">Товары для дома</a></li>
+				<li><a href="#">Дача, сад, огород</a></li>
+				<li><a href="#">Инструменты и оборудование</a></li>
+				<li><a href="#">Автотовары NEW</a></li>
+				<li><a href="#">Авиа и ЖД билеты</a></li>
+				<li><a href="#">Одежда, обувь и аксессуары</a></li>
+				<li><a href="#">Алкогольные напитки и продукты</a></li>
+				<li><a href="#">Ювелирные украшения</a></li>
+				<li><a href="#">Косметика и парфюмерия</a></li>
+				<li><a href="#">Торговое оборудование </a></li>
+				<li><a href="#">Офис, школа, книги</a></li>
+				<li><a href="#">Зоотовары</a></li>
+			</ul>
+		</div>
+		<div class="sidebar">
+			<div class="carousel">
+				<div class="carousel-wrapper">
+					<a href="#" class="carousel-block">
+						<h4>Заголовок последней новости</h4>
+						<span class="date">
+							21.03.2015
+						</span>
+						<p>
+							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям...
+						</p>
+						<span class="more">Подробнее</span>
+					</a>
+					<a href="#" class="carousel-block">
+						<h4>Заголовок последней новости с картинкой</h4>
+						<span class="date">
+							21.03.2015
+						</span>
+						<figure data-src="img/blog-image.jpg">
+							<img src="img/blog-image.jpg" alt="blog-image">
+						</figure>
+						<p>
+							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
+						</p>
+						<span class="more">Подробнее</span>
+					</a>
+				</div>
+				<div class="carousel-nav">
+					<a href="#" class="all">Все новости</a>
+				</div>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<ul class="main-navigation">
+				<li class="close">Меню</li>
+				<li><a href="#">Для мамы</a></li>
+				<li><a href="#">Для папы</a></li>
+				<li><a href="#">Аренда</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#" class="active">Блог</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Благотворительность</a></li>
+			</ul>
+			<div class="slider">
+				<ul>
+					<li data-src="img/slider-image-1.jpg">
+						<img src="img/slider-image-1.jpg" alt="slider-image-1">
+					</li>
+					<li data-src="img/slider-image-2.jpg">
+						<img src="img/slider-image-2.jpg" alt="slider-image-2">
+					</li>
+					<li data-src="img/slider-image-2.jpg">
+						<img src="img/slider-image-2.jpg" alt="slider-image-2">
+					</li>
+				</ul>
+			</div>
+			<aside>
+				<div class="slider">
+					<ul>
+						<li>
+							<img src="img/banner-img-1.jpg" alt="banner-image-1">
+						</li>
+						<li>
+							<img src="img/banner-img-2.jpg" alt="banner-image-2">
+						</li>
+						<li>
+							<img src="img/banner-img-3.jpg" alt="banner-image-2">
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Коляски</a></li>
+			</ul>
+			<div class="content-text">
+				<h2>Коляски и автокресла</h2>
+				<p>
+					Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны реализация намеченных плановых заданий позволяет оценить значение новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание соответствующий условий активизации. 
+				</p>
+			</div>
+			<div class="category">
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+				<div class="category-block">
+					<figure>
+						<figcaption>Коляски</figcaption>
+						<img src="img/category-img.jpg" alt="category-img">
+					</figure>
+					<ul>
+						<li><a href="#">Коляски для двойни</a></li>
+						<li><a href="#">Коляски-трости</a></li>
+						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
+						<li><a href="#">Универсальные коляски 2 в 1</a></li>
+						<li><a href="#">Универсальные коляски 3 в 1</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<h3 class="head">Дядя Влас - Интернет магазин</h3>
+			<div class="info-left">
+				<h4>PANAMA ПРИНОСИТ МАЛЫШАМ РАДОСТЬ</h4>
+				<p>
+					Интернет магазин детских товаров – это великолепная возможность принести радость себе и ребёнку, не выходя из дома. Всего за несколько минут вы можете заказать необходимую вещь для своего малыша, будь то игрушка или удобная качественная одежда. Заходите к нам в гости, не стесняйтесь! У нас есть все-все-все, что нужно деткам. В детском интернет магазине Панама огромный выбор, удобная система поиска и навигации, поэтому найти нужную вещь вы сможете легко и быстро.
+				</p>
+				<p>
+					Яркие образы, любимые герои, популярные игрушки и многое другое – на страницах нашего магазина игрушек! Мы предложим очень широкий спектр товаров, в число которых вошла даже обувь для детей, и все это для того, чтобы мамам и папам не пришлось тратить время на поиски.
+				</p>
+				<h4>ВСЁ ЛУЧШЕЕ — ДЕТЯМ!</h4>
+				<p>
+					<a href="#">Игрушки</a> и коляски, мебель и канцелярские принадлежности. Мы гарантируем, что все это сделано из лучших материалов и с огромной любовью. Самое главное, что готов предложить интернет магазин детских товаров – качество. Одежда отвечает высоким мировым стандартам, а игрушки выполнены из экологичных материалов, не представляющих никакой угрозы детскому здоровью.
+				</p>
+				<p>
+					Мебель для детской имеет большое значение, хотя взрослым иногда кажется, что малыш не понимает, какая у него кроватка, но это не так. Коляски должны быть, в первую очередь, удобными. Все вещи малышам, конечно же, выбирает мама, но как приятно, когда ребенок любит свой первый транспорт и с удовольствием ездит на нем. Детский интернет магазин Panama.ua исполняет мечты малышей и дарит родителям уверенность в том, что ребенок растет в безопасности и комфорте.
+				</p>
+			</div>
+			<div class="info-right">
+				<p>
+					Наш магазин старается создать волшебный и добрый мир для детишек на своих страницах. Именно для этого каждый день трудятся талантливые взрослые – дизайнеры и художники, инженеры и программисты, производители товаров и поставщики. Для заботливых родителей будет приятной новостью то, что все товары на Panama.ua можно приобрести по доступной цене.
+				</p>
+				<h4>ТВОРЧЕСТВО ДЛЯ САМЫХ МАЛЕНЬКИХ</h4>
+				<p>
+					Талантливые детки смогут развить свои способности благодаря развивающим игрушкам. Для того, чтобы детство вашего ребёнка было по-настоящему ярким, познавательным и запоминающимся, вы можете подарить ему такие приятные и полезные товары, как:
+				</p>
+				<ul>
+					<li>наборы для творчества;</li>
+					<li>мозаики;</li>
+					<li>фоторамки;</li>
+					<li>наборы для маленьких учёных;</li>
+					<li>модели для сборки;</li>
+					<li>рамки для слепков и многое другое.</li>
+				</ul>
+				<h4>ВСЕГДА НА СВЯЗИ</h4>
+				<p>
+					Мы постарались предусмотреть всевозможные способы связи с магазином: вы сможете написать на нашу электронную почту, позвонить по нескольким телефонам или заказать обратный звонок. <a href="#">Магазин игрушек</a> в Киеве делает все для того, чтобы покупателям было максимально удобно. Персонал детского магазина в Киеве всегда готов прийти на помощь, оказать своевременную консультацию, в том числе в онлайн режиме. Мы всегда вам рады.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<h4>Для мам, пап и киндерят!</h4>
+		<form action="#" class="subscribe">
+			<input type="email" required placeholder="Ваш e-mail:">
+			<input type="submit" value="Подписаться">
+		</form>
+		<span class="subscribe-img"></span>
+	</div>
+	<footer>
+		<div class="footer-wrapper clearfix">
+			<div>
+				<a href="#" class="footer-logo"></a>
+				<span class="footer-logo-text">Для мам, пап и киндерят!</span>
+				<span class="footer-copy">
+					&copy; Компания «Дядя Влас» 2016. Все права защищены
+				</span>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<h6>Способы оплаты:</h6>
+						<a href="#" class="visa-master"></a>
+						<a href="#" class="privat24logo"></a>
+						<a href="#" class="cards">- налич. и безналич. расчет.</a>
+					</li>
+					<li>
+						<h6>Способы доставки:</h6>
+						<a href="#" class="new-mail"></a>
+						<a href="#" class="intime"></a>
+						<a href="#" class="autolux"></a>
+						<a href="#" class="delivery-icon">- доставку курьером на дом</a>
+					</li>
+					<li>
+						<h6>Наши пратнеры:</h6>
+						<a href="#" class="visa"></a>
+						<a href="#" class="master"></a>
+						<a href="#" class="qiwi"></a>
+						<a href="#" class="webmoney"></a>
+						<a href="#" class="scrill"></a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4>О компании</h4>
+				<ul>
+					<li><a href="#">Отзывы о нас</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Новости и события</a></li>
+					<li><a href="#" class="google-play"></a></li>
+					<li><a href="#" class="appstore"></a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Покупателям</h4>
+				<ul>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Для учреждений</a></li>
+					<li><a href="#">Просмотренные товары</a></li>
+					<li><a href="#">Товары с акциями</a></li>
+					<li><a href="#">Товары новинки</a></li>
+					<li><a href="#">Товары популярные</a></li>
+					<li><a href="#">Бренды</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="footer-info">Полезная информация</h4>
+				<ul>
+					<li><a href="#" class="footer-rules">Условия аренды</a></li>
+					<li><a href="#" class="footer-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="footer-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="footer-agreement">Договор аренды</a></li>
+					<li><a href="#" class="footer-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="footer-public">Публичная оферта</a></li>
+					<li><a href="#" class="footer-partners">Партнерская программа</a></li>
+					<li><a href="#" class="footer-loyalty">Программа лояльности</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-foot">
+			<span>&copy; Компания «Дядя Влас» 2016.</span> 
+			<span>Все права защищены</span>
+		</div>
+		<form id="callback">
+			<h3>Заказать обратный звонок</h3>
+			<label>
+				Ваше имя:
+				<input type="text" required>
+			</label>
+			<label>
+				Ваш телефон:
+				<input type="text" required>
+			</label>
+			<button class="submit button-green">Отправить</button>
+			<button class="cancel">Отмена</button>
+		</form>
+		<form id="enter">
+			<div class="left">
+				<h3>Вход в интернет-магазин:</h3>
+				<label>
+					Email:
+					<input type="email" required>
+				</label>
+				<label>
+					Пароль:
+					<input type="text" required>
+				</label>
+				<a href="#" class="forget">Забыл пароль</a>
+				<label class="checkbox">
+					<input type="checkbox" checked>
+					Запомнить меня
+				</label>
+				<button class="submit button-green">Отправить</button>
+				<button class="cancel">Отмена</button>
+			</div>
+			<div class="right">
+				<h3>Войти как пользователь:</h3>
+				<a href="#" class="vk">Вконтакте</a>
+				<a href="#" class="fb">Facebook</a>
+				<a href="#" class="reg">Зарегестрироваться</a>
+			</div>
+		</form>
+	</footer>
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
