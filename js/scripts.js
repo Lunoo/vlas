@@ -197,6 +197,16 @@ $(function(){
             $(this).removeClass('closed').addClass('opened');
         }
     })
+    $('.filter .head').click(function(){
+        if(!$(this).parent().hasClass('active')){
+            $(this).parent().addClass('active');
+        }
+    })
+    $('.filter .close').click(function(){
+        if($(this).parent().hasClass('active')){
+            $(this).parent().removeClass('active');
+        }
+    })
     //DROPDOWN
     $('.dropdown-list span').click(function(){
         console.log($(this));
