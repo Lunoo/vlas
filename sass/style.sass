@@ -609,11 +609,12 @@ header
 		.header-like:hover + .description,
 		.header-basket:hover + .description
 			opacity: 1
+			z-index: 1
 			transition: opacity .3s ease .3s
 		.header-like + .description, .header-basket + .description
 			position: absolute
 			opacity: 0
-			z-index: 1
+			z-index: -1
 			transition: opacity .3s ease .7s
 			width: 275px
 			padding: 20px
@@ -936,11 +937,11 @@ header
 	margin-top: 23px
 	width: 701px
 	overflow: hidden
-.carousel-wrapper
-	display: inline-block
-	width: 10000px
-	position: relative
-	.carousel-block
+	&-wrapper
+		display: inline-block
+		width: 10000px
+		position: relative
+	&-block
 		float: left
 		width: 220px
 		height: 302px
@@ -956,7 +957,7 @@ header
 			font-size: 14px
 			font-weight: 700
 
-		.date
+		.blog-date
 			margin-bottom: 13px
 			width: 85px
 			height: 30px
@@ -968,19 +969,19 @@ header
 			color: #fff
 			font-style: italic
 			font-size: 11px
-		img
+		.blog-img
 			width: 100%
 			height: 75px
-		p
+		.blog-text
 			font-size: 12px
 			margin: 15px
 			height: 144px
 			overflow: hidden
-		figure + p
+		figure + .blog-text
 			height: 53px
 			overflow: hidden
 			margin-bottom: 13px
-		.more
+		.blog-more
 			position: relative
 			display: block
 			height: 30px
@@ -1004,7 +1005,7 @@ header
 		&:hover
 			border-color: #c12227
 			transition: border-color .2s ease
-			.more
+			.blog-more
 				transition-duration: .2s
 				background: #c12227
 				border-color: #c12227
@@ -1231,13 +1232,13 @@ h3.head
 	figure
 		display: flex
 		height: 235px
-	img.gods-img
+	&-img
 		max-width: 100%
 		width: auto
 		height: auto
 		display: block
 		margin: auto
-	.gods-text
+	&-text
 		border-top: 1px solid #cad2d9
 		box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .1)
 		color: #485259
@@ -1247,12 +1248,12 @@ h3.head
 			font-size: 13px
 			font-weight: 700
 			margin: 20px 0
-		>div
-			display: inline-block
-			padding: 12px 12px 15px
-			background: #fff6ce
-			margin-top: 5px
-	.gods-price
+	&-container
+		display: inline-block
+		padding: 12px 12px 15px
+		background: #fff6ce
+		margin-top: 5px
+	&-price
 		display: block
 		margin-bottom: 10px
 		width: 80px
@@ -1261,7 +1262,7 @@ h3.head
 		font-size: 14px
 		text-align: center
 		border-radius: 3px
-	.gods-rating
+	&-rating
 		display: inline-block
 		vertical-align: middle
 		margin: 5px 15px 0 5px
@@ -1276,7 +1277,7 @@ h3.head
 			&.on
 				background: url('../img/icons/star-active.png') no-repeat center
 				background-size: contain
-	.gods-buy
+	&-buy
 		float: left
 		clear: left
 		margin-top: 10px
@@ -1287,7 +1288,7 @@ h3.head
 		text-transform: uppercase
 		&.button-green
 			margin-top: 0
-	.gods-like
+	&-like
 		float: right
 		width: 90px
 		height: 90px
@@ -1320,7 +1321,7 @@ h3.head
 		&.active
 			border-color: #e09c1b
 
-	.gods-review
+	&-review
 		display: inline-block
 		vertical-align: middle
 		padding: 6px 0
@@ -1335,7 +1336,7 @@ h3.head
 		.number
 			font-size: 14px
 	.carousel-nav
-		width: 75px
+		width: 76px
 		float: right
 		margin-top: 10px
 		span
@@ -1357,7 +1358,7 @@ h3.head
 	figure.brands
 		display: block
 		margin: 10px auto
-		width: 410px
+		width: 415px
 		cursor: auto
 	[class*="brand-"]
 		width: 50px
@@ -1991,65 +1992,65 @@ footer
 			height: 405px
 			width: 230px
 			margin: 0 12px 15px 0
-			.carousel-inner
-				position: relative
-				width: 230px
-				height: 405px
-				left: 0
-				top: 0
-			&:nth-child(5n)
-				margin-right: 0
-			.gods-like, .gods-buy, .gods-choose, .gods-characteristics, input
-				display: none
-			.gods-text> div
-				width: calc(100% - 20px)
-				padding: 5px 10px
-			.gods-price
-				margin: 0
-			img.gods-img
-				height: 160px
-			.gods-choose
-				margin-top: 0
-				background: none
-			h6
-				margin: 8px 0
-				font-size: 13px
-				font-weight: 700
-			label[for*="size"]
-				box-sizing: border-box
-				width: 36px
-				height: 28px
-				margin-right: 2px
-				border: 1px solid #c1c1c1
-				border-bottom-width: 3px
-				border-radius: 3px
-				line-height: 28px
-				text-align: center
-				font-size: 15px
-				font-weight: 700
-				cursor: pointer
-			[type="radio"]:checked + label[for*="size"]
-				color: #fff
-				border: none
-				height: 27px
-				background-image: -moz-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-				background-image: -webkit-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-				background-image: -ms-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-				background-image: linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-				box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.18)
-			label[for*="color"]
-				box-sizing: border-box
-				width: 34px
-				height: 34px
-				padding: 4px
-				border: 1px solid transparent
-				border-radius: 50%
-				cursor: pointer
-				img
-					width: 25px
-					height: 25px
-			[type="radio"]:checked + label[for*="color"]
-				border-color: #de9813
+		&-inner
+			position: relative
+			width: 230px
+			height: 405px
+			left: 0
+			top: 0
+		&:nth-child(5n)
+			margin-right: 0
+		.gods-like, .gods-buy, .gods-choose, .gods-characteristics, input
+			display: none
+		.gods-container
+			width: calc(100% - 20px)
+			padding: 5px 10px
+		.gods-price
+			margin: 0
+		img.gods-img
+			height: 160px
+		.gods-choose
+			margin-top: 0
+			background: none
+		h6
+			margin: 8px 0
+			font-size: 13px
+			font-weight: 700
+		label[for*="size"]
+			box-sizing: border-box
+			width: 36px
+			height: 28px
+			margin-right: 2px
+			border: 1px solid #c1c1c1
+			border-bottom-width: 3px
+			border-radius: 3px
+			line-height: 28px
+			text-align: center
+			font-size: 15px
+			font-weight: 700
+			cursor: pointer
+		[type="radio"]:checked + label[for*="size"]
+			color: #fff
+			border: none
+			height: 27px
+			background-image: -moz-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+			background-image: -webkit-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+			background-image: -ms-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+			background-image: linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+			box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.18)
+		label[for*="color"]
+			box-sizing: border-box
+			width: 34px
+			height: 34px
+			padding: 4px
+			border: 1px solid transparent
+			border-radius: 50%
+			cursor: pointer
+			img
+				width: 25px
+				height: 25px
+		[type="radio"]:checked + label[for*="color"]
+			border-color: #de9813
 		&-block:hover
 			outline: none 
 			.carousel-inner
@@ -2072,8 +2073,8 @@ footer
 				transition: all .5s ease
 				h4
 					color: #bd2126
-				>div
-					padding-bottom: 15px
+			.gods-container
+				padding-bottom: 15px
 			.gods-like, .gods-buy, .gods-choose
 				display: inline-block
 			h6
@@ -2084,7 +2085,6 @@ footer
 				display: inline-block
 .content-gods.list
 	.carousel
-		//width: 970px
 		margin-right: 250px
 		&-block
 			padding-top: 30px
@@ -2115,12 +2115,12 @@ footer
 					font-size: 22px
 					float: left
 					width: 100%
-				>div
-					display: inline-block
-					&:not(.gods-choose)
-						float: right
-						width: 200px
-						padding: 5px 10px 15px
+			.gods-container
+				display: inline-block
+				float: right
+				width: 200px
+				padding: 5px 10px 15px
+				
 			.gods-characteristics
 				display: block
 				float: left
@@ -2129,7 +2129,7 @@ footer
 				li
 					line-height: 1.2
 					margin-top: 7px
-			.gods-like, .gods-buy, .gods-text > div ~ *
+			.gods-like, .gods-buy
 				display: inline-block
 			.gods-rating
 				position: absolute
@@ -2140,6 +2140,7 @@ footer
 				right: 0
 				top: 5px
 			.gods-choose
+				display: inline-block
 				float: left
 				width: 200px
 				margin-left: 40px
@@ -2286,21 +2287,91 @@ footer
 			border-top: 1px solid #cad2d9
 			&:before
 				position: relative
-				display: none
+				display: inline-block
+				width: 0
 				float: left
 				top: 12px
 				left: 0
 				content: ''
 				height: 6px
-				width: 12px
+				transition-duration: .2s
 				background: url('../img/icons/arrow-category.png') no-repeat
 			&.link-special, &:hover
 				color: #c12227
 				transition-duration: .2s
 				&:before
-					display: inline-block
+					width: 12px
+					transition-duration: .2s
 			&:hover
 				background: #fef2da
+
+// GODS PAGE
+
+.product
+	margin-left: -290px
+	margin-top: 20px
+	&-nav
+		margin-top: -20px
+	&-title
+		margin-right: 400px
+		font-weight: 700
+		font-size: 22px
+		color: #485259
+		text-transform: uppercase
+	&-add-info
+		float: right
+		width: 390px
+		span
+			display: inline-block
+			height: 45px
+			width: 185px
+			margin-left: 8px
+			background: #f4f4f4
+			text-align: center
+			line-height: 45px
+			color: #757575
+			font-size: 13px
+			font-weight: 700
+	&-tabs
+		margin-top: 27px
+		>label
+			display: inline-block
+			margin-right: 5px
+			width: 125px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			border: 1px solid #cad2d9
+			border-bottom: none
+			font-size: 12px
+			cursor: pointer
+			span
+				color: #282828
+				border-bottom: 1px dotted transparent
+			&:hover
+				border-top: 4px solid #c12227
+				transition: border-color .3s
+				span
+					color: #c12227
+					border-bottom: 1px dotted #c12227
+					transition-duration: .3s
+		input[id*="product"]:checked + label
+			border-top: 4px solid #de9711
+			background: #fff
+			cursor: default
+			span
+				color: #de9711
+				border-bottom-color: transparent
+		>div, >input[type="radio"]
+			display: none
+		input[id="product-about"]:checked ~ .product-about,
+		input[id="product-characteristics"]:checked ~ .product-characteristics,
+		input[id="product-photos"]:checked ~ .product-photos,
+		input[id="product-reviews"]:checked ~ .product-reviews
+			display: block
+			border-top: 1px solid #cad2d9
+			margin-top: -1px
+
 
 
 // RESPONSIVE
@@ -2431,19 +2502,20 @@ footer
 					width: 8px
 					height: 4px
 					background: url("../img/icons/arrow-down.png") no-repeat
-			#header-tel
-				display: none
+			.header-tel
 				position: absolute
-				z-index: 1
+				z-index: -1
 				left: 155px
 				top: 35px
 				background: #fff
-				padding: 10px
+				padding: 0
 				width: 140px
 				border-radius: 5px
 				text-align: center
 				box-shadow: 0px 2px 18.63px 8.37px rgba(202, 210, 217, 0.4)
 				border: 1px solid #cad2d9
+				opacity: 0
+				transition-duration: .3s
 				a
 					padding-left: 0
 				&:before
@@ -2466,8 +2538,11 @@ footer
 					border-bottom: 9px solid #fff
 					border-left: 7px solid transparent
 					border-right: 7px solid transparent
-				&:target
-					display: block
+				&.active
+					z-index: 1
+					opacity: 1
+					padding: 10px
+					transition-duration: .3s
 			.callme
 				margin-top: 4px
 				padding-left: 20px
@@ -2562,34 +2637,33 @@ footer
 		ul li
 			width: 525px
 			height: 220px
-	.main-content .carousel
+	.news-feed
 		width: 525px
-		.carousel-wrapper
-			.carousel-block
-				width: 161px
-				height: 220px
-				h4
-					font-size: 12px
-					margin: 11px
-					height: 28px
-					overflow: hidden
-				.date
-					font-size: 10px
-					height: 22px
-					width: 72px
-					line-height: 22px
-				img, figure
-					height: 60px
-				p
-					margin: 5px 11px
-					height: 99px
-				figure + p
-					margin: 7px 11px
-					height: 30px
-				.more
-					&:before
-						left: 27px
-		&-nav
+		.carousel-block
+			width: 161px
+			height: 220px
+			h4
+				font-size: 12px
+				margin: 11px
+				height: 28px
+				overflow: hidden
+			.blog-date
+				font-size: 10px
+				height: 22px
+				width: 72px
+				line-height: 22px
+			.blog-img, figure
+				height: 60px
+			.blog-text
+				margin: 10px 11px
+				height: 94px
+			figure + .blog-text
+				margin: 7px 11px
+				height: 30px
+			.blog-more
+				&:before
+					left: 27px
+		.carousel-nav
 			width: 77px
 	.all
 		display: none
@@ -2603,35 +2677,40 @@ footer
 			width: 247px
 			float: left
 			margin-left: -11px
-			.carousel-wrapper .carousel-block
-				width: 235px
-				height: 520px
-				background: #fff
-			img.gods-img
-				height: 160px
+		.carousel-block
+			width: 235px
+			height: 520px
+			background: #fff
+		&-img
+			height: 160px
 		.carousel-nav
 			width: 86px
-	.special .carousel
-		width: 720px
-		.carousel-wrapper .carousel-block
+	.special 
+		.carousel
 			width: 720px
-			img
-				height: auto
-				width: auto
-				display: block
-				margin: auto
-		.carousel:first-child
+			&-block
+				width: 720px
+				img
+					height: auto
+					width: auto
+					display: block
+					margin: auto
+			&-nav
+				width: 75px
+		&:first-child
 			.carousel-block
 				height: 300px
 			figure.brands
 				width: auto
 			[class*="brand-"]
 				margin: 0 9px 9px 9px
-	.blog.carousel
+	.blog
 		margin-bottom: 0
 		width: 720px
 		.carousel-wrapper .carousel-block
 			width: 226px
+		figure + .blog-text
+			height: 54px
 		.carousel-nav
 			width: 77px
 	.review h3.review-head
@@ -2725,23 +2804,28 @@ footer
 				top: 15px
 		label
 			font-size: 12px
+	.dropdown-list
+		width: 200px
+		margin-left: 70px
 	.content
 		margin-left: 200px
 		position: relative
-		.gods
-			width: calc(100% - 11px)
-		.carousel
+		&-gods
 			width: 100%
+			left: 0
+		.carousel
+			width: calc(100% - 5px)
+			margin: 0
 			&-block
 				width: 250px
 				height: 620px
-				margin-right: 10px
+				margin-right: 20px
 				&:nth-child(5n)
-					margin-right: 10px
+					margin-right: 20px
 				&:nth-child(2n)
 					margin-right: 0
-				.gods-like, .gods-buy, .gods-choose, label[for*="size"], label[for*="color"]
-					display: inline-block
+			.gods-like, .gods-buy, .gods-choose, label[for*="size"], label[for*="color"]
+				display: inline-block
 			&-block .carousel-inner
 				width: auto
 				height: 620px
@@ -2760,11 +2844,12 @@ footer
 					padding: 0 8px
 					h4
 						color: #4b5158
-					>div
-						padding-bottom: 5px
+				.gods-container
+					padding-bottom: 5px
 	.content-gods.list
 		.carousel
 			&-block
+				padding: 10px 0
 				.gods-characteristics
 					display: none
 				figure
@@ -2774,8 +2859,9 @@ footer
 					height: auto
 				.gods-review
 					width: 40px
-					height: 16px
+					height: 22px
 					font-size: 9px
+					padding: 3px 0
 					top: 0
 					.number
 						font-size: 11px
@@ -2787,13 +2873,13 @@ footer
 						height: 15px
 				.gods-text
 					margin-left: 120px
-					>div:not(.gods-choose)
-						width: 150px
 					h4
 						margin: 0
 						font-size: 14px
 						padding-right: 190px
 						box-sizing: border-box
+				.gods-container
+					width: 150px
 				.gods-like
 					width: 68px
 					height: 68px
@@ -2805,7 +2891,9 @@ footer
 					height: 28px
 					line-height: 28px
 				.gods-choose
-					margin-left: -10px
+					margin-left: 0px
+					h6:first-child
+						margin-top: 0
 			&-block:hover 
 				.carousel-inner
 					height: auto
@@ -2906,7 +2994,7 @@ footer
 					width: 19px
 					height: 21px
 					background: url("../img/icons/tel-mobile.png") center no-repeat
-			#header-tel:target
+			.header-tel
 				left: -45px
 				top: 40px
 				&:before, &:after
@@ -3098,9 +3186,9 @@ footer
 			background-position: center
 		img
 			display: none
-	.main-content .carousel
+	.news-feed
 		width: 100%
-		.carousel-wrapper .carousel-block
+		.carousel-block
 			width: calc(48vw - 7px)
 			margin-left: 9px
 			&:first-child
@@ -3109,18 +3197,20 @@ footer
 				height: 60px
 				background-size: cover
 				background-position: center
-			img
+			.blog-img
 				display: none
-			.more:before
+			.blog-more:before
 				left: 20px
 	h3.head
 		font-size: 15px
 	.gods
 		width: calc(100% - 10px)
-	.gods .carousel
+	.gods
 		margin-top: 0
 		width: calc(100% + 10px)
-		.carousel-wrapper .carousel-block
+		.carousel
+			width: calc(100% - 10px)
+		.carousel-block
 			width: calc(48vw - 7px)
 			height: 339px
 			margin-left: 9px
@@ -3128,44 +3218,50 @@ footer
 				margin-left: 0
 			figure
 				height: 140px
-			img
-				height: 100px
-			.gods-rating
-				margin: 5px 8px 0 0
-				i
-					height: 13px
-					width: 13px
-			.gods-review
-				width: 48px
-				height: 20px
-				padding: 4px 0
+			&.discont:before
+				height: 42px
+				width: 42px
+				top: -8px
+				right: -8px
+				background-size: contain
+		&-img
+			height: 100px
+		&-rating
+			margin: 5px 8px 0 0
+			i
+				height: 13px
+				width: 13px
+		&-review
+			width: 48px
+			height: 20px
+			padding: 4px 0
+			font-size: 9px
+			.number
 				font-size: 9px
-				.number
-					font-size: 9px
-			.gods-text
-				> div
-					width: calc(100% - 10px)
-					padding: 5px
-				h4
-					margin: 17px 0
-			.gods-price
-				height: auto
-				line-height: 1
-				font-size: 12px
-				text-align: left
-			.gods-like
-				width: 55px
-				height: 55px
-				margin-left: 0
-				&:before
-					top: 18px
-					width: 23px
-					height: 23px
-			.gods-buy
-				width: calc(100% - 62px)
+		&-text
+			h4
+				margin: 17px 0
+		&-container
+			width: calc(100% - 10px)
+			padding: 5px
+		&-price
+			height: auto
+			line-height: 1
+			font-size: 12px
+			text-align: left
+		&-like
+			width: 55px
+			height: 55px
+			margin-left: 0
+			&:before
+				top: 18px
+				width: 23px
 				height: 23px
-				line-height: 23px
-				font-size: 10px
+		&-buy
+			width: calc(100% - 62px)
+			height: 23px
+			line-height: 23px
+			font-size: 10px
 			&.discont:before
 				top: -8px
 				right: -8px
@@ -3174,24 +3270,25 @@ footer
 				width: 35px
 				background-size: contain
 				font-size: 12px
-		&-nav
+		.carousel-nav
 			width: 79px
 	.special
 		left: 0
-		width: calc(100% - 8px)
+		width: calc(100%)
 		.carousel
+			margin-left: 0
 			&:first-child
 				display: none
-			.carousel-wrapper .carousel-block
-				width: calc(100vw - 12px)
+			&-block
+				width: calc(100vw - 22px)
 				figure
-					height: 100%
+					height: 100% !important
 				img
 					height: auto
 					max-height: 100%
 					max-width: 100%
-		.carousel-nav
-			width: 75px
+			&-nav
+				width: 75px
 	aside
 		h4
 			display: none
@@ -3296,9 +3393,14 @@ footer
 		p
 			font-size: 12px
 	.content .carousel-block
-		height: 325px
+		height: 320px
 		width: calc(50% - 7px)
-		margin-right: 7px
+		margin-left: 7px
+		margin-right: 0
+		&:nth-child(5n)
+			margin-right: 0
+		&:nth-child(2n+1)
+			margin-left: 0
 	.gods-layout + .carousel
 		margin-top: 20px
 	.gods .carousel 
@@ -3316,14 +3418,16 @@ footer
 				height: 13px
 		.gods-review
 			width: 48px
-			height: 14px
+			height: 20px
 			font-size: 9px
+			padding: 6px 0
 			.number
 				font-size: 9px
 		.gods-price
 			font-size: 12px
 			text-align: left
 			width: auto
+			margin-bottom: 5px
 		.gods-buy
 			width: calc(100% - 65px)
 			height: 23px
@@ -3359,7 +3463,7 @@ footer
 	
 	.sidebar
 		display: none
-	.content-text p, .slider, aside
+	.content-text p, aside, .catalog-slider
 		display: none
 	.category
 		margin-top: 0

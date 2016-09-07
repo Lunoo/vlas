@@ -16,6 +16,16 @@ $(function(){
         $(this).parents('#review').fadeOut(200);
     })
 
+    // HEADER TEL
+
+    $('.header-tel-open').click(function(){
+        if($(this).next().hasClass('active')){
+            $('.header-tel').removeClass('active');
+        } else {
+            $('.header-tel').addClass('active');
+        }
+    })
+
     // SLIDER
 
     $(".slider").each(function () { // обрабатываем каждый слайдер
