@@ -15,7 +15,10 @@ $(function(){
         e.preventDefault();
         $(this).parents('#review').fadeOut(200);
     })
-
+    $('.product-about .vcarousel-preview').fancybox({
+        wrapCSS: 'opened-slider',
+        padding: [20, 35, 20, 35]
+    });
     // HEADER TEL
 
     $('.header-tel-open').click(function(){
@@ -237,4 +240,49 @@ $(function(){
     $('.gods-layout #layout-2').click(function(){
         $(this).parents('.content-gods').addClass('list');
     })
+
+    //VERTICAL SLIDER
+
+    //Обработка клика на стрелку вверх
+    $(document).on('click', ".vcarousel-nav .next", function(){ 
+        $('.vcarousel').each(function(i, item){
+           bottom_carusel(item);
+        })
+        return false;
+    });
+    //Обработка клика на стрелку вниз
+    $(document).on('click',".vcarousel-nav .prev", function(){ 
+        $('.vcarousel').each(function(i, item){
+           top_carusel(item);
+        })
+        return false;
+    });
+    //Обработка клика на большую картинку
+    $(document).on('click', ".vcarousel .vcarousel-block", function(e){
+        e.preventDefault();
+        var index = $(this).index();
+        $('.vcarousel-block').removeClass('active');
+        $('.vcarousel').each(function(i, item){
+            $(item).find('.vcarousel-block').eq(index).addClass('active');
+            $(item).find('.vcarousel-preview img').attr('src', $(item).find('.active').attr('href'));
+        })
+    })
+    $('.vcarousel-preview').click(function(e){
+        e.preventDefault();
+    })
+    function bottom_carusel(carusel){
+        var block_height = $(carusel).find('.vcarousel-block').outerHeight() + 10;
+        $(carusel).find(".vcarousel-wrapper .vcarousel-block").eq(-1).clone().prependTo($(carusel).find(".vcarousel-wrapper")); 
+        $(carusel).find(".vcarousel-wrapper").css({"top":"-"+block_height+"px"});
+        $(carusel).find(".vcarousel-wrapper .vcarousel-block").eq(-1).remove();    
+        $(carusel).find(".vcarousel-wrapper").animate({top: "0px"}, 200); 
+    }
+    function top_carusel(carusel){
+        var block_height = $(carusel).find('.vcarousel-block').outerHeight() + 10;
+        $(carusel).find(".vcarousel-wrapper").animate({top: "-"+ block_height+"px"}, 200, function(){
+          $(carusel).find(".vcarousel-wrapper .vcarousel-block").eq(0).clone().appendTo($(carusel).find(".vcarousel-wrapper")); 
+          $(carusel).find(".vcarousel-wrapper .vcarousel-block").eq(0).remove(); 
+          $(carusel).find(".vcarousel-wrapper").css({"top":"0px"});
+        }); 
+    }
 })
