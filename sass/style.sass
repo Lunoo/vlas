@@ -138,6 +138,21 @@ textarea
 			transition-duration: .3s
 			background: url('../img/icons/arrow-dropdown-opened.png') no-repeat center
 
+.logo
+	width: 155px
+	height: 50px
+	display: block
+	float: left
+	background: url('../img/logo-text.png') no-repeat center right
+	background-size: 110px
+
+	&:before
+		content: ''
+		display: inline-block
+		width: 40px
+		height: 50px
+		background: url("../img/logo.png") no-repeat
+		background-size: contain
 
 // POPUP
 
@@ -343,6 +358,7 @@ textarea
 		height: calc(100% - 105px)
 		width: 100%
 		overflow: visible
+		padding: 0
 	.vcarousel-outer
 		overflow: hidden
 		height: 360px
@@ -369,12 +385,13 @@ textarea
 		display: -moz-box         /* OLD - Firefox 19- (buggy but mostly works) */
 		display: -ms-flexbox      /* TWEENER - IE 10 */
 		display: -webkit-flex     /* NEW - Chrome */
-		display: flex  
+		display: flex
 		img
 			margin: auto
 			height: 500px
 			max-height: none
 			max-width: none
+
 	.vcarousel-nav
 		top: 50%
 		right: 0
@@ -1528,7 +1545,7 @@ h3.head
 	position: relative
 	h3.review-head
 		margin-top: 69px
-	.review-list
+	&-list
 		width: calc(100% - 30px)
 		border: 1px solid #cad2d9
 		padding: 15px
@@ -1549,15 +1566,15 @@ h3.head
 			padding-bottom: 0
 		&:first-child
 			padding-top: 0
-	.review-author
+	&-author
 		font-weight: 700
 		font-size: 14px
 		float: left
-	.review-date
+	&-date
 		font-size: 12px
 		color: #a0a0a0
 		float: right
-	.review-rating
+	&-rating
 		display: block
 		clear: both
 		i
@@ -1572,15 +1589,15 @@ h3.head
 				background: url('../img/icons/star-active.png') no-repeat
 				background-size: contain
 	p
-		margin-top: 6px
+		margin-top: 8px
 		clear: both
 		color: #485259
 		font-size: 12px
-		line-height: 1.2
+		line-height: 1.4
 		height: 70px
 		overflow: hidden
 		text-overflow: ellipsis
-	.review-nav
+	&-nav
 		float: right
 		margin-top: 10px
 		width: 185px
@@ -1633,7 +1650,7 @@ h3.head
 		color: #282828
 	p
 		font-size: 14px
-		line-height: 1.5
+		line-height: 1.4
 		margin: 20px 0 0 0px
 		text-align: justify
 		a
@@ -2078,45 +2095,6 @@ footer
 		.gods-choose
 			margin-top: 0
 			background: none
-		h6
-			margin: 8px 0
-			font-size: 13px
-			font-weight: 700
-		label[for*="size"]
-			box-sizing: border-box
-			width: 36px
-			height: 28px
-			margin-right: 2px
-			border: 1px solid #c1c1c1
-			border-bottom-width: 3px
-			border-radius: 3px
-			line-height: 28px
-			text-align: center
-			font-size: 15px
-			font-weight: 700
-			cursor: pointer
-		[type="radio"]:checked + label[for*="size"]
-			color: #fff
-			border: none
-			height: 27px
-			background-image: -moz-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-			background-image: -webkit-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-			background-image: -ms-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-			background-image: linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
-			box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.18)
-		label[for*="color"]
-			box-sizing: border-box
-			width: 34px
-			height: 34px
-			padding: 4px
-			border: 1px solid transparent
-			border-radius: 50%
-			cursor: pointer
-			img
-				width: 25px
-				height: 25px
-		[type="radio"]:checked + label[for*="color"]
-			border-color: #de9813
 		&-block:hover
 			outline: none 
 			.carousel-inner
@@ -2143,12 +2121,51 @@ footer
 				padding-bottom: 15px
 			.gods-like, .gods-buy, .gods-choose
 				display: inline-block
-			h6
-				display: block
-			label[for*="size"]
-				display: inline-block
-			label[for*="color"]
-				display: inline-block
+
+.gods-choose
+	h6
+		margin: 8px 0
+		font-size: 13px
+		font-weight: 700
+	label[for*="size"]
+		display: inline-block
+		box-sizing: border-box
+		width: 36px
+		height: 28px
+		margin-right: 2px
+		border: 1px solid #c1c1c1
+		border-bottom-width: 3px
+		border-radius: 3px
+		line-height: 28px
+		text-align: center
+		font-size: 15px
+		font-weight: 700
+		cursor: pointer
+	[type="radio"]
+		display: none
+	[type="radio"]:checked + label[for*="size"]
+		color: #fff
+		border: none
+		height: 27px
+		background-image: -moz-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+		background-image: -webkit-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+		background-image: -ms-linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+		background-image: linear-gradient( 90deg, rgb(62,196,23) 0%, rgb(1,254,1) 100%)
+		box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.18)
+	label[for*="color"]
+		display: inline-block
+		box-sizing: border-box
+		width: 34px
+		height: 34px
+		padding: 4px
+		border: 1px solid transparent
+		border-radius: 50%
+		cursor: pointer
+		img
+			width: 25px
+			height: 25px
+	[type="radio"]:checked + label[for*="color"]
+		border-color: #de9813
 .content-gods.list
 	.carousel
 		margin-right: 250px
@@ -2210,8 +2227,6 @@ footer
 				float: left
 				width: 200px
 				margin-left: 40px
-			label[for*="size"], label[for*="color"]
-				display: inline-block
 .list + .gods-pagination
 	margin-top: 50px 
 	.gods-pagination-pages
@@ -2378,8 +2393,11 @@ footer
 	margin-top: 20px
 	&-nav
 		margin-top: -20px
+		margin-bottom: 0
 	&-title
-		margin-right: 400px
+		float: left
+		width: 1100px
+		margin-bottom: 27px
 		font-weight: 700
 		font-size: 22px
 		color: #485259
@@ -2399,7 +2417,7 @@ footer
 			font-size: 13px
 			font-weight: 700
 	&-tabs
-		margin-top: 27px
+		clear: both
 		>label
 			display: inline-block
 			margin-right: 5px
@@ -2438,14 +2456,156 @@ footer
 			border-top: 1px solid #cad2d9
 			margin-top: -1px
 
-	&-about
+	&-about, &-characteristics
 		padding-top: 35px
+		.gods-choose
+
+		>.gods-container
+			margin-top: 35px
+		>.gods-rating
+			display: block
+			margin-top: 15px
+
+	article
+		float: right
+		box-sizing: border-box
+		width: 380px
+		padding: 0 35px 15px 85px
+		background: #f4f4f4
+		>div
+			position: relative
+			margin-top: 14px
+			width: 100%
+			display: inline-block
+			&:before
+				position: absolute
+				left: -44px
+				top: 0
+				content: ''
+			&.seller
+				.logo
+					margin-top: 5px
+				&:before
+					width: 16px
+					height: 16px
+					background: url('../img/icons/seller.png') no-repeat
+			&.pay
+				&:before
+					width: 21px
+					height: 19px
+					background: url('../img/icons/pay.png') no-repeat
+				a
+					display: inline-block
+					margin-right: 17px
+					&:before
+						display: inline-block
+						content: ''
+						height: 20px
+					&.visa-master
+						width: 64px
+						background: url('../img/icons/visa-master.png') no-repeat center top
+					&.privat24logo
+						width: 78px
+						background: url('../img/icons/privat24logo.png') no-repeat center top
+					&.cards
+						position: relative
+						margin-left: 22px
+						height: 16px
+						&:before
+							position: absolute
+							top: -5px
+							left: -24px
+							display: inline-block
+							content: ''
+							width: 21px
+							height: 21px
+							background: url('../img/icons/cards.png') no-repeat left top
+			&.delivery
+				&:before
+					width: 18px
+					height: 11px
+					background: url('../img/icons/delivery.png') no-repeat
+				a
+					display: inline-block
+					margin-right: 10px
+					&:last-child
+						margin-right: 0
+					&:before
+						display: inline-block
+						content: ''
+						height: 23px
+					&.new-mail:before
+						width: 60px
+						background: url('../img/icons/new-mail.png') no-repeat
+					&.intime:before
+						width: 54px
+						background: url('../img/icons/intime.png') no-repeat
+					&.autolux:before
+						width: 84px
+						background: url('../img/icons/autolux.png') no-repeat
+					&.delivery-icon:before
+						width: 19px
+						height: 20px
+						background: url('../img/icons/delivery-icon.png') no-repeat
+			&.guarantee:before
+				width: 21px
+				height: 19px
+				background: url('../img/icons/guarantee.png') no-repeat
+		a, span
+			font-size: 14px
+			color: #282828
+			line-height: 1.3
+		h6
+			margin-bottom: 5px
+			font-size: 18px
+			color: #282828
+	&-info
+		margin-top: 40px
+		float: left
+		width: 910px
+		.head
+			margin: 0 0 35px 0
+	&-review
+		margin-top: 40px
+		.review-list:hover, .review-list:hover li
+			border-color: #cad2d9
+		h3.review-head
+			margin: 0 0 35px 0
+		p
+			height: 80px
+	&-characteristics-list
+		float: left
+		width: 640px
+		margin-top: 45px
+		font-size: 14px
+		color: #282828
+		li
+			padding: 13px 20px
+			&:nth-child(odd)
+				background: #f3f3f3
+			&:nth-child(even)
+				background: #fff
+		em
+			display: inline-block
+			width: 50%
+	&-video
+		margin-top: 30px
+		float: right
+		width: 600px
+	&-characteristics
+		.product-characteristics-list
+			width: 920px
+			li
+				padding: 16px 33px
 .vcarousel
 	position: relative
 	overflow: hidden
 	height: 350px
 	padding: 20px 0
 	margin-top: -20px
+	float: left
+	padding-right: 25px
+	margin-right: 45px
 	&-wrapper
 		height: 9999px
 		float: left
@@ -2463,6 +2623,22 @@ footer
 			max-height: 280px
 			display: block
 			margin: 30px auto
+		&.discont
+			position: relative
+			&:after
+				position: absolute
+				right: -25px
+				top: calc(50% - 25px)
+				z-index: 1
+				content: attr(data-discont)
+				height: 47px
+				width: 47px
+				line-height: 47px
+				background: url('../img/icons/discont.png') no-repeat
+				text-align: center
+				font-size: 15px
+				font-weight: 700
+				color: #fff
 	&-block
 		height: 80px
 		width: 80px
@@ -2717,7 +2893,8 @@ footer
 				display: none
 	.main
 		max-width: 726px
-		padding: 50px 7px 40px
+		//padding: 50px 7px 40px
+		padding: 50px 20px 40px
 	.main-content
 		margin-left: 200px
 		position: relative
@@ -2776,8 +2953,9 @@ footer
 	.news-feed
 		width: 525px
 		.carousel-block
-			width: 161px
+			width: 163px
 			height: 220px
+			margin-left: 9px
 			h4
 				font-size: 12px
 				margin: 11px
@@ -2808,31 +2986,39 @@ footer
 		font-size: 20px
 	.gods
 		position: relative
-		left: 11px
+		width: calc(100% + 9px)
 		.carousel
-			width: 247px
+			width: 238px
 			float: left
-			margin-left: -11px
 		.carousel-block
 			width: 235px
 			height: 520px
 			background: #fff
+			margin-left: 9px
+			&:first-child
+				margin-left: 0
+			&.discont:before
+				top: -7px
+				right: -7px
+				width: 43px
+				background-size: contain
 		&-img
 			height: 160px
 		.carousel-nav
-			width: 86px
+			width: 78px
 	.special 
+		width: 100%
 		.carousel
-			width: 720px
+			width: 100%
 			&-block
-				width: 720px
+				width: 723px
+				&:first-child
+					margin-left: 0
 				img
 					height: auto
 					width: auto
 					display: block
 					margin: auto
-			&-nav
-				width: 75px
 		&:first-child
 			.carousel-block
 				height: 300px
@@ -2842,9 +3028,10 @@ footer
 				margin: 0 9px 9px 9px
 	.blog
 		margin-bottom: 0
-		width: 720px
+		width: 728px
 		.carousel-wrapper .carousel-block
-			width: 226px
+			width: 229px
+			height: 300px
 		figure + .blog-text
 			height: 54px
 		.carousel-nav
@@ -2956,6 +3143,7 @@ footer
 				width: 250px
 				height: 620px
 				margin-right: 20px
+				margin-left: 0
 				&:nth-child(5n)
 					margin-right: 20px
 				&:nth-child(2n)
@@ -3076,6 +3264,65 @@ footer
 				margin-right: 0
 			figcaption
 				font-size: 23px
+
+	// PRODUCT
+	.product
+		margin-left: -200px
+		&-nav
+			margin-top: 5px
+			padding-bottom: 505px
+			.main-navigation
+				top: -40px
+		&-title
+			font-size: 21px
+			width: 100%
+			margin-bottom: 20px
+		&-add-info
+			float: none
+			margin-bottom: 40px
+			span:first-child
+				margin-left: 0
+		article
+			display: none
+		&-characteristics-list, 
+		&-characteristics .product-characteristics-list
+			width: 100%
+		&-info
+			width: 100%
+			margin-top: 40px
+		&-review
+			position: absolute
+			bottom: 0
+		.gods
+			width: 100%
+			left: 0
+			.carousel
+				width: 100%
+				&-block
+					width: 235px
+					height: 525px
+					margin-left: 9px
+					margin-right: 0
+					&:first-child
+						margin: 0
+					&.discont:before
+						top: -5px
+						right: -5px
+						width: 42px
+						height: 42px
+						background-size: contain
+				&-nav
+					width: 76px
+		.special
+			display: none
+	.vcarousel
+		height: 330px
+		&-block
+			height: 75px
+			width: 75px
+		&-preview
+			width: 330px
+			height: 330px
 
 
 @media screen and (max-width: 768px)
@@ -3259,7 +3506,8 @@ footer
 		&.active ul
 			max-height: 0
 			opacity: 0
-				
+	.main
+		padding: 50px 7px 40px
 	.main-navigation
 		width: 100px
 		border-bottom: none

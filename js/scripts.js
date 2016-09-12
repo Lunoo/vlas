@@ -71,12 +71,12 @@ $(function(){
         return false;
     });
     function left_carusel(carusel){
-        if($('body').width()<768){
+        if($('body').width()<1580){
              var block_width = $(carusel).find('.carousel-block').outerWidth() + 9;
         } else {
              var block_width = $(carusel).find('.carousel-block').outerWidth() + 17;
         }
-       console.log(block_width);
+       //console.log(block_width);
        $(carusel).find(".carousel-wrapper .carousel-block").eq(-1).clone().prependTo($(carusel).find(".carousel-wrapper")); 
        $(carusel).find(".carousel-wrapper").css({"left":"-"+block_width+"px"});
        $(carusel).find(".carousel-wrapper .carousel-block").eq(-1).remove();    
@@ -84,7 +84,7 @@ $(function(){
        
     }
     function right_carusel(carusel){
-       if($('body').width()<768){
+       if($('body').width()<1580){
              var block_width = $(carusel).find('.carousel-block').outerWidth() + 9;
         } else {
              var block_width = $(carusel).find('.carousel-block').outerWidth() + 17;
