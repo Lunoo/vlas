@@ -285,4 +285,13 @@ $(function(){
           $(carusel).find(".vcarousel-wrapper").css({"top":"0px"});
         }); 
     }
+    // LIKELIST
+
+    $('.likelist').on('click', '.close', function(){
+        var $block = $(this).parents('.carousel-block');
+        $block.animate({opacity: 0, width: 0, height: 0}, 300);
+        setTimeout(function(){
+            $block.remove();
+        }, 300);
+    })
 })

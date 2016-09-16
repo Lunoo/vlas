@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Дядя Влас</title>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<a href="#" class="header-logo"></a>
+			<div class="header-nav">
+				<ul>
+					<li class="close"></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Кредит</a></li>
+					<li><a href="#">Гарантия и возврат</a></li>
+					<li><a href="#">Доставки и оплата</a></li>
+				</ul>
+				<ul class="mobile">
+					<li><a href="#" class="header-info">Полезная информация</a></li>
+					<li><a href="#" class="header-rules">Условия аренды</a></li>
+					<li><a href="#" class="header-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="header-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="header-agreement">Договор аренды</a></li>
+					<li><a href="#" class="header-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="header-public">Публичная оферта</a></li>
+					<li><a href="#" class="header-partners">Партнерская программа</a></li>
+					<li><a href="#" class="header-loyalty">Программа лояльности</a></li>
+				</ul>
+				<form action="#">
+					<p>
+						<input type="text" placeholder="Поиск по сайту">
+					</p>
+					<input type="submit">
+					<span>Напр.: <i>Коляска</i></span>
+				</form>
+			</div>
+			<div class="header-contacts">
+				<a href="#callback" class="callme">Call me</a>
+				<a href="#" class="header-tel-open"></a>
+				<div class="header-tel" class="header-tel">
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
+				</div>
+				<a href="mail:info@vlas.com.ua">info@vlas.com.ua</a>
+			</div>
+			<div class="header-personal">
+				<a href="#enter" class="cab">Личный кабинет</a>
+				<a href="#" class="header-like" data-number="14">Желаемое</a>
+				<div class="description">
+					<h3>Список желаний пуст</h3>
+					<p>
+						Добавляйте товары в список желаний, делитесь списками с друзьями и обсуждайте товары вместе.
+					</p>
+					<span>
+						Если у вас уже есть списки желаний, 
+					</span>
+					<a href="#">авторизуйтесь.</a>
+				</div>
+				<a href="#" class="header-basket" data-number="14">Корзина</a>
+				<div class="description empty">
+					<h3>Ваша корзина пуста</h3>
+					<p>
+						Добавляйте понравившиеся товары или <a href="#">авторизуйтесь</a>, если добавляли ранее.
+					</p>
+				</div>
+				<!-- <div class="description full">
+					<span>В корзине <em>2 товара</em></span>
+					<span>на сумму <em>4026 грн</em></span>
+					<a href="#" class="offer submit button-green">Оформить заказ</a>
+					<hr>
+					<a href="#" class="basket">Перейти в корзину</a>
+				</div> -->
+			</div>
+		</div>
+	</header>
+
+	<div class="main clearfix">
+		<div class="catalog active">
+			<h2>Каталог товаров</h2>
+			<ul>
+				<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+				<li><a href="#">Телефоны, MP3</a></li>
+				<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+				<li class="submenu">
+					<a href="#">Бытовая техника и интерьер</a>
+					<ul>
+						<li>
+							<a href="#">Ноутбуки, планшеты и компьютеры</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Телефоны, MP3</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">ТВ, Аудио, Видео, Фото</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активная вкладва 2го уровня</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Авиа и ЖД билеты</a></li>
+								<li><a href="#">Одежда, обувь и аксессуары</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Активный отдых и туризм</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Спортивные товары</a>
+							<ul>
+								<li><a href="#">Ноутбуки, планшеты и компьютеры</a></li>
+								<li><a href="#">Телефоны, MP3</a></li>
+								<li><a href="#">ТВ, Аудио, Видео, Фото</a></li>
+								<li>
+									<a href="#">Активная вкладва 3го уровня</a>
+								</li>
+								<li><a href="#">Активный отдых и туризм</a></li>
+								<li><a href="#">Алкогольные напитки и продукты</a></li>
+								<li><a href="#">Ювелирные украшения</a></li>
+								<li><a href="#">Косметика и парфюмерия</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Активный отдых и туризм</a></li>
+				<li><a href="#">Спортивные товары</a></li>
+				<li><a href="#">Детский мир</a></li>
+				<li><a href="#">Товары для дома</a></li>
+				<li><a href="#">Дача, сад, огород</a></li>
+				<li><a href="#">Инструменты и оборудование</a></li>
+				<li><a href="#">Автотовары NEW</a></li>
+				<li><a href="#">Авиа и ЖД билеты</a></li>
+				<li><a href="#">Одежда, обувь и аксессуары</a></li>
+				<li><a href="#">Алкогольные напитки и продукты</a></li>
+				<li><a href="#">Ювелирные украшения</a></li>
+				<li><a href="#">Косметика и парфюмерия</a></li>
+				<li><a href="#">Торговое оборудование </a></li>
+				<li><a href="#">Офис, школа, книги</a></li>
+				<li><a href="#">Зоотовары</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul class="main-navigation">
+				<li class="close">Меню</li>
+				<li><a href="#">Для мамы</a></li>
+				<li><a href="#">Для папы</a></li>
+				<li><a href="#">Аренда</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#" class="active">Блог</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Благотворительность</a></li>
+			</ul>
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Список желаний</a></li>
+			</ul>
+			<div class="content-text">
+				<h2>Список желаний</h2>
+			</div>
+			<div class="goods likelist clearfix">
+				<div class="carousel">
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-block">
+						<span class="close">
+							<i></i>
+							<i></i>
+						</span>
+						<figure>
+							<img src="img/products/product-1-big.jpg" alt="product-1" class="goods-img">
+						</figure>
+						<div class="goods-text">
+							<h4>Детская коляска Roan Marita</h4>
+							<span class="goods-rating">
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="on"></i>
+								<i class="off"></i>
+							</span>
+							<span class="goods-review">
+								<span class="number">232</span> Отзывов
+							</span>
+							<div class="goods-container">
+								<span class="goods-price">5 999 грн</span>
+								<a href="#" class="goods-buy button-green">Купить</a>
+								<a href="#" class="goods-buy button-gold">В кредит</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods-pagination">
+				<button class="button-brown">Еще</button>
+				<ul class="goods-pagination-pages">
+					<li><a href="#" class="prev"></a></li>
+					<li><a href="#" class="active button-brown">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#" class="dots">...</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#" class="next"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<h4>Для мам, пап и киндерят!</h4>
+		<form action="#" class="subscribe">
+			<input type="email" required placeholder="Ваш e-mail:">
+			<input type="submit" value="Подписаться">
+		</form>
+		<span class="subscribe-img"></span>
+	</div>
+	<footer>
+		<div class="footer-wrapper clearfix">
+			<div>
+				<a href="#" class="footer-logo"></a>
+				<span class="footer-logo-text">Для мам, пап и киндерят!</span>
+				<span class="footer-copy">
+					&copy; Компания «Дядя Влас» 2016. Все права защищены
+				</span>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<h6>Способы оплаты:</h6>
+						<a href="#" class="visa-master"></a>
+						<a href="#" class="privat24logo"></a>
+						<a href="#" class="cards">- налич. и безналич. расчет.</a>
+					</li>
+					<li>
+						<h6>Способы доставки:</h6>
+						<a href="#" class="new-mail"></a>
+						<a href="#" class="intime"></a>
+						<a href="#" class="autolux"></a>
+						<a href="#" class="delivery-icon">- доставку курьером на дом</a>
+					</li>
+					<li>
+						<h6>Наши пратнеры:</h6>
+						<a href="#" class="visa"></a>
+						<a href="#" class="master"></a>
+						<a href="#" class="qiwi"></a>
+						<a href="#" class="webmoney"></a>
+						<a href="#" class="scrill"></a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4>О компании</h4>
+				<ul>
+					<li><a href="#">Отзывы о нас</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Новости и события</a></li>
+					<li><a href="#" class="google-play"></a></li>
+					<li><a href="#" class="appstore"></a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Покупателям</h4>
+				<ul>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Для учреждений</a></li>
+					<li><a href="#">Просмотренные товары</a></li>
+					<li><a href="#">Товары с акциями</a></li>
+					<li><a href="#">Товары новинки</a></li>
+					<li><a href="#">Товары популярные</a></li>
+					<li><a href="#">Бренды</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="footer-info">Полезная информация</h4>
+				<ul>
+					<li><a href="#" class="footer-rules">Условия аренды</a></li>
+					<li><a href="#" class="footer-gifts">Подарочные сертификаты</a></li>
+					<li><a href="#" class="footer-ok">Сертификаты качества</a></li>
+					<li><a href="#" class="footer-agreement">Договор аренды</a></li>
+					<li><a href="#" class="footer-close">Политика конфиденциальности</a></li>
+					<li><a href="#" class="footer-public">Публичная оферта</a></li>
+					<li><a href="#" class="footer-partners">Партнерская программа</a></li>
+					<li><a href="#" class="footer-loyalty">Программа лояльности</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-foot">
+			<span>&copy; Компания «Дядя Влас» 2016.</span> 
+			<span>Все права защищены</span>
+		</div>
+		<form id="callback">
+			<h3>Заказать обратный звонок</h3>
+			<label>
+				Ваше имя:
+				<input type="text" required>
+			</label>
+			<label>
+				Ваш телефон:
+				<input type="text" required>
+			</label>
+			<button class="submit button-green">Отправить</button>
+			<button class="cancel">Отмена</button>
+		</form>
+		<form id="enter">
+			<div class="left">
+				<h3>Вход в интернет-магазин:</h3>
+				<label>
+					Email:
+					<input type="email" required>
+				</label>
+				<label>
+					Пароль:
+					<input type="text" required>
+				</label>
+				<a href="#" class="forget">Забыл пароль</a>
+				<label class="checkbox">
+					<input type="checkbox" checked>
+					Запомнить меня
+				</label>
+				<button class="submit button-green">Отправить</button>
+				<button class="cancel">Отмена</button>
+			</div>
+			<div class="right">
+				<h3>Войти как пользователь:</h3>
+				<a href="#" class="vk">Вконтакте</a>
+				<a href="#" class="fb">Facebook</a>
+				<a href="#" class="reg">Зарегестрироваться</a>
+			</div>
+		</form>
+	</footer>
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

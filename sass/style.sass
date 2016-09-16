@@ -418,6 +418,33 @@ textarea
 					transition-duration: .3s
 					background: url("../img/icons/arrow-slider-right-hover.png") no-repeat
 
+#basket
+	padding: 40px 0 80px
+	background: #fff
+	h2
+		font-size: 22px
+		text-transform: uppercase
+		color: #485259
+	figure
+		margin-left: 50px
+		width: 105px
+		height: 105px
+		float: left
+		border: 1px solid #cad2d9
+	.basket
+		&-img
+			margin: 5px auto
+			display: block
+			max-height: 80px
+		&-text
+			margin-left: 60px
+			color: #282828
+		&-title
+			font-size: 17px
+			text-transform: uppercase
+
+
+
 // BUTTONS
 
 .button-green, .reg, .button-gold, .button-brown
@@ -917,10 +944,11 @@ header
 			max-height: 900px
 			opacity: 1
 			transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding .3s ease-out
-	&.catalog-prod
+	&.catalog-prod:not(.active)
 		position: absolute
-		z-index: 3
 		background: #fff
+		z-index: 3
+			
 .main
 	position: relative
 	background: #fff
@@ -2654,6 +2682,9 @@ footer
 			p
 				height: auto
 				font-size: 15px
+			li:last-child
+				border-bottom: 1px solid #cad2d9
+				padding-bottom: 20px
 		#review
 			position: static
 			margin-top: 30px
@@ -2765,7 +2796,52 @@ footer
 				bottom: 0
 				&:hover
 					background: #fff url('../img/icons/arrow-slider-bottom-hover.png') no-repeat bottom center
-				
+
+// LIKELIST
+
+.likelist
+	float: none
+
+	.goods-img
+		max-height: 170px
+	.goods-buy
+		clear: none
+		margin-top: 0
+		&.button-green
+			margin-right: 5px
+	.carousel
+		width: auto
+		&-block
+			height: 470px
+			margin: 0 0 9px 9px
+			&:nth-child(5n+1)
+				margin-left: 0
+			.close
+				position: absolute
+				top: 5px
+				right: 5px
+				width: 25px
+				height: 25px
+				border: 1px solid #ebeef0
+				border-radius: 50%
+				transition-duration: .3s
+				i
+					display: block
+					width: 18px
+					height: 2px
+					background: #ebeef0
+					transition-duration: .5s
+					&:first-child
+						transform: rotate(45deg) translate(10px, 5px)
+					&:last-child
+						transform: rotate(-45deg) translate(-4px, 9px)
+				&:hover
+					transform: rotate(180deg)
+					transition-duration: .5s
+					border-color: #d5d7d8
+					i
+						background: #d5d7d8
+						transition-duration: .5s
 
 
 
@@ -3379,6 +3455,20 @@ footer
 			max-width: 100%
 		&-review
 			position: static
+		&-reviews
+			width: auto
+			float: none
+			.review
+				width: auto
+				float: none
+				&-list
+					width: auto
+				&-rating, p
+					clear: left
+			#review
+				width: auto
+				[type="email"], [type="text"], textarea
+					width: 555px
 		.goods
 			width: 100%
 			left: 0
@@ -3403,9 +3493,11 @@ footer
 			display: none
 		&-yourgood
 			margin-top: 20px
+			margin-left: 10px
 			width: 265px
 			font-size: 13px
 			padding: 15px
+			background: #fff
 
 			img
 				max-width: 170px
@@ -3459,6 +3551,12 @@ footer
 				height: auto
 				img
 					height: 310px
+	// LIKE-LIST
+	.likelist
+		.goods-buy
+			width: 102px
+		.carousel-block
+			height: 470px
 
 @media screen and (max-width: 768px)
 	#enter
@@ -4125,6 +4223,21 @@ footer
 				max-width: calc(100% - 20px)
 		.goods-img-container
 			margin-right: 0
+		&-reviews
+			#review
+				padding: 15px 10px 20px
+				h3
+					text-align: center
+					text-indent: 0
+				[type="email"], [type="text"], textarea
+					margin: 5px 0 0
+					width: calc(100vw - 44px)
+				label
+					text-align: left
+					span
+						top: 0
+				.rating
+					padding-left: 0
 
 	.vcarousel
 		height: 230px
@@ -4154,3 +4267,11 @@ footer
 				max-height: 210px
 				max-width: 210px
 				margin: 10px auto
+	// LIKE-LIST
+	.likelist
+		.carousel-block
+			height: 285px
+			&:nth-child(5n+6)
+				margin-left: 7px
+			.goods-buy
+				width: calc(50% - 3px)
