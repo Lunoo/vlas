@@ -154,10 +154,35 @@ textarea
 		height: 50px
 		background: url("../img/logo.png") no-repeat
 		background-size: contain
+.close-button
+	display: block
+	width: 25px
+	height: 25px
+	border: 1px solid #ebeef0
+	border-radius: 50%
+	transition-duration: .3s
+	cursor: pointer
+	i
+		display: block
+		width: 18px
+		height: 2px
+		background: #ebeef0
+		transition-duration: .5s
+		&:first-child
+			transform: rotate(45deg) translate(10px, 5px)
+		&:last-child
+			transform: rotate(-45deg) translate(-4px, 9px)
+	&:hover
+		transform: rotate(180deg)
+		transition-duration: .5s
+		border-color: #d5d7d8
+		i
+			background: #d5d7d8
+			transition-duration: .5s
 
 // POPUP
 
-#callback, #enter, #open-slider
+#callback, #enter, #open-slider, #basket
 	display: none
 
 .fancybox-opened .fancybox-skin
@@ -419,35 +444,129 @@ textarea
 					background: url("../img/icons/arrow-slider-right-hover.png") no-repeat
 
 #basket
-	padding: 40px 0 80px
+	padding: 40px 45px 80px
 	background: #fff
+	width: 1100px
 	h2
+		margin-bottom: 25px
 		font-size: 22px
+		font-weight: 700
 		text-transform: uppercase
 		color: #485259
 	figure
-		margin-left: 50px
+		margin: 0 60px 0 25px
 		width: 105px
 		height: 105px
 		float: left
 		border: 1px solid #cad2d9
+	ul
+		margin: 0 -45px
+		padding: 0 45px 40px
+		box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.07)
+	li
+		padding: 15px 0
+		min-height: 110px
 	.basket
 		&-img
 			margin: 5px auto
 			display: block
 			max-height: 80px
 		&-text
-			margin-left: 60px
+			height: 92px
+			float: left
+			padding-top: 15px
 			color: #282828
 		&-title
 			font-size: 17px
 			text-transform: uppercase
+		&-price
+			display: block
+			margin-top: 30px
+			font-size: 20px
+		&-number
+			float: left
+			height: 80px
+			padding-top: 27px
+			margin: 0 90px
+			input
+				margin: 0 15px
+				width: 52px
+				height: 42px
+				border: 1px solid #d5dee5
+				border-radius: 4px
+				box-shadow: inset 0px 5px 5px 0px rgba(213, 222, 229, 0.36)
+				font-size: 22px
+				color: #485259
+				text-align: center
+			span
+				display: inline-block
+				position: relative
+				vertical-align: middle
+				height: 6px
+				padding: 20px 0
+				cursor: pointer
+				&:hover i
+					background: #de9814
+					transition-duration: .3s
+			i
+				display: block
+				height: 3px
+				width: 30px
+				background: #d5dee5
+				transition-duration: .3s
+				& + i
+					position: absolute
+					top: 6px
+					left: 14px
+					height: 30px
+					width: 3px
+
+
+		&-sum
+			float: left
+			font-size: 15px
+			color: #282828
+			&-general
+				margin-top: 15px
+				display: block
+				height: 45px
+				line-height: 45px
+				width: 100px
+				padding: 0 15px
+				background: #fff4c2
+				color: #485259
+				font-size: 20px
+		&-total
+			float: right
+			margin-top: 35px
+			width: 235px
+			background: #fff4c2
+			padding: 30px 15px 22px
+			font-size: 22px
+			span
+				display: inline-block
+				margin-bottom: 20px
+				float: right
+	.close-button
+		border-color: #c3292e
+		float: left
+		i
+			background: #c3292e
+	.button-gray, .button-green
+		width: 235px
+		height: 65px
+		line-height: 65px
+		font-size: 18px
+		text-align: center
+	.button-gray
+		margin: 95px 0 0 45px
+
 
 
 
 // BUTTONS
 
-.button-green, .reg, .button-gold, .button-brown
+.button-green, .reg, .button-gold, .button-brown, .button-gray, .button-darkgreen
 	position: relative
 	display: inline-block
 	border: none
@@ -494,7 +613,19 @@ textarea
 		background: #ed9d06
 		box-shadow: 0px 2px 6px 0px rgba(22, 23, 24, 0.6)
 		transition-duration: .3s
-
+.button-gray
+	background: #ddd
+	color: #282828
+	transition-duration: .3s
+	&:hover
+		background: #c8c6c6
+		transition-duration: .3s
+.button-darkgreen
+	background: #03bc02
+	transition-duration: .3s
+	&:hover
+		background: #15a314
+		transition-duration: .3s
 
 // ANIMATION
 
@@ -2820,30 +2951,56 @@ footer
 				position: absolute
 				top: 5px
 				right: 5px
-				width: 25px
-				height: 25px
-				border: 1px solid #ebeef0
-				border-radius: 50%
-				transition-duration: .3s
-				i
-					display: block
-					width: 18px
-					height: 2px
-					background: #ebeef0
-					transition-duration: .5s
-					&:first-child
-						transform: rotate(45deg) translate(10px, 5px)
-					&:last-child
-						transform: rotate(-45deg) translate(-4px, 9px)
-				&:hover
-					transform: rotate(180deg)
-					transition-duration: .5s
-					border-color: #d5d7d8
-					i
-						background: #d5d7d8
-						transition-duration: .5s
+// THANKYOU
+.thankyou
+	text-align: center
+	&-block
+		max-width: 1130px
+		height: 900px
+		margin: 30px auto 0
+		background: url('../img/bg-thanks.png') no-repeat center
+		h1
+			margin: 30px auto
+			font-weight: 700
+			font-size: 38px
+			text-transform: uppercase
+		.subhead
+			display: block
+			font-size: 38px
+			line-height: 1.2
+			max-width: 1200px
+			margin: 0 auto 50px
+		aside
+			position: static
+			width: 360px
+			float: right
+			margin-top: 0
+			.aside-social
+				margin-top: 0
+			>*
+				border: none
+		.order-info
+			float: left
+			width: 250px
+			color: #282828
+			font-size: 18px
+			font-weight: 700
+			line-height: 1.2
+			text-align: left
+			span
+				display: block
 
-
+		.button-darkgreen
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 170px
+			margin: auto
+			height: 60px
+			line-height: 60px
+			width: 235px
+			font-size: 18px
+			font-weight: 700
 
 // RESPONSIVE
 @media screen and (max-width: 1580px)
@@ -3557,6 +3714,114 @@ footer
 			width: 102px
 		.carousel-block
 			height: 470px
+	#basket
+		padding: 20px 25px 45px
+		width: 730px
+		h2
+			margin-bottom: 10px
+			font-size: 15px
+		figure
+			margin: 0 15px
+			width: 60px
+			height: 60px
+		ul
+			margin: 0 -25px
+			padding: 0 25px 5px
+		li
+			padding: 15px 0
+			min-height: 70px
+		.basket
+			&-img
+				margin: 5px auto
+				max-height: 50px
+			&-text
+				height: 62px
+				padding-top: 8px
+			&-title
+				font-size: 15px
+				text-transform: uppercase
+			&-price
+				font-size: 15px
+				margin-top: 20px
+			&-number
+				height: 65px
+				padding-top: 15px
+				margin: 0 90px
+				input
+					margin: 0 12px
+					width: 30px
+					height: 25px
+					font-size: 13px
+				span
+					height: 6px
+					padding: 20px 0
+				i
+					height: 2px
+					width: 20px
+					& + i
+						top: 10px
+						left: 9px
+						height: 20px
+						width: 2px
+
+
+			&-sum-general
+				margin-top: 10px
+				height: 25px
+				line-height: 25px
+				width: 70px
+				padding: 0 5px
+				font-size: 14px
+			&-total
+				margin-top: 20px
+				width: 140px
+				padding: 10px
+				font-size: 15px
+				span
+					margin-bottom: 15px
+		.close-button
+			width: 18px
+			height: 18px
+			i
+				width: 11px
+				&:first-child
+					transform: rotate(45deg) translate(8px, 3px)
+				&:last-child
+					transform: rotate(-45deg) translate(-2px, 7px)
+					
+		.button-gray, .button-green
+			width: 140px
+			height: 40px
+			line-height: 40px
+			font-size: 13px
+		.button-gray
+			margin: 55px 0 0 40px
+	// THANKYOU
+	.thankyou
+		.main-navigation
+			left: 90px
+			top: 20px
+		&-block
+			height: 900px
+			margin: 30px auto 0
+			background: url('../img/bg-thanks.png') no-repeat center
+			h1
+				font-size: 34px
+				margin: 20px auto
+			.subhead
+				font-size: 28px
+				max-width: 520px
+			aside
+				width: 200px
+				.aside-social
+					margin-top: 0
+				>*
+					float: none
+					width: 100%
+				input
+					width: 100%
+				[type="submit"]
+					font-size: 12px
 
 @media screen and (max-width: 768px)
 	#enter
@@ -4275,3 +4540,108 @@ footer
 				margin-left: 7px
 			.goods-buy
 				width: calc(50% - 3px)
+	// BASKET
+	#basket
+		overflow: hidden
+		padding: 6px 15px 16px
+		width: calc(100vw - 40px)
+		min-width: 290px
+		max-width: 350px
+		h2
+			display: none
+		ul
+			margin: 0 -15px
+			padding: 0 15px 20px
+		figure
+			margin: 0 9px 0 0
+		li
+			padding: 10px 0
+			min-height: 90px
+			position: relative
+		.basket
+			&-text
+				padding-top: 5px
+			&-title
+				color: #69bbf5
+			&-price
+				font-size: 14px
+				margin-top: 0px
+				position: absolute
+				left: 0
+				top: 80px
+			&-text
+				width: 180px
+				height: 35px
+				overflow: hidden
+			&-number
+				height: 35px
+				padding-top: 0
+				margin: 0
+				span
+					padding: 12px 0
+				i + i
+					top: 3px
+			&-sum
+				display: none
+			&-total
+				margin-top: 10px
+				width: 120px
+				font-size: 14px
+				span
+					margin-bottom: 10px
+		.close-button
+			position: absolute
+			right: 0
+					
+		.button-gray, .button-green
+			width: 125px
+			height: 32px
+			line-height: 32px
+			font-size: 11px
+		.button-gray
+			margin: 35px 0 0
+	// THANKYOU
+	.thankyou
+		.main-navigation
+			left: 0
+			top: 70px
+			&.active
+				top: 70px
+				& + .thankyou-block
+					margin-top: 60px
+					transition-duration: .3s
+		&-block
+			height: 730px
+			margin-top: 0
+			background: url('../img/bg-thanks.png') no-repeat center
+			transition-duration: .3s
+			background-size: 200px
+			background-position: center 140px
+			h1
+				font-size: 18px
+				margin: 10px auto
+			.subhead
+				font-size: 14px
+				margin-bottom: 20px
+			.order-info
+				float: none
+				width: auto
+				text-align: center
+				font-size: 14px
+			aside
+				position: absolute
+				display: block
+				left: 0
+				right: 0
+				top: auto
+				bottom: 10px
+				margin: auto
+				>*
+					float: none
+					width: 100%
+				input
+					width: 180px
+				[type="submit"]
+					font-size: 11px
+			.button-darkgreen
+				bottom: 240px

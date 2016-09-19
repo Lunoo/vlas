@@ -19,6 +19,11 @@ $(function(){
         wrapCSS: 'opened-slider',
         padding: [20, 35, 20, 35]
     });
+    $('.header-basket').fancybox({
+        wrapCSS: 'basket',
+        padding: [0, 0, 0, 0], 
+        margin: [0, 0, 0, 0]
+    });
     // HEADER TEL
 
     $('.header-tel-open').click(function(){
@@ -293,5 +298,17 @@ $(function(){
         setTimeout(function(){
             $block.remove();
         }, 300);
+    })
+    // NUMBER
+    $('.basket-number .plus').click(function(){
+        $parent = $(this).parents('.basket-number');
+        $parent.find('.num').val(+$parent.find('.num').val() + 1);
+    })
+    $('.basket-number .minus').click(function(){
+        $parent = $(this).parents('.basket-number');
+        $parent.find('.num').val(+$parent.find('.num').val() - 1);
+        if($parent.find('.num').val() < 1){
+            $parent.find('.num').val(1);
+        }
     })
 })

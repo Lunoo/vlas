@@ -62,7 +62,7 @@
 					</span>
 					<a href="#">авторизуйтесь.</a>
 				</div>
-				<a href="#" class="header-basket" data-number="14">Корзина</a>
+				<a href="#basket" class="header-basket" data-number="14">Корзина</a>
 				<div class="description empty">
 					<h3>Ваша корзина пуста</h3>
 					<p>
@@ -1104,26 +1104,77 @@
 		</form>
 		<div id="basket">
 			<h2>Корзина</h2>
-			<ul>
+			<ul class="clearfix">
 				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
 					<figure>
 						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
 					</figure>
 					<div class="basket-text">
-						<span class="bastet-title">Детская коляска Roan Marita</span>
-						<span class="bastet-price">5 999 грн</span>
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
 					</div>
 					<div class="basket-number">
-						<a href="#" class="minus">-</a>
-						<input type="text" value="1">
-						<a href="#" class="plus">+</a>
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
 					</div>
-					<div class="basket-sum"></div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
+				</li>
+				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
+					<figure>
+						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
+					</figure>
+					<div class="basket-text">
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
+					</div>
+					<div class="basket-number">
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
+					</div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
+				</li>
+				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
+					<figure>
+						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
+					</figure>
+					<div class="basket-text">
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
+					</div>
+					<div class="basket-number">
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
+					</div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
 				</li>
 			</ul>
-			<a href="#" class="button-grey">Продолжить покупки</a>
+			<a href="#" class="button-gray">Продолжить покупки</a>
 			<div class="basket-total">
-				Итого:<span>17 997 грн</span>
+				Итого:<span>17 997 грн</span>
 				<a href="#" class="button-green">Оформить заказ</a>
 			</div>
 		</div>
