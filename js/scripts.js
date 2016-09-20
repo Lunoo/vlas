@@ -227,16 +227,11 @@ $(function(){
     })
     //DROPDOWN
     $('.dropdown-list span').click(function(){
-        console.log($(this));
-        if($(this).parents('.dropdown-list').hasClass('opened')){
-            $(this).parents('.dropdown-list').removeClass('opened');
-        } else {
-            $(this).parents('.dropdown-list').addClass('opened');
-        }
+        $(this).parents('.dropdown-list').toggleClass('opened');
     })
     $('.dropdown-list li').click(function(){
         var $this = $(this);
-        $this.parents('.dropdown-list').find('span').text($this.text());
+        $this.parents('.dropdown-list').find('span').text($this.text()).addClass('chosen');
         $this.parents('.dropdown-list').removeClass('opened');
     })
     $('.goods-layout #layout-1').click(function(){

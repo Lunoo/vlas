@@ -80,7 +80,7 @@
 		</div>
 	</header>
 
-	<div class="main clearfix thankyou">
+	<div class="main clearfix order">
 		<ul class="main-navigation">
 			<li class="close">Меню</li>
 			<li><a href="#">Для мамы</a></li>
@@ -91,31 +91,108 @@
 			<li><a href="#">Новости</a></li>
 			<li><a href="#">Благотворительность</a></li>
 		</ul>
-		<div class="thankyou-block">
-			<h1>Спасибо за покупку в нашем магазине!</h1>
-			<span class="subhead">Ваш заказ  будет обработан, в ближайшее время наш менеджер с Вами свяжется.</span>
-			<div class="order-info">
-				<span>Заказ № 53076920</span>
-				<span>Сумма заказа: 5 997 грн</span>
-			</div>
-			<aside class="aside">
-				<div class="aside-social">
-					<h4>Мы в соц. сетях:</h4>
-					<a href="#" class="social-twitter"></a>
-					<a href="#" class="social-vk"></a>
-					<a href="#" class="social-in"></a>
-					<a href="#" class="social-fb"></a>
-					<a href="#" class="social-youtube"></a>
-					<a href="#" class="social-ok"></a>
-					<a href="#" class="social-instagram"></a>
-				</div>
-				<form action="#" class="aside-subscribe subscribe">
-					<h4>Хотите всегда получать новости о скидках и распродажах?</h4>
-					<input type="email" required placeholder="Ваш e-mail:">
-					<input type="submit" value="Подписаться на новости">
-				</form>
+		<div class="order">
+			<h1 class="mobile">Оформление заказа</h1>
+			<aside class="bill">
+				<ul>
+					<li>
+						<img src="img/bill-img.jpg" alt="bill-img" class="bill-img">
+						<span class="bill-title">Детская коляска Roan Marita</span>
+						<span class="bill-price">5 999 грн</span>
+					</li>
+					<li>
+						<img src="img/bill-img.jpg" alt="bill-img" class="bill-img">
+						<span class="bill-title">Детская коляска Roan Marita</span>
+						<span class="bill-price">5 999 грн</span>
+					</li>
+					<li>
+						<img src="img/bill-img.jpg" alt="bill-img" class="bill-img">
+						<span class="bill-title">Детская коляска Roan Marita</span>
+						<span class="bill-price">5 999 грн</span>
+					</li>
+				</ul>
+				<span class="bill-total">Итого:&nbsp;&nbsp;&nbsp;17 997 грн</span>
 			</aside>
-			<a href="#" class="button-darkgreen">Перейти на главную</a>
+			<form action="#" class="form">
+				<div class="form-block">
+					<h2 class="form-title number" data-number="1"><span class="desktop">Оформление заказа</span><span class="mobile">Основная информация</span></h2>
+					<label>Ваше имя: <input type="text"></label>
+					<label>Введите фамилию: <input type="text"></label>
+					<label>Мобильный телефон: <input type="tel"></label>
+					<label>Эл. почта: <input type="email"></label>
+				</div>
+				<div class="form-block">
+					<h2 class="form-title number" data-number="2">Выбор способа доставки и оплаты</h2>
+					<div class="clearfix">
+						<h6>Оплата:</h6>
+						<input type="radio" id="pay-1" name="pay">
+						<label for="pay-1" class="money">наличный расчет</label>
+						<input type="radio" id="pay-2" name="pay">
+						<label for="pay-2" class="privat24logo"></label>
+						<input type="radio" id="pay-3" name="pay">
+						<label for="pay-3" class="cards">безналичный расчет</label>
+						<input type="radio" id="pay-4" name="pay">
+						<label for="pay-4" class="visa-master"></label>
+					</div>
+					<div class="clearfix">
+						<h6>Доставка:</h6>
+						<input type="radio" id="delivery-1" name="delivery">
+						<label for="delivery-1" class="new-mail"></label>
+						<input type="radio" id="delivery-2" name="delivery">
+						<label for="delivery-2" class="intime"></label>
+						<input type="radio" id="delivery-3" name="delivery">
+						<label for="delivery-3" class="autolux"></label>
+						<input type="radio" id="delivery-4" name="delivery">
+						<label for="delivery-4" class="delivery-icon"></label>
+					</div>
+					<div class="choose-town">
+						<input type="text" id="town" list="town-list" placeholder="Город">
+						<datalist id="town-list">
+							<option>Киев</option>
+							<option>Львов</option>
+							<option>Одесса</option>
+							<option>Нью-Йорк</option>
+						</datalist>
+					</div>
+					<div class="choose-adress">
+						<input type="text" id="adress" list="adress-list" placeholder="Адрес доставки">
+						<datalist id="town-list">
+							<option>Киев</option>
+							<option>Львов</option>
+							<option>Одесса</option>
+							<option>Нью-Йорк</option>
+						</datalist>
+					</div>
+				</div>
+				<div class="form-block gift">
+					<h2 class="form-title">Подарки вашим детям</h2>
+					<input type="text" placeholder="Имя:" name="name">
+					<div class="dropdown-list sex">
+						<span>Пол</span>
+						<ul>
+							<li>Мужской</li>
+							<li>Женский</li>
+						</ul>
+					</div>
+					<input type="text" placeholder="день" name="date" class="num">
+					<div class="dropdown-list month">
+						<span>месяц</span>
+						<ul>
+							<li>Январь</li>
+							<li>Сентябрь</li>
+						</ul>
+					</div>
+					<input type="text" placeholder="год" name="year" class="num">
+					<span><sup>*</sup>не обязательно</span>
+					<a href="#" class="info">Политика конфиденциальности</a>
+					<a href="#" class="info">Публичная оферта</a>
+				</div>
+				<div class="form-block">
+					<h6>Комментарии к заказу:</h6>
+					<textarea cols="30" rows="10"></textarea>
+					<button class="button-green">Заказ подтверждаю</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	<div class="subscribe">
