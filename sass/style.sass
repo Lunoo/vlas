@@ -1,5 +1,4 @@
 @import "reset"
-//@import "compass/helpers"
 
 $red: #bd1818
 $social: twitter vk in fb youtube ok instagram
@@ -576,7 +575,7 @@ input:-ms-input-placeholder
 
 // BUTTONS
 
-.button-green, .reg, .button-gold, .button-brown, .button-gray, .button-darkgreen
+.button-green, .reg, .button-gold, .button-brown, .button-gray, .button-darkgreen, .button-red
 	position: relative
 	display: inline-block
 	border: none
@@ -636,7 +635,12 @@ input:-ms-input-placeholder
 	&:hover
 		background: #15a314
 		transition-duration: .3s
-
+.button-red
+	background: #bd1818
+	transition-duration: .3s
+	&:hover
+		background: #990f13
+		transition-duration: .3s
 // ANIMATION
 
 
@@ -2156,6 +2160,7 @@ footer
 		border-top: 1px solid #cad2d9
 		border-bottom: 1px solid #cad2d9
 		background: #fff
+		transition-duration: .3s
 		&:first-child
 			border-left: 1px solid #cad2d9
 		&:after, &:before
@@ -2174,10 +2179,13 @@ footer
 			border-top: 16px solid transparent
 			border-bottom: 16px solid transparent
 			border-left: 7px solid #fff
+			transition-duration: .3s
 		&:hover
 			background: #fef2da
+			transition-duration: .3s
 			&:after
 				border-left-color: #fef2da
+				transition-duration: .3s
 	a
 		display: block
 		height: 32px
@@ -3273,6 +3281,98 @@ footer
 	input::-webkit-calendar-picker-indicator
 		display: none
 
+// REVIEWS
+
+.post
+	position: relative
+	box-sizing: border-box
+	width: 345px
+	height: 335px
+	padding: 20px
+	margin: 0 80px 80px 0
+	float: left
+	background: #f5f5f5
+	&:nth-child(3n)
+		margin-right: 0
+	&:before, &:after
+		position: absolute
+		content: ''
+		width: 25px
+		height: 25px
+		border-radius: 5px
+	&:before
+		top: -6px
+		right: -6px
+		background: url('../img/icons/corner-tr.png') no-repeat
+		background-size: contain
+	&:after
+		bottom: -6px
+		left: -6px
+		background: url('../img/icons/corner-bl.png') no-repeat
+		background-size: contain
+	&-name
+		position: relative
+		height: 18px
+		width: 210px
+		float: left
+		font-size: 18px
+		color: #282828
+		font-weight: 700
+		&:before, &:after
+			position: absolute
+			content: ''
+			width: 21px
+			height: 21px
+			background: url('../img/icons/quotes.png') no-repeat
+		&:before
+			top: 55px
+			left: 0
+		&:after
+			top: 280px
+			right: -95px
+	.goods-rating
+		float: right
+		margin: 0
+		i
+			width: 15px
+	&-text
+		margin: 90px 0 35px
+		height: 160px
+		overflow: hidden
+		line-height: 1.2
+		font-size: 15px
+	&-date
+		color: #a0a0a0
+		font-size: 12px
+
+.reviews-general + .product-reviews
+	#review
+		label
+			font-size: 14px
+		.rating
+			padding-left: 95px
+
+// RENT
+
+.rent
+	&-img
+		width: 100%
+		margin: 10px 0 30px
+	&-links
+		a
+			height: 45px
+			line-height: 45px
+			padding: 0 30px
+			font-size: 15px
+			margin-left: 95px
+			&.button-gold
+				background-image: -moz-linear-gradient( 90deg, rgb(222,152,19) 0%, rgb(255,193,75) 100%)
+				background-image: -webkit-linear-gradient( 90deg, rgb(222,152,19) 0%, rgb(255,193,75) 100%)
+				background-image: -ms-linear-gradient( 90deg, rgb(222,152,19) 0%, rgb(255,193,75) 100%)
+				background-image: linear-gradient( to top, rgb(222,152,19) 0%, rgb(255,193,75) 100%)
+				&:hover
+					background: #de9813
+
 
 // RESPONSIVE
 @media screen and (max-width: 1580px)
@@ -4071,8 +4171,7 @@ footer
 	// THANKYOU
 	.thankyou
 		.main-navigation
-			left: 90px
-			top: 20px
+			left: -110px
 		&-block
 			height: 900px
 			margin: 30px auto 0
@@ -4178,6 +4277,43 @@ footer
 			height: 80px
 			padding: 10px
 			box-sizing: border-box
+	// REVIEWS
+
+	.post
+		width: 230px
+		height: 420px
+		padding: 15px
+		margin: 0 60px 60px 0
+		&:nth-child(3n)
+			margin-right: 60px
+		&:nth-child(2n)
+			margin-right: 0
+		&-name
+			position: relative
+			width: 100%
+			float: none
+			font-size: 17px
+			&:before
+				top: 50px
+				left: 0
+			&:after
+				top: 373px
+				right: 40px
+		.goods-rating
+			float: none
+			margin-top: 0
+			i
+				width: 13px
+		&-text
+			margin: 45px 0 30px
+			height: 260px
+			font-size: 14px
+
+	.reviews-general + .product-reviews
+		margin-left: -200px
+		#review
+			[type="email"], [type="text"], textarea
+				width: 540px
 
 @media screen and (max-width: 768px)
 	#enter
@@ -4195,6 +4331,8 @@ footer
 		max-width: 320px
 	.mobile
 		display: inline-block
+	.desktop
+		display: none
 	header
 		height: 65px
 		.wrapper
@@ -4556,15 +4694,25 @@ footer
 	
 	// CATALOG
 
+	.main-content
+		margin-top: 0
+		transition: margin .3s ease-out
+		&.add-margin
+			margin-top: 52px
+			margin-bottom: 58px
+			transition: margin .3s ease-out
 	.filter-block, .breadcrumbs, .goods-layout
 		display: none
 	.filter
 		position: absolute
-		top: 150px
+		top: 135px
 		right: 15px
 		width: 55px
 		margin: 0
-		transition-duration: .2s
+		transition-duration: .3s
+		transition-timing-function: ease-out
+		&.add-margin
+			top: 170px
 		.head
 			display: inline-block
 			color: #259dd5
@@ -4700,7 +4848,7 @@ footer
 	
 	.sidebar
 		display: none
-	.content-text p, .aside, .catalog-slider
+	.content-text p, aside .slider, .catalog-slider
 		display: none
 	.category
 		margin-top: 0
@@ -4750,10 +4898,6 @@ footer
 		margin-top: 20px
 		transition: margin .3s ease-out
 		margin-left: 0
-		&-nav
-			.main-navigation.active ~ .product
-				margin-top: 70px
-				transition: margin .3s ease-out
 		&-title
 			font-size: 15px
 			overflow: hidden
@@ -4960,12 +5104,6 @@ footer
 	.thankyou
 		.main-navigation
 			left: 0
-			top: 70px
-			&.active
-				top: 70px
-				& + .thankyou-block
-					margin-top: 60px
-					transition-duration: .3s
 		&-block
 			height: 730px
 			margin-top: 0
@@ -5001,3 +5139,147 @@ footer
 					font-size: 11px
 			.button-darkgreen
 				bottom: 240px
+	// ORDER
+
+	.order:not(.main)
+		margin-top: 30px
+		transition-duration: .3s
+		h1
+			display: block
+			margin-bottom: 23px
+			font-size: 18px
+			color: #425359
+			font-weight: 700
+			text-align: center
+
+	.main.order  .main-navigation
+		display: block
+		&.active
+			& + .order
+				transition-duration: .3s
+				margin-top: 60px
+	.bill
+		padding: 23px 15px 15px
+		margin: 0 30px 30px
+		width: auto
+		float: none
+		li
+			margin-bottom: 30px
+			min-height: 70px
+		&-img
+			margin-bottom: 10px
+		&-price
+			font-size: 15px
+			clear: left
+			text-align: left
+		&-total
+			margin-top: 30px
+	.form
+		&-title
+			font-size: 14px
+			&.number:before
+				top: -11px
+		&-block
+			margin-bottom: 30px
+			>div
+				padding-left: 0
+				&[class*="choose"]
+					padding-left: 0
+					&:after
+						left: auto
+						right: 15px
+						top: 20px
+				&.choose-town
+					margin: 10px auto 0
+			&.gift
+				width: auto
+				h2 
+					padding-left: 60px
+				h2 ~ *
+					margin-right: 40px
+				&:before
+					top: -28px
+					width: 65px
+				[name="name"]
+					width: calc(100% - 80px)
+				.sex
+					margin-right: 40px
+					width: calc(100% - 80px)
+				[name="date"], [name="year"]
+					margin-right: 0
+				.month
+					width: calc(100% - 210px)
+				>span
+					width: calc(100% - 40px)
+			&:last-child
+				margin: 0 15px
+				width: calc(100% - 30px)
+				float: none
+				.button-green
+					display: block
+					margin: 30px auto 0
+					float: none
+		label
+			width: auto
+			padding-left: 0
+		[type="text"], [type="tel"], [type="email"]
+			margin-top: 10px
+			margin: 10px 0 0
+			width: 100%
+		h6
+			margin-bottom: 15px
+		[type="radio"] + label
+			width: 100%
+			margin-left: 5px
+			&[for*="delivery"]
+				width: 48%
+				margin-right: 0
+		textarea
+			width: 100%
+
+	// REVIEWS
+	
+	.post
+		width: 100%
+		height: auto
+		margin: 0 0 30px
+		&:nth-child(3n)
+			margin-right: 0
+		&-name
+			width: 200px
+			float: left
+			&:before, &:after
+				display: none
+		.goods-rating
+			float: right
+		&-text
+			position: relative
+			margin: 70px 0 20px
+			height: auto
+			overflow: visible
+			&:before, &:after
+				position: absolute
+				content: ''
+				width: 21px
+				height: 21px
+				background: url('../img/icons/quotes.png') no-repeat
+			&:before
+				top: -30px
+				left: 0
+			&:after
+				bottom: -38px
+				top: auto
+				right: -5px
+			
+
+	.reviews-general + .product-reviews
+		margin-left: 0
+		#review
+			[type="email"], [type="text"], textarea
+				width: calc(100% - 10px)
+			.rating
+				padding-left: 0
+			.button-green
+				display: block
+				width: calc(100% - 60px)
+				margin: 15px auto 0

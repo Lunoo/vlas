@@ -131,11 +131,9 @@ $(function(){
         }
     })
     $('.main-navigation .close').click(function(){
-        if(!$(this).parents('ul').hasClass('active')){
-            $('.main-navigation').addClass('active');
-        } else {
-            $('.main-navigation').removeClass('active');
-        }
+        $('.main-navigation').toggleClass('active');
+        $('.main-content').toggleClass('add-margin');
+        $('.filter').toggleClass('add-margin');
     })
     $('.catalog h2').click(function(){
         if($(this).parents('.catalog').hasClass('active')){

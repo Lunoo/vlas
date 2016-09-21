@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Дядя Влас</title>
-	<link href="css/jquery-ui.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -43,7 +42,7 @@
 			<div class="header-contacts">
 				<a href="#callback" class="callme">Call me</a>
 				<a href="#" class="header-tel-open"></a>
-				<div class="header-tel">
+				<div class="header-tel" class="header-tel">
 					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
 					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
 					<a href="tel:+380933333333">+38 (093) 333-33-33</a>
@@ -63,7 +62,7 @@
 					</span>
 					<a href="#">авторизуйтесь.</a>
 				</div>
-				<a href="#" class="header-basket" data-number="14">Корзина</a>
+				<a href="#basket" class="header-basket" data-number="14">Корзина</a>
 				<div class="description empty">
 					<h3>Ваша корзина пуста</h3>
 					<p>
@@ -196,223 +195,124 @@
 				<li><a href="#">Благотворительность</a></li>
 			</ul>
 		</div>
-		<div class="sidebar">
-			<div class="carousel">
-				<div class="carousel-wrapper">
-					<a href="#" class="carousel-block">
-						<h4>Заголовок последней новости</h4>
-						<span class="blog-date">
-							21.03.2015
-						</span>
-						<p class="blog-text">
-							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям...
-						</p>
-						<span class="blog-more">Подробнее</span>
-					</a>
-					<a href="#" class="carousel-block">
-						<h4>Заголовок последней новости с картинкой</h4>
-						<span class="blog-date">
-							21.03.2015
-						</span>
-						<figure data-src="img/blog-image.jpg">
-							<img src="img/blog-image.jpg" alt="blog-image" class="blog-img">
-						</figure>
-						<p class="blog-text">
-							С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений...
-						</p>
-						<span class="blog-more">Подробнее</span>
-					</a>
-				</div>
-				<div class="carousel-nav">
-					<a href="#" class="all">Все новости</a>
-				</div>
-			</div>
-		</div>
-		<div class="content clearfix">
-			<div class="slider catalog-slider">
-				<ul>
-					<li data-src="img/slider-image-1.jpg">
-						<img src="img/slider-image-1.jpg" alt="slider-image-1">
-					</li>
-					<li data-src="img/slider-image-2.jpg">
-						<img src="img/slider-image-2.jpg" alt="slider-image-2">
-					</li>
-					<li data-src="img/slider-image-2.jpg">
-						<img src="img/slider-image-2.jpg" alt="slider-image-2">
-					</li>
-				</ul>
-			</div>
-			<aside>
-				<div class="slider">
-					<ul>
-						<li>
-							<img src="img/banner-img-1.jpg" alt="banner-image-1">
-						</li>
-						<li>
-							<img src="img/banner-img-2.jpg" alt="banner-image-2">
-						</li>
-						<li>
-							<img src="img/banner-img-3.jpg" alt="banner-image-2">
-						</li>
-					</ul>
-				</div>
-			</aside>
+		<div class="content">
 			<ul class="breadcrumbs">
 				<li><a href="#">Главная</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Коляски</a></li>
+				<li><a href="#">Отзывы</a></li>
 			</ul>
 			<div class="content-text">
-				<h2>Коляски и автокресла</h2>
-				<p>
-					Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны реализация намеченных плановых заданий позволяет оценить значение новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание соответствующий условий активизации. 
-				</p>
+				<h2>Отзывы</h2>
 			</div>
-			<div class="category">
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+			<div class="reviews-general clearfix">
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
-				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
-				</div>
-				<div class="category-block">
-					<figure>
-						<figcaption>Коляски</figcaption>
-						<img src="img/category-img.jpg" alt="category-img">
-					</figure>
-					<ul>
-						<li><a href="#">Коляски для двойни</a></li>
-						<li><a href="#">Коляски-трости</a></li>
-						<li><a href="#" class="link-special">Прогулочные коляски</a></li>
-						<li><a href="#">Универсальные коляски 2 в 1</a></li>
-						<li><a href="#">Универсальные коляски 3 в 1</a></li>
-					</ul>
+				<div class="post">
+					<div class="post-name">Роберт Коллинс</div>
+					<span class="goods-rating">
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="on"></i>
+						<i class="off"></i>
+					</span>
+					<p class="post-text">
+						Отличная коляска, купил пользвался. За все время ничего не сломалось, и потом еще и продал ее за 60% от цены. так что доволен до безумия. Спасибо за то что продаете такие офигенные вещи по такой адекватной цене. С другой стороны реализация намеченных плановых заданий требуют от нас анализа новых предложений. 
+					</p>
+					<span class="post-date">2 марта 2016 &nbsp;&nbsp;22:10</span>
 				</div>
 			</div>
-		</div>
-		<div class="info">
-			<h3 class="head">Дядя Влас - Интернет магазин</h3>
-			<div class="info-left">
-				<h4>PANAMA ПРИНОСИТ МАЛЫШАМ РАДОСТЬ</h4>
-				<p>
-					Интернет магазин детских товаров – это великолепная возможность принести радость себе и ребёнку, не выходя из дома. Всего за несколько минут вы можете заказать необходимую вещь для своего малыша, будь то игрушка или удобная качественная одежда. Заходите к нам в гости, не стесняйтесь! У нас есть все-все-все, что нужно деткам. В детском интернет магазине Панама огромный выбор, удобная система поиска и навигации, поэтому найти нужную вещь вы сможете легко и быстро.
-				</p>
-				<p>
-					Яркие образы, любимые герои, популярные игрушки и многое другое – на страницах нашего магазина игрушек! Мы предложим очень широкий спектр товаров, в число которых вошла даже обувь для детей, и все это для того, чтобы мамам и папам не пришлось тратить время на поиски.
-				</p>
-				<h4>ВСЁ ЛУЧШЕЕ — ДЕТЯМ!</h4>
-				<p>
-					<a href="#">Игрушки</a> и коляски, мебель и канцелярские принадлежности. Мы гарантируем, что все это сделано из лучших материалов и с огромной любовью. Самое главное, что готов предложить интернет магазин детских товаров – качество. Одежда отвечает высоким мировым стандартам, а игрушки выполнены из экологичных материалов, не представляющих никакой угрозы детскому здоровью.
-				</p>
-				<p>
-					Мебель для детской имеет большое значение, хотя взрослым иногда кажется, что малыш не понимает, какая у него кроватка, но это не так. Коляски должны быть, в первую очередь, удобными. Все вещи малышам, конечно же, выбирает мама, но как приятно, когда ребенок любит свой первый транспорт и с удовольствием ездит на нем. Детский интернет магазин Panama.ua исполняет мечты малышей и дарит родителям уверенность в том, что ребенок растет в безопасности и комфорте.
-				</p>
-			</div>
-			<div class="info-right">
-				<p>
-					Наш магазин старается создать волшебный и добрый мир для детишек на своих страницах. Именно для этого каждый день трудятся талантливые взрослые – дизайнеры и художники, инженеры и программисты, производители товаров и поставщики. Для заботливых родителей будет приятной новостью то, что все товары на Panama.ua можно приобрести по доступной цене.
-				</p>
-				<h4>ТВОРЧЕСТВО ДЛЯ САМЫХ МАЛЕНЬКИХ</h4>
-				<p>
-					Талантливые детки смогут развить свои способности благодаря развивающим игрушкам. Для того, чтобы детство вашего ребёнка было по-настоящему ярким, познавательным и запоминающимся, вы можете подарить ему такие приятные и полезные товары, как:
-				</p>
-				<ul>
-					<li>наборы для творчества;</li>
-					<li>мозаики;</li>
-					<li>фоторамки;</li>
-					<li>наборы для маленьких учёных;</li>
-					<li>модели для сборки;</li>
-					<li>рамки для слепков и многое другое.</li>
-				</ul>
-				<h4>ВСЕГДА НА СВЯЗИ</h4>
-				<p>
-					Мы постарались предусмотреть всевозможные способы связи с магазином: вы сможете написать на нашу электронную почту, позвонить по нескольким телефонам или заказать обратный звонок. <a href="#">Магазин игрушек</a> в Киеве делает все для того, чтобы покупателям было максимально удобно. Персонал детского магазина в Киеве всегда готов прийти на помощь, оказать своевременную консультацию, в том числе в онлайн режиме. Мы всегда вам рады.
-				</p>
+			<div class="product-reviews">
+				<form id="review">
+					<h3>Оставить отзыв:</h3>
+					<label>
+						Ваше имя:
+						<input type="text" required>
+					</label>
+					<label>
+						Ваш эл. адрес:
+						<input type="email" required>
+					</label>
+					<label>
+						<span>Ваш отзыв:</span>
+						<textarea cols="30" rows="10"></textarea>
+					</label>
+					<span class="rating">
+						<i data-text="Плохой"></i>
+						<i data-text="Так себе"></i>
+						<i data-text="Нормальный"></i>
+						<i data-text="Хороший"></i>
+						<i data-text="Отличный"></i>
+					</span>
+					<button class="submit button-green">Отправить</button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -539,11 +439,86 @@
 				<a href="#" class="reg">Зарегестрироваться</a>
 			</div>
 		</form>
+		<div id="basket">
+			<h2>Корзина</h2>
+			<ul class="clearfix">
+				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
+					<figure>
+						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
+					</figure>
+					<div class="basket-text">
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
+					</div>
+					<div class="basket-number">
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
+					</div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
+				</li>
+				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
+					<figure>
+						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
+					</figure>
+					<div class="basket-text">
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
+					</div>
+					<div class="basket-number">
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
+					</div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
+				</li>
+				<li>
+					<span class="close-button">
+						<i></i>
+						<i></i>
+					</span>
+					<figure>
+						<img src="img/slider-img-big.jpg" alt="img-big" class="basket-img">
+					</figure>
+					<div class="basket-text">
+						<span class="basket-title">Детская коляска Roan Marita</span>
+						<span class="basket-price">5 999 грн</span>
+					</div>
+					<div class="basket-number">
+						<span class="minus"><i></i></span>
+						<input type="text" value="1" class="num">
+						<span class="plus"><i></i><i></i></span>
+					</div>
+					<div class="basket-sum">
+						<span>Сумма</span>
+						<span class="basket-sum-general">5 999 грн</span>
+					</div>
+				</li>
+			</ul>
+			<a href="#" class="button-gray">Продолжить покупки</a>
+			<div class="basket-total">
+				Итого:<span>17 997 грн</span>
+				<a href="#" class="button-green">Оформить заказ</a>
+			</div>
+		</div>
 	</footer>
 	<script src="js/jquery-1.12.0.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.fancybox-thumbs.js"></script>
-	<script src="js/jquery-ui.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
