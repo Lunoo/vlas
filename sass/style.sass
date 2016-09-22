@@ -3355,10 +3355,14 @@ footer
 // RENT
 
 .rent
-	&-img
+	.slider
 		width: 100%
-		margin: 10px 0 30px
+		height: 510px
+		li
+			width: 1220px
+			height: 510px
 	&-links
+		margin-top: 20px
 		a
 			height: 45px
 			line-height: 45px
@@ -3372,7 +3376,219 @@ footer
 				background-image: linear-gradient( to top, rgb(222,152,19) 0%, rgb(255,193,75) 100%)
 				&:hover
 					background: #de9813
+	&-advantages
+		margin-top: 65px
+		>*
+			position: relative
+			display: inline-block
+			width: 240px
+			height: 240px
+			border-radius: 50%
+			border: 2px solid #de9814
+			background-color: rgb(255, 255, 255)
+			box-shadow: 0px 5px 68px 0px rgba(0, 0, 0, 0.18)
+			margin-right: 165px
+			&:last-child
+				margin-right: 0
+			span
+				display: block
+				text-align: center
+				margin: 0 auto
+				width: calc(100% - 50px)
+				font-weight: 700
+				color: #d48b00
+				font-size: 18px
+			img
+				display: block
+				max-width: 45%
+				margin: 40px auto 20px
 
+	&-offer
+		margin-top: 175px
+		li
+			margin-bottom: 145px
+			display: inline-block
+		&-img
+			margin-top: -50px
+			width: 260px
+			float: left
+			margin-right: 80px
+		&-text
+			color: #485259
+		&-title
+			font-size: 27px
+			font-weight: 700
+			width: 400px
+			float: left
+		&-rating
+			i
+				width: 20px
+		&-details
+			margin: 20px 0
+			line-height: 1.2
+			font-size: 17px
+			margin-left: 335px
+		&-price
+			display: inline-block
+			padding: 10px
+			background: #fff4c2
+			font-size: 20px
+			font-weight: 700
+		.button-green
+			margin-top: -3px
+			width: 200px
+			height: 45px
+			float: right
+			line-height: 45px
+			font-size: 16px
+			text-transform: uppercase
+			text-align: center
+		li:nth-child(2n)
+			.rent-offer-img
+				float: right
+				margin-left: 80px
+				margin-right: 0
+			.rent-offer-text
+				text-align: right
+			.rent-offer-price, .rent-offer-title
+				float: right
+			.rent-offer-details
+				margin-left: 0
+				margin-right: 335px
+			.button-green
+				float: left
+	.goods
+		margin-left: -290px
+		float: none
+		.carousel
+			width: 1230px
+			margin: auto
+			&-block
+				height: 430px
+				margin-left: 13px
+				&:first-child
+					margin-left: 0
+		&-text
+			h4
+				height: 42px
+		&-price
+			font-size: 14px
+			width: 115px
+			background: #fff4c2
+			float: left
+		&-rating
+			i
+				width: 15px
+		&-buy
+			margin-top: 10px
+			font-size: 13px
+
+// BLOG
+
+.content.blog-page
+	margin-left: 0
+	.blog
+		width: 100%
+		margin: 20px 0 80px
+	.breadcrumbs
+		position: absolute
+		top: 680px
+
+.blog
+	.banner
+		box-sizing: border-box
+		position: relative
+		height: 600px
+		background: #c12227
+		border-radius: 30px
+		padding-top: 50px
+		h1
+			text-align: center
+			font-size: 80px
+			font-family: 'Vesna', arial, sans-serif
+			color: #fff
+			em
+				position: relative
+				&:after
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 2px
+					content: ''
+					margin: auto
+					height: 10px
+					width: 70%
+					border-radius: 10px
+					background: #fff
+		.subhead
+			position: absolute
+			bottom: 70px
+			left: 65px
+			font-size: 100px
+			font-family: 'Vesna', arial, sans-serif
+			color: #fff
+		&-bird
+			position: absolute
+			bottom: 71px
+			right: 25px
+			width: 354px
+			height: 287px
+			background: url('../img/blog/blog-bird.png') no-repeat
+			background-size: contain
+		&-cloud
+			position: absolute
+			height: 250px
+			background: url('../img/blog/blog-cloud.png') no-repeat
+			background-size: contain
+			&:nth-last-child(7)
+				top: 147px
+				right: 911px
+				width: 271px
+				transform: rotate(0deg)
+			&:nth-last-child(6)
+				top: 243px
+				right: 715px
+				width: 133px
+				transform: rotate(-15deg)
+			&:nth-last-child(5)
+				top: 193px
+				right: 669px
+				width: 71px
+				transform: rotate(15deg)
+			&:nth-last-child(4)
+				top: 206px
+				right: 502px
+				width: 38px
+				transform: rotate(-27deg)
+			&:nth-last-child(3)
+				top: 241px
+				right: 427px
+				width: 29px
+				transform: rotate(-41deg)
+			&:nth-last-child(2)
+				top: 174px
+				right: 534px
+				width: 34px
+				transform: rotate(52deg)
+			&:nth-last-child(1)
+				top: 211px
+				right: 475px
+				width: 25px
+				transform: rotate(51deg)
+		&-ad
+			position: absolute
+			height: 150px
+			width: 240px
+			bottom: 14px
+			left: 17px
+			font-size: 25px
+		&-special
+			position: absolute
+			height: 77px
+			width: 110px
+			left: 37px
+			left: 11px
+			font-size: 25px
 
 // RESPONSIVE
 @media screen and (max-width: 1580px)
@@ -4314,6 +4530,91 @@ footer
 		#review
 			[type="email"], [type="text"], textarea
 				width: 540px
+	// RENT
+	.catalog
+		margin-bottom: 25px
+	.rent
+		margin-top: 10px
+		.slider
+			height: 220px
+			li
+				width: 528px
+				height: 220px
+		&-links
+			a
+				height: 40px
+				line-height: 40px
+				padding: 0 10px
+				margin-left: 15px
+				font-size: 13px
+		&-advantages
+			margin-top: 65px
+			>*
+				width: 160px
+				height: 160px
+				margin-right: 13px
+				vertical-align: top
+				&:last-child
+					margin-right: 0
+				span
+					font-size: 15px
+				img
+					display: block
+					margin: 20px auto 10px
+
+		&-offer
+			margin-top: 90px
+			margin-left: -200px
+			li
+				margin-bottom: 80px
+			&-img
+				margin-top: -25px
+				width: 140px
+				margin-right: 30px
+			&-title
+				font-size: 22px
+				width: auto
+				margin-right: 150px
+				float: none
+			&-rating
+				float: right
+				margin-top: -30px
+				i
+					width: 15px
+			&-details
+				font-size: 14px
+				margin-left: 170px
+			.button-green
+				width: 150px
+				height: 50px
+				line-height: 50px
+			li:nth-child(2n)
+				.rent-offer-img
+					margin-left: 30px
+					margin-right: 0
+				.rent-offer-title
+					margin-right: 0
+					margin-left: 150px
+					float: none
+				.rent-offer-rating
+					float: left
+				.rent-offer-details
+					margin-right: 170px
+					margin-left: 0
+		.goods
+			margin-left: -200px
+			width: calc(100% + 200px)
+			.carousel
+				width: 100%
+				&-block
+					margin-right: 0
+					height: 412px
+					width: 232px
+					&:first-child
+						margin-left: 0
+			&-text
+				h4
+					height: 35px
 
 @media screen and (max-width: 768px)
 	#enter
@@ -5283,3 +5584,81 @@ footer
 				display: block
 				width: calc(100% - 60px)
 				margin: 15px auto 0
+
+	// RENT
+	.rent
+		.slider
+			li
+				width: calc(100vw - 10px)
+		&-links
+			text-align: center
+			a
+				margin: 0 15% 20px
+				font-size: 15px
+		&-advantages
+			margin-top: 45px
+			text-align: center
+			>*
+				margin: 0 15px 20px
+
+		&-offer
+			margin-left: 0
+			margin-top: 80px
+			li
+				margin-bottom: 70px
+			&-img
+				margin-top: -15px
+				width: 150px
+				margin-right: 5px
+			&-title
+				font-size: 16px
+				margin-right: 0
+			&-rating
+				i
+					width: 20px
+			&-details
+				clear: both
+				margin-left: 0
+			&-price
+				font-size: 18px
+				padding: 8px
+			.button-green
+				width: 120px
+				height: 35px
+				line-height: 35px
+				font-size: 14px
+				margin-top: 0
+			li:nth-child(2n)
+				.rent-offer-img
+					margin-left: 5px
+					margin-right: 0
+				.rent-offer-title
+					margin-left: 0
+				.rent-offer-rating
+					float: right
+				.rent-offer-details
+					margin-right: 0
+		.goods
+			margin-left: 0
+			width: 100%
+			.carousel
+				&-block
+					margin-right: 0
+					height: 295px
+					width: calc(50vw - 16px)
+					&:nth-child(2n+1)
+						margin-left: 13px
+					&:first-child
+						margin-left: 0
+			&-text
+				h4
+					height: 40px
+			&-price
+				display: inline-block
+				padding: 5px
+				font-size: 12px
+				width: auto
+				float: none
+			&-rating
+				i
+					width: 10px

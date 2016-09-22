@@ -101,7 +101,7 @@ $(function(){
        }); 
     }
     // MOBILE
-        $('.main-content .slider li, .main-content .carousel figure').each(function(i, item){
+        $('.main-content .slider li, .main-content .carousel figure, .rent .slider li').each(function(i, item){
             $(item).css({"background-image":"url("+ $(item).attr('data-src')+")"});
         })
     // RATING
