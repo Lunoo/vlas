@@ -104,6 +104,11 @@ $(function(){
         $('.main-content .slider li, .main-content .carousel figure, .rent .slider li').each(function(i, item){
             $(item).css({"background-image":"url("+ $(item).attr('data-src')+")"});
         })
+        if($('body').width()<768){
+            height = $('.blog-post').outerHeight();
+            $('.blog-ad-aside').css('top', height + 273);
+            $('.blog-ad-middle').css('top', height*2 + 292);
+        }
     // RATING
     var oldRating = $('#review i.active').length; 
     $('#review i').on('mouseover', function(){
