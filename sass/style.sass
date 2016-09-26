@@ -3444,7 +3444,7 @@ footer
 
 // BLOG
 
-.content.blog-page
+.content.blog-list
 	margin-left: 0
 	.blog
 		width: 100%
@@ -3454,108 +3454,109 @@ footer
 		position: absolute
 		top: 680px
 		z-index: 1
-
+.content.blog-page
+	margin-left: 0
+.banner
+	box-sizing: border-box
+	position: relative
+	height: 600px
+	background: #c12227
+	border-radius: 30px
+	padding-top: 50px
+	h1
+		text-align: center
+		font-size: 80px
+		font-family: 'Vesna', arial, sans-serif
+		color: #fff
+		font-weight: 700
+		em
+			position: relative
+			&:after
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 2px
+				content: ''
+				margin: auto
+				height: 10px
+				width: 70%
+				border-radius: 10px
+				background: #fff
+		i
+			font-weight: 500
+			margin-right: 50px
+	.subhead
+		position: absolute
+		bottom: 70px
+		left: 65px
+		font-size: 100px
+		font-family: 'Vesna', arial, sans-serif
+		color: #fff
+	&-bird
+		position: absolute
+		bottom: 71px
+		right: 25px
+		width: 354px
+		height: 287px
+		background: url('../img/blog/blog-bird.png') no-repeat
+		background-size: contain
+	&-cloud
+		position: absolute
+		height: 250px
+		background: url('../img/blog/blog-cloud.png') no-repeat
+		background-size: contain
+		&:nth-last-child(7)
+			top: 147px
+			right: 911px
+			width: 271px
+			transform: rotate(0deg)
+		&:nth-last-child(6)
+			top: 243px
+			right: 715px
+			width: 133px
+			transform: rotate(-15deg)
+		&:nth-last-child(5)
+			top: 193px
+			right: 669px
+			width: 71px
+			transform: rotate(15deg)
+		&:nth-last-child(4)
+			top: 206px
+			right: 502px
+			width: 38px
+			transform: rotate(-27deg)
+		&:nth-last-child(3)
+			top: 241px
+			right: 427px
+			width: 29px
+			transform: rotate(-41deg)
+		&:nth-last-child(2)
+			top: 174px
+			right: 534px
+			width: 34px
+			transform: rotate(52deg)
+		&:nth-last-child(1)
+			top: 211px
+			right: 475px
+			width: 25px
+			transform: rotate(51deg)
+	&-ad
+		position: absolute
+		overflow: hidden
+		height: 150px
+		width: 240px
+		bottom: 14px
+		left: 17px
+		font-size: 25px
+	&-special
+		position: absolute
+		overflow: hidden
+		height: 77px
+		width: 110px
+		top: 37px
+		left: 11px
+		font-size: 25px
 .blog
-	.banner
-		box-sizing: border-box
-		position: relative
-		height: 600px
-		background: #c12227
-		border-radius: 30px
-		padding-top: 50px
-		h1
-			text-align: center
-			font-size: 80px
-			font-family: 'Vesna', arial, sans-serif
-			color: #fff
-			font-weight: 700
-			em
-				position: relative
-				&:after
-					position: absolute
-					left: 0
-					right: 0
-					bottom: 2px
-					content: ''
-					margin: auto
-					height: 10px
-					width: 70%
-					border-radius: 10px
-					background: #fff
-			i
-				font-weight: 500
-				margin-right: 50px
-		.subhead
-			position: absolute
-			bottom: 70px
-			left: 65px
-			font-size: 100px
-			font-family: 'Vesna', arial, sans-serif
-			color: #fff
-		&-bird
-			position: absolute
-			bottom: 71px
-			right: 25px
-			width: 354px
-			height: 287px
-			background: url('../img/blog/blog-bird.png') no-repeat
-			background-size: contain
-		&-cloud
-			position: absolute
-			height: 250px
-			background: url('../img/blog/blog-cloud.png') no-repeat
-			background-size: contain
-			&:nth-last-child(7)
-				top: 147px
-				right: 911px
-				width: 271px
-				transform: rotate(0deg)
-			&:nth-last-child(6)
-				top: 243px
-				right: 715px
-				width: 133px
-				transform: rotate(-15deg)
-			&:nth-last-child(5)
-				top: 193px
-				right: 669px
-				width: 71px
-				transform: rotate(15deg)
-			&:nth-last-child(4)
-				top: 206px
-				right: 502px
-				width: 38px
-				transform: rotate(-27deg)
-			&:nth-last-child(3)
-				top: 241px
-				right: 427px
-				width: 29px
-				transform: rotate(-41deg)
-			&:nth-last-child(2)
-				top: 174px
-				right: 534px
-				width: 34px
-				transform: rotate(52deg)
-			&:nth-last-child(1)
-				top: 211px
-				right: 475px
-				width: 25px
-				transform: rotate(51deg)
-		&-ad
-			position: absolute
-			overflow: hidden
-			height: 150px
-			width: 240px
-			bottom: 14px
-			left: 17px
-			font-size: 25px
-		&-special
-			position: absolute
-			overflow: hidden
-			height: 77px
-			width: 110px
-			top: 37px
-			left: 11px
-			font-size: 25px
 	&-aside
 		position: static
 		float: right
@@ -3566,7 +3567,7 @@ footer
 		form.subscribe input
 			width: 240px
 			font-size: 13px
-	&-list
+	&-list-container
 		margin-top: 65px
 	&-post
 		float: left
@@ -3660,7 +3661,162 @@ footer
 			&:hover
 				background: rgb(161, 32, 36)
 
+	&-title
+		margin: 15px 0
+		font-size: 30px
+		color: #282828
+		text-transform: uppercase
+		font-weight: 700
+	&-page
+		.aside
+			position: static
+			float: right
+			width: 360px
+		&-main
+			float: left
+			width: 1120px
+		.blog-post-date
+			float: none
+			font-size: 15px
+		.blog-post-view
+			font-size: 15px
+			margin-left: 35px
+		.blog-img
+			max-width: 100%
+		.side-social
+			width: 300px
+			height: 70px
+			background: url('../img//blog/social.png') no-repeat center
+			font-weight: 700
+			font-size: 20px
+			color: #485259
+	&-more
+		clear: both
+		margin-bottom: 55px
+		.blog-post-date
+			float: right
+			font-size: 18px
+		.blog-post-view
+			font-size: 18px
+			margin-left: 0
+		.blog-post
+			&:nth-child(3)
+				margin-right: 23px
+			&:nth-child(4)
+				margin-right: 0
+	&-ad-2
+		float: right
+		width: 250px
+		height: 1000px
+		background: #f4f4f4
 
+	&-text
+		margin: 25px 0
+		line-height: 1.2
+		font-size: 15px
+	&-reviews
+		margin-right: 500px
+		h4
+			margin-bottom: 50px
+			font-weight: 700
+			font-size: 22px
+			color: #485259
+			text-transform: uppercase
+			i
+				color: #cad2d9
+		li
+			padding: 15px 0
+			border-bottom: 1px solid #cad2d9
+		&-author
+			color: #282828
+			font-size: 18px
+			font-weight: 700
+		&-date
+			float: right
+			font-size: 12px
+			color: #a0a0a0
+		p
+			margin: 15px 0
+			font-size: 15px
+			line-height: 1.2
+		&-respond
+			color: #4a80b1
+			&:before
+				display: inline-block
+				content: ''
+				margin-right: 5px
+				width: 19px
+				height: 13px
+				background: url('../img/icons/respond.png') no-repeat
+		.review-nav
+			width: 174px
+		.product-reviews
+			margin-top: 40px
+
+// FORUM
+
+.content.forum-main
+	margin-left: 0
+	.banner
+		background: #dd940c
+	.forum
+		margin: 20px 0 0px
+		position: relative
+	.breadcrumbs
+		position: absolute
+		top: 780px
+		z-index: 1
+.forum
+	&-heading
+		margin-top: 25px
+		margin-bottom: 75px
+		height: 75px
+		li
+			float: left
+			margin: 0 13px 13px 0
+		a
+			position: relative
+			display: inline-block
+			padding: 7px 47px
+			border: 1px solid #cad2d9
+			border-radius: 3px
+			background: #fafafb
+			font-size: 15px
+			color: #666666
+			transition: all .3s ease
+			&:after
+				position: absolute
+				display: none
+				content: ''
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 4px
+				box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, .16)
+			&.special
+				background: #c12227
+				border-color: #c12227
+				color: #fff
+				&:after
+					display: block
+			&.active, &:hover
+				background: #dd940c
+				border-color: #dd940c
+				color: #fff
+				&:after
+					display: block
+
+	&-subheading
+		float: left
+		font-size: 22px
+		font-weight: 700
+		color: #282828
+	.goods-pagination
+		margin-top: 0
+
+
+
+	
 
 // RESPONSIVE
 @media screen and (max-width: 1580px)
@@ -4689,11 +4845,14 @@ footer
 					height: 35px
 	// BLOG
 
-	.content.blog-page
+	.content.blog-list
 		.breadcrumbs
 			top: 450px
-	.main-navigation.blog-page
+	.main-navigation.blog-list
 		left: -110px
+	.content.blog-page
+		.breadcrumbs
+			margin: 10px 0
 	.blog
 		.banner
 			height: 285px
@@ -4802,6 +4961,23 @@ footer
 				font-size: 60px
 			&-bottom
 				margin-top: 0px
+		&-page
+			&-main
+				float: none
+				width: auto
+			.aside
+				display: none
+			.blog-post
+				&:nth-child(3)
+					margin-bottom: 0
+				&:nth-child(4)
+					clear: none
+		&-title
+			font-size: 24px
+		&-ad-2
+			display: none
+		&-reviews
+			margin-right: 0
 
 @media screen and (max-width: 768px)
 	#enter
@@ -5479,12 +5655,13 @@ footer
 		&-reviews
 			#review
 				padding: 15px 10px 20px
+				width: calc(100% - 20px)
 				h3
 					text-align: center
 					text-indent: 0
 				[type="email"], [type="text"], textarea
 					margin: 5px 0 0
-					width: calc(100vw - 44px)
+					width: calc(100% - 20px)
 				label
 					text-align: left
 					span
@@ -5938,3 +6115,22 @@ footer
 				margin-top: 0px
 		.goods-pagination
 			margin-top: 50px
+		&-title
+			font-size: 16px
+		&-page
+			.blog-post-date, .blog-post-view
+				font-size: 12px
+			.blog-post:nth-child(3)
+				margin-right: 10px
+		&-text
+			font-size: 14px
+		&-reviews 
+			h4
+				font-size: 16px
+				margin-bottom: 15px
+			&-author
+				font-size: 17px
+			#review
+				.button-green
+					display: block
+					margin: auto
