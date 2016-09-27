@@ -2130,6 +2130,8 @@ footer
 		transition-duration: .3s
 		&:first-child
 			border-left: 1px solid #cad2d9
+		&:last-child a
+			color: #be1818
 		&:after, &:before
 			z-index: 1
 			position: absolute
@@ -3793,7 +3795,7 @@ footer
 				width: 100%
 				height: 4px
 				box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, .16)
-			&.special
+			&.special-heading
 				background: #c12227
 				border-color: #c12227
 				color: #fff
@@ -3807,15 +3809,209 @@ footer
 					display: block
 
 	&-subheading
+		margin-bottom: 30px
 		float: left
 		font-size: 22px
 		font-weight: 700
 		color: #282828
 	.goods-pagination
 		margin-top: 0
+		height: 36px
+		float: right
+	&-list
+		margin: 30px 0
+		clear: both
+		li
+			transition-duration: .3s
+			outline: 1px solid transparent
+			a
+				padding: 15px
+				display: block
+				&:after
+					display: table
+					content: ''
+					clear: both
+			&:nth-child(2n+1)
+				background: #f5f5f5
+			&:last-child
+				border-bottom: 2px solid #f5f5f5
+			&:hover
+				outline: 1px solid #dd940c
+	&-text-block
+		float: left
+		width: calc(100% - 400px)
+	&-title
+		font-size: 22px
+		font-weight: 700
+		color: #070707
+	&-details
+		margin: 15px 0
+		font-size: 15px
+		line-height: 1.2
+		color: #040404
+	&-responds-block
+		float: right
+		width: 185px
+		font-size: 18px
+		line-height: 30px
+		color: #485259
+		>*
+			display: block
+	&-responds:before, &-views:before
+		display: inline-block
+		content: ''
+		margin-right: 5px
+	&-responds:before
+		width: 28px
+		height: 21px
+		background: url('../img/icons/forum-respond.png') no-repeat
+	&-views:before
+		width: 23px
+		height: 17px
+		background: url('../img/icons/forum-view.png') no-repeat
+	&-date
+		display: block
+		float: right
+		width: 205px
+		font-size: 18px
+		line-height: 30px
+		color: #a0a0a0
+		i
+			display: block
+			position: relative
+			margin-top: -5px
+			&:before
+				position: relative
+				top: 6px
+				display: inline-block
+				content: ''
+				width: 27px
+				height: 27px
+				margin-right: 8px
+				background: url('../img/icons/time.png') no-repeat
+	&-author
+		color: #282828
+		font-size: 18px
+		&:before
+			position: relative
+			top: 2px
+			display: inline-block
+			content: ''
+			width: 20px
+			height: 18px
+			margin-right: 7px
+			background: url('../img/icons/forum-author.png') no-repeat
+	&-functional
+		>*
+			height: 80px
+			width: 260px
+			vertical-align: top
+			font-size: 28px
+			color: #fff
+			text-transform: none
+		.button-gray
+			background: #b1b0ae
+			transition-duration: .3s
+			margin-left: 50px
+			&:hover
+				background: #a1a09f
+				box-shadow: 0px 2px 6px 0px rgba(22, 23, 24, 0.6)
 
+	.product-reviews #review
+		padding: 40px 20px 20px
+		label
+			font-size: 14px
+		.submit
+			float: right
+	&-header
+		margin-top: 20px
+		font-size: 30px
+		color: #282828
+		font-weight: 700
+	&-add-info
+		display: block
+		margin: 20px 0 10px
+		padding: 7px 0 7px 15px
+		background: #dd940c
+		font-size: 15px
+		color: #fff
+	&-head
+		margin-bottom: 10px
+		font-size: 22px
+		color: #282828
+		font-weight: 700
+	&-posts-container
+		margin-bottom: 80px
+		li
+			position: relative
+			margin-top: 20px
+			padding: 20px 20px 15px
+			min-height: 250px
+			border: 1px solid #cad2d9
+			border-bottom-width: 3px
+			&:nth-child(2n+1)
+				background: #f5f5f5
+		.forum-date
+			position: absolute
+			top: 20px
+			right: 20px
+	&-author-section
+		width: 190px
+		float: left
+		text-align: center
+		color: #282828
+		img
+			display: block
+			width: 100px
+			margin: 40px auto 0
+	&-author-name
+		margin: 13px 0
+		display: block
+		font-size: 17px
+		font-weight: 700
+	&-author-details
+		font-size: 13px
+		line-height: 1.2
+		em
+			display: block
+	&-post
+		margin-right: 280px
+		margin-left: 220px
+		font-size: 15px
+		line-height: 1.2
+		color: #060606
+		p
+			margin-top: 20px
+	&-respond-link
+		position: relative
+		display: inline-block
+		margin-top: 55px
+		color: #4a80b1
+		&:before
+			display: inline-block
+			margin-right: 3px
+			content: ''
+			width: 19px
+			height: 13px
+			background: url('../img/icons/respond.png') no-repeat
 
-
+.content.forum-page
+	margin-left: 0
+.forum-page
+	.forum-heading
+		height: auto
+		margin-bottom: 20px
+		overflow: hidden
+	.goods-pagination
+		margin-top: 0
+		overflow: hidden
+	.forum-author
+		font-weight: 700
+	.forum-date-main
+		position: static !important
+		float: none
+		display: inline
+		margin-left: 10px
 	
 
 // RESPONSIVE
@@ -4845,80 +5041,82 @@ footer
 					height: 35px
 	// BLOG
 
-	.content.blog-list
-		.breadcrumbs
+	.content
+		&.blog-list .breadcrumbs
 			top: 450px
-	.main-navigation.blog-list
+		&.forum-main .breadcrumbs
+			top: 400px
+	.main-navigation.blog-list, .main-navigation.forum-main
 		left: -110px
 	.content.blog-page
 		.breadcrumbs
 			margin: 10px 0
+	.banner
+		height: 285px
+		border-radius: 15px
+		padding-top: 30px
+		h1
+			font-size: 47px
+			em
+				position: relative
+				&:after
+					bottom: 2px
+					height: 5px
+			i
+				font-size: 37px
+				margin-right: 20px
+		.subhead
+			position: absolute
+			bottom: 35px
+			left: 30px
+			font-size: 47px
+		&-bird
+			bottom: 31px
+			right: 15px
+			height: 137px
+			width: 169px
+		&-cloud
+			height: 120px
+			&:nth-last-child(7)
+				top: 70px
+				right: 434px
+				width: 127px
+			&:nth-last-child(6)
+				top: 115px
+				right: 341px
+				width: 62px
+			&:nth-last-child(5)
+				top: 91px
+				right: 320px
+				width: 33px
+			&:nth-last-child(4)
+				top: 97px
+				right: 239px
+				width: 18px
+			&:nth-last-child(3)
+				top: 114px
+				right: 203px
+				width: 14px
+			&:nth-last-child(2)
+				top: 82px
+				right: 256px
+				width: 16px
+			&:nth-last-child(1)
+				top: 100px
+				right: 229px
+				width: 10px
+		&-ad
+			height: 67px
+			width: 112px
+			left: 8px
+			font-size: 12px
+		&-special
+			height: 36px
+			width: 54px
+			top: 17px
+			left: 4px
+			font-size: 12px
 	.blog
-		.banner
-			height: 285px
-			border-radius: 15px
-			padding-top: 30px
-			h1
-				font-size: 47px
-				em
-					position: relative
-					&:after
-						bottom: 2px
-						height: 5px
-				i
-					font-size: 37px
-					margin-right: 20px
-			.subhead
-				position: absolute
-				bottom: 35px
-				left: 30px
-				font-size: 47px
-			&-bird
-				bottom: 31px
-				right: 15px
-				height: 137px
-				width: 169px
-			&-cloud
-				height: 120px
-				&:nth-last-child(7)
-					top: 70px
-					right: 434px
-					width: 127px
-				&:nth-last-child(6)
-					top: 115px
-					right: 341px
-					width: 62px
-				&:nth-last-child(5)
-					top: 91px
-					right: 320px
-					width: 33px
-				&:nth-last-child(4)
-					top: 97px
-					right: 239px
-					width: 18px
-				&:nth-last-child(3)
-					top: 114px
-					right: 203px
-					width: 14px
-				&:nth-last-child(2)
-					top: 82px
-					right: 256px
-					width: 16px
-				&:nth-last-child(1)
-					top: 100px
-					right: 229px
-					width: 10px
-			&-ad
-				height: 67px
-				width: 112px
-				left: 8px
-				font-size: 12px
-			&-special
-				height: 36px
-				width: 54px
-				top: 17px
-				left: 4px
-				font-size: 12px
 		&-aside
 			float: none
 			width: 100%
@@ -4978,6 +5176,71 @@ footer
 			display: none
 		&-reviews
 			margin-right: 0
+	// FORUM
+
+	.forum
+		&-heading
+			a
+				padding: 7px 25px
+			li
+				margin: 0 10px 10px 0
+		.goods-pagination-pages
+			margin-top: 0
+		&-list
+			li
+				position: relative
+		&-text-block
+			width: 100%
+		&-date
+			position: absolute
+			width: 210px
+			right: 12px
+			top: 10px
+			i
+				display: inline
+				margin: -6px 15px 0 0
+				float: left
+		&-responds-block
+			margin-top: -25px
+			font-size: 14px
+			line-height: 18px
+		.forum-views:before, .forum-responds:before
+			position: relative
+			top: 4px
+			width: 28px
+		&-subheading + .goods-pagination,
+		&-heading + .goods-pagination
+			display: none
+		.goods-pagination
+			float: none
+			margin-bottom: 40px
+		&-functional
+			text-align: center
+		.product-reviews #review
+			[type="email"], [type="text"], textarea
+				width: 569px
+		&-post
+			margin-right: 0
+		&-posts-container
+			.forum-date
+				position: static
+				margin-top: -22px
+				font-size: 14px
+				width: 160px
+				i
+					margin-top: 0
+					&:before
+						position: relative
+						top: 2px
+						width: 14px
+						height: 14px
+						margin-right: 3px
+						background: url('../img/icons/time-mobile.png') no-repeat
+		&-respond-link
+			margin-top: 30px
+		&-posts-container
+			margin-bottom: 0	
+
 
 @media screen and (max-width: 768px)
 	#enter
@@ -6028,36 +6291,43 @@ footer
 					width: 10px
 	// BLOG
 
-	.content.blog-page
-		.breadcrumbs
-			top: 450px
-	.main-navigation.blog-page
+	.content
+		&.blog-page
+			.breadcrumbs
+				top: 450px
+		&.forum-main
+			.breadcrumbs
+				top: 400px
+			.banner
+				background: url('../img/forum-banner.jpg') no-repeat
+				background-size: contain
+	.main-navigation.blog-page, .main-navigation.forum-main
 		left: 0
+	.banner
+		margin: auto
+		width: 305px
+		height: 120px
+		border-radius: 10px
+		padding-top: 10px
+		background: url('../img/blog/blog-banner.jpg') no-repeat
+		background-size: contain
+		h1
+			font-size: 20px
+			em
+				&:after
+					height: 2px
+			i
+				font-size: 16px
+				margin-right: 0
+		.subhead
+			bottom: 13px
+			left: 13px
+			font-size: 20px
+		&-bird
+			display: none
+		&-cloud
+			display: none
 	.blog
-		.banner
-			margin: auto
-			width: 305px
-			height: 120px
-			border-radius: 10px
-			padding-top: 10px
-			background: url('../img/blog/blog-banner.jpg') no-repeat
-			background-size: contain
-			h1
-				font-size: 20px
-				em
-					&:after
-						height: 2px
-				i
-					font-size: 16px
-					margin-right: 0
-			.subhead
-				bottom: 13px
-				left: 13px
-				font-size: 20px
-			&-bird
-				display: none
-			&-cloud
-				display: none
 		.blog-aside
 			float: none
 			width: 100%
@@ -6134,3 +6404,86 @@ footer
 				.button-green
 					display: block
 					margin: auto
+	// FORUM
+	.forum
+		&-heading
+			margin: 15px 0
+			height: auto
+			overflow: hidden
+			li
+				margin: 0 8px 8px 0
+			a
+				padding: 5px 10px
+		&-subheading
+			font-size: 17px
+			margin-bottom: 20px
+		&-title
+			font-size: 15px
+		&-author
+			font-size: 15px
+			&:before
+				width: 14px
+				height: 15px
+				margin-right: 5px
+				background: url(../img/icons/forum-author-mobile.png) no-repeat
+		&-date
+			position: static
+			margin-top: 8px
+			float: left
+			width: 120px
+			font-size: 15px
+			line-height: 26px
+			i:before
+				width: 14px
+				height: 14px
+				top: 2px
+				margin-right: 3px
+				background: url("../img/icons/time-mobile.png") no-repeat
+		&-responds-block
+			margin-top: 12px
+			width: 150px
+		.forum-views
+			&:before
+				top: 2px
+				width: 18px
+				height: 14px
+				background: url("../img/icons/forum-view-mobile.png") no-repeat
+		.forum-responds
+			&:before
+				top: 2px
+				width: 18px
+				height: 14px
+				background: url("../img/icons/forum-respond-mobile.png") no-repeat
+		&-functional 
+			.button-gray, .button-brown
+				margin: 20px 20px 0
+		.product-reviews #review
+			padding: 15px 10px 20px
+			width: calc(100% - 20px)
+			[type="email"], [type="text"], textarea
+				width: calc(100% - 10px)
+			.submit
+				margin-right: 0
+		&-posts-container li
+			padding: 7px
+			.forum-date
+				float: right
+		&-author-section
+			width: 100%
+			float: none
+			img
+				width: 26px
+				margin: 0
+				float: left
+		&-author-name
+			float: left
+			width: 150px
+			margin: 7px 0
+			padding-left: 10px
+			text-align: left
+		&-author-details
+			float: right
+			width: 100px
+		&-post
+			clear: both
+			margin: 40px 0 0
