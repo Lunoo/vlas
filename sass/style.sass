@@ -102,8 +102,9 @@ textarea
 			content: ''
 			width: 8px
 			height: 4px
-			transition-duration: .3s
-			background: url('../img/icons/arrow-dropdown-closed.png') no-repeat center
+			//background: url('../img/icons/arrow-dropdown-closed.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -386px -5px
 	ul
 		position: absolute
 		left: -1px
@@ -134,8 +135,9 @@ textarea
 			box-shadow: 0 4px 5px 0 rgba(22, 23, 24, .31)
 			transition-duration: .3s
 		span:after
-			transition-duration: .3s
-			background: url('../img/icons/arrow-dropdown-opened.png') no-repeat center
+			//background: url('../img/icons/arrow-dropdown-opened.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -404px -5px
 
 .logo
 	width: 155px
@@ -363,9 +365,11 @@ input:-ms-input-placeholder
 			width: 30px
 			height: 43px
 			margin: 0 12px
-			background: url('../img/icons/star.png') no-repeat
+			//background: url('../img/icons/star.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -45px -427px
 			cursor: pointer
-			transition-duration: .2s
+			//transition-duration: .2s
 			&:after
 				position: absolute
 				bottom: 0
@@ -375,8 +379,10 @@ input:-ms-input-placeholder
 				font-weight: 700
 				font-size: 9px
 			&.active, &.hover
-				background: url('../img/icons/star-active.png') no-repeat
-				transition-duration: .2s
+				//background: url('../img/icons/star-active.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -198px -427px
+				//transition-duration: .2s
 
 .opened-slider .fancybox-skin
 	background: #fff
@@ -433,17 +439,23 @@ input:-ms-input-placeholder
 			&.prev
 				left: 0
 				right: auto
-				background: url("../img/icons/arrow-slider-left.png") no-repeat
-				transition-duration: .3s
+				//background: url("../img/icons/arrow-slider-left.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -301px -50px
 				&:hover
-					background: url("../img/icons/arrow-slider-left-hover.png") no-repeat
+					//background: url("../img/icons/arrow-slider-left-hover.png") no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -354px -50px
 			&.next
 				right: 0
 				left: auto
-				background: url("../img/icons/arrow-slider-right.png") no-repeat
-				transition-duration: .3s
+				//background: url("../img/icons/arrow-slider-right.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -5px -97px
 				&:hover
-					background: url("../img/icons/arrow-slider-right-hover.png") no-repeat
+					//background: url("../img/icons/arrow-slider-right-hover.png") no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -58px -97px
 
 #basket
 	padding: 40px 45px 80px
@@ -754,11 +766,15 @@ header
 				content: ''
 		.header-tel:before
 			top: 24px
-			background: url('../img/icons/tel.png') center no-repeat
+			//background: url('../img/icons/tel.png') center no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -83px -357px
 		[href*="mail"]
 			margin-top: 10px
 		[href*="mail"]:before
-			background: url('../img/icons/mail.png') center no-repeat
+			//background: url('../img/icons/mail.png') center no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -207px -294px
 		.callme
 			position: relative
 			height: 32px
@@ -774,9 +790,10 @@ header
 			&:hover
 				border-color: #580808
 				&:before
-					transition-duration: .3s
-					background: url('../img/icons/call-hover.png') no-repeat
-					background-size: contain
+					//transition-duration: .3s
+					//background: url('../img/icons/call-hover.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -143px -122px
 			&:before
 				position: absolute
 				top: 8px
@@ -784,8 +801,9 @@ header
 				content: ''
 				width: 14px
 				height: 15px
-				background: url('../img/icons/call.png') no-repeat
-				background-size: contain
+				//background: url('../img/icons/call.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -511px -97px
 
 	.header-personal
 		width: 150px
@@ -806,7 +824,9 @@ header
 				left: -20px
 				width: 15px
 				height: 15px
-				background: url('../img/icons/user.png') no-repeat
+				//background: url('../img/icons/user.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -775px -334px
 		[class*="header"]
 			position: relative
 			margin: 24px 2px 0
@@ -907,8 +927,9 @@ header
 				width: 40px
 				height: 40px
 				margin: 0 auto 30px
-				background: url("../img/icons/like-des.png") center no-repeat
-				background-size: contain
+				//background: url("../img/icons/like-des.png") center no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -218px -324px
 		.header-basket + .description
 			top: 137px
 			right: 53px
@@ -918,8 +939,9 @@ header
 				width: 40px
 				height: 40px
 				margin: 0 auto 30px
-				background: url("../img/icons/basket.png") center no-repeat
-				background-size: contain
+				//background: url("../img/icons/basket-des.png") center no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -407px -97px
 
 			&.full
 				transition-delay: 1s
@@ -939,10 +961,11 @@ header
 						left: -33px
 						top: -3px
 						content: ''
-						height: 20px
-						width: 20px
-						background: url('../img/icons/basket.png') no-repeat
-						background-size: contain
+						height: 19px
+						width: 19px
+						//background: url('../img/icons/basket-des-full.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -457px -97px
 					&.basket:after
 						position: absolute
 						left: -17px
@@ -1068,7 +1091,9 @@ header
 				content: ''
 				right: 11px
 				top: 13px
-				background: url('../img/icons/arrow-right-hover-red.png') no-repeat
+				//background: url('../img/icons/arrow-right-hover-red.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -391px -27px
 
 	&.active
 		ul
@@ -1221,10 +1246,10 @@ header
 		.blog-text
 			font-size: 12px
 			margin: 15px
-			height: 144px
+			height: 146px
 			overflow: hidden
 		figure + .blog-text
-			height: 53px
+			height: 56px
 			overflow: hidden
 			margin-bottom: 13px
 		.blog-more
@@ -1243,9 +1268,11 @@ header
 			&:before
 				position: absolute
 				top: 13px
-				left: 56px
+				left: 40px
 				content: ''
-				background: url('../img/icons/dots.png') no-repeat
+				//background: url('../img/icons/dots.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -525px -163px
 				height: 5px
 				width: 16px
 		&:hover
@@ -1257,7 +1284,9 @@ header
 				border-color: #c12227
 				color: #fff
 				&:before
-					background: url('../img/icons/dots-white.png') no-repeat
+					//background: url('../img/icons/dots-white.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -517px -178px
 .carousel-nav
 	width: 222px
 	float: right
@@ -1300,9 +1329,13 @@ header
 		left: 8px
 		width: 16px
 		height: 14px
-		background: url('../img/icons/news.png') no-repeat
+		//background: url('../img/icons/news.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -606px -334px
 	&:hover:before
-		background: url('../img/icons/news-hover.png') no-repeat
+		//background: url('../img/icons/news-hover.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -632px -334px
 
 .aside
 	position: absolute
@@ -1420,7 +1453,7 @@ form.subscribe
 			height: 5px
 			box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .16)
 .aside-subscribe
-	margin-top: 10px
+	margin-top: 13px
 	text-align: center
 	padding: 11px 0 14px
 	border: 1px solid #cad2d9
@@ -1459,7 +1492,9 @@ h3.head
 				height: 47px
 				width: 47px
 				line-height: 47px
-				background: url('../img/icons/discont.png') no-repeat
+				//background: url('../img/icons/discont.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -407px -176px
 				text-align: center
 				font-size: 15px
 				font-weight: 700
@@ -1506,11 +1541,13 @@ h3.head
 			height: 22px
 			margin-right: -2px
 			&.off
-				background: url('../img/icons/star.png') no-repeat center
-				background-size: contain
+				//background: url('../img/icons/goods-star.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -583px -246px
 			&.on
-				background: url('../img/icons/star-active.png') no-repeat center
-				background-size: contain
+				//background: url('../img/icons/goods-star-active.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -615px -246px
 	&-buy
 		float: left
 		clear: left
@@ -1541,14 +1578,12 @@ h3.head
 			width: 37px
 			height: 37px
 			display: block
-			background: url('../img/icons/like.png') no-repeat center
-			background-size: contain
+			background: url('../img/icons/like.png') no-repeat
 			transition-duration: .3s
 		&:hover
 			border-color: #f38202
 			&:before
-				background: url('../img/icons/like-hover.png') no-repeat center
-				background-size: contain
+				background: url('../img/icons/like-hover.png') no-repeat
 
 		&.active
 			border-color: #e09c1b
@@ -1727,15 +1762,17 @@ h3.head
 		clear: both
 		i
 			display: inline-block
-			width: 13px
-			height: 13px
+			width: 14px
+			height: 15px
 			margin: 8px 0px 0 -3px
-			background: url('../img/icons/star.png') no-repeat
-			background-size: contain
+			//background: url('../img/icons/goods-star-mobile.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -287px -246px
 			cursor: pointer
 			&.active
-				background: url('../img/icons/star-active.png') no-repeat
-				background-size: contain
+				//background: url('../img/icons/goods-star-active-mobile.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -107px -246px
 	p
 		margin-top: 8px
 		clear: both
@@ -1754,7 +1791,9 @@ h3.head
 			box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .39)
 			transition-duration: .2s
 			&:before
-				background: url("../img/icons/news.png") no-repeat
+				//background: url("../img/icons/news.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -606px -334px
 			&:hover
 				position: relative
 				top: 2px
@@ -1901,10 +1940,14 @@ footer
 					border-bottom: 1px dotted #c12227
 			&.visa-master
 				width: 64px
-				background: url('../img/icons/visa-master.png') no-repeat center top
+				//background: url('../img/icons/visa-master.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -536px -427px
 			&.privat24logo
 				width: 78px
-				background: url('../img/icons/privat24logo.png') no-repeat center top
+				//background: url('../img/icons/privat24logo.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -658px -324px
 			&.cards
 				margin-left: 22px
 				height: 16px
@@ -1916,16 +1959,24 @@ footer
 					content: ''
 					width: 21px
 					height: 21px
-					background: url('../img/icons/cards.png') no-repeat left top
+					//background: url('../img/icons/cards.png') no-repeat left top
+					background: url('../img/icons.png') no-repeat
+					background-position: -167px -122px
 			&.new-mail
 				width: 60px
-				background: url('../img/icons/new-mail.png') no-repeat center top
+				//background: url('../img/icons/new-mail.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -536px -324px
 			&.intime
 				width: 54px
-				background: url('../img/icons/intime.png') no-repeat center top
+				//background: url('../img/icons/intime.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -107px -324px
 			&.autolux
 				width: 84px
-				background: url('../img/icons/autolux.png') no-repeat center top
+				//background: url('../img/icons/autolux.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -143px -73px
 			&.delivery-icon
 				margin-left: 20px
 				height: 16px
@@ -1937,7 +1988,9 @@ footer
 					content: ''
 					width: 19px
 					height: 20px
-					background: url('../img/icons/delivery-icon.png') no-repeat left top
+					//background: url('../img/icons/delivery-icon.png') no-repeat left top
+					background: url('../img/icons.png') no-repeat
+					background-position: -263px -163px
 			&.visa
 				width: 27px
 				background: url('../img/icons/partners.png') no-repeat 0 top
@@ -1956,17 +2009,25 @@ footer
 			&.google-play
 				width: 155px
 				height: 37px
-				background: url('../img/icons/google-play.png') no-repeat center top
-				transition-duration: .3s
+				//background: url('../img/icons/google-play.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -423px -277px
+				transition-duration: 0s
 				&:hover
-					background: url('../img/icons/google-play-hover.png') no-repeat center top
+					//background: url('../img/icons/google-play-hover.png') no-repeat center top
+					background: url('../img/icons.png') no-repeat
+					background-position: -588px -277px
 			&.appstore
 				width: 138px
 				height: 43px
-				transition-duration: .3s
-				background: url('../img/icons/appstore.png') no-repeat center top
+				transition-duration: 0s
+				//background: url('../img/icons/appstore.png') no-repeat center top
+				background: url('../img/icons.png') no-repeat
+				background-position: -5px -5px
 				&:hover
-					background: url('../img/icons/appstore-hover.png') no-repeat center top
+					//background: url('../img/icons/appstore-hover.png') no-repeat center top
+					background: url('../img/icons.png') no-repeat
+					background-position: -153px -5px
 			&[class*="footer"]
 				margin-left: 24px
 				&:before
@@ -1977,21 +2038,37 @@ footer
 					width: 23px
 					height: 17px
 			&.footer-rules:before
-				background: url('../img/icons/footer-rules.png') no-repeat center
+				//background: url('../img/icons/footer-rules.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -260px -217px
 			&.footer-gifts:before
-				background: url('../img/icons/footer-gifts.png') no-repeat center
+				//background: url('../img/icons/footer-gifts.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -111px -217px
 			&.footer-ok:before
-				background: url('../img/icons/footer-ok.png') no-repeat center
+				//background: url('../img/icons/footer-ok.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -177px -217px
 			&.footer-agreement:before
-				background: url('../img/icons/footer-agreement.png') no-repeat center
+				//background: url('../img/icons/footer-agreement.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -375px -192px
 			&.footer-close:before
-				background: url('../img/icons/footer-close.png') no-repeat center
+				//background: url('../img/icons/footer-close.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -517px -192px
 			&.footer-public:before
-				background: url('../img/icons/footer-public.png') no-repeat center
+				//background: url('../img/icons/footer-public.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -237px -217px
 			&.footer-partners:before
-				background: url('../img/icons/footer-partners.png') no-repeat center
+				//background: url('../img/icons/footer-partners.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -204px -217px
 			&.footer-loyalty:before
-				background: url('../img/icons/footer-loyalty.png') no-repeat center
+				//background: url('../img/icons/footer-loyalty.png') no-repeat center
+				background: url('../img/icons.png') no-repeat
+				background-position: -152px -217px
 	h4
 		margin-top: 25px
 		font-size: 18px
@@ -2007,7 +2084,9 @@ footer
 				left: -22px
 				width: 7px
 				height: 22px
-				background: url('../img/icons/footer-info.png')
+				//background: url('../img/icons/footer-info.png')
+				background: url('../img/icons.png') no-repeat
+				background-position: -135px -217px
 	.footer-foot
 		display: none
 
@@ -2049,19 +2128,27 @@ footer
 				content: ''
 				height: 6px
 				width: 8px
-				background: url('../img/icons/arrow-opened.png') no-repeat center
-				transition-duration: .1s
+				//background: url('../img/icons/arrow-opened.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -490px -5px
+				//transition-duration: .1s
 			&:hover
 				color: #c12227
 				&:after
-					background: url('../img/icons/arrow-opened-hover.png') no-repeat center
+					//background: url('../img/icons/arrow-opened-hover.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -508px -5px
 		&.closed
 			max-height: 56px
 			transition: max-height .3s ease
 			h2:after
-				background: url('../img/icons/arrow-closed.png') no-repeat center
+				//background: url('../img/icons/arrow-closed.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -314px -5px
 			h2:hover:after
-				background: url('../img/icons/arrow-closed-hover.png') no-repeat center
+				//background: url('../img/icons/arrow-closed-hover.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -332px -5px
 		.num
 			width: 60px
 			height: 25px
@@ -2394,7 +2481,9 @@ footer
 			content: ''
 			height: 23px
 			width: 22px
-			background: url('../img/icons/refresh.png') no-repeat
+			//background: url('../img/icons/refresh.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -229px -386px
 	&-pages
 		float: right
 		li
@@ -2431,14 +2520,22 @@ footer
 					width: 8px
 			&.prev
 				&:before
-					background: url('../img/icons/arrow-pag-left.png') no-repeat
+					//background: url('../img/icons/arrow-pag-left.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -526px -5px
 				&:hover:before
-					background: url('../img/icons/arrow-pag-left-hover.png') no-repeat
+					//background: url('../img/icons/arrow-pag-left-hover.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -301px -27px
 			&.next
 				&:before
-					background: url('../img/icons/arrow-pag-right.png') no-repeat
+					//background: url('../img/icons/arrow-pag-right.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -319px -27px
 				&:hover:before
-					background: url('../img/icons/arrow-pag-right-hover.png') no-repeat
+					//background: url('../img/icons/arrow-pag-right-hover.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -337px -27px
 
 // CATEGORY
 
@@ -2515,7 +2612,9 @@ footer
 				content: ''
 				height: 6px
 				transition-duration: .2s
-				background: url('../img/icons/arrow-category.png') no-repeat
+				//background: url('../img/icons/arrow-category.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -301px -5px
 			&.link-special, &:hover
 				color: #c12227
 				transition-duration: .2s
@@ -2626,12 +2725,16 @@ footer
 				&:before
 					width: 16px
 					height: 16px
-					background: url('../img/icons/seller.png') no-repeat
+					//background: url('../img/icons/seller.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -316px -386px
 			&.pay
 				&:before
 					width: 21px
 					height: 19px
-					background: url('../img/icons/pay.png') no-repeat
+					//background: url('../img/icons/pay.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -5px -386px
 				a
 					display: inline-block
 					margin-right: 17px
@@ -2641,10 +2744,14 @@ footer
 						height: 20px
 					&.visa-master
 						width: 64px
-						background: url('../img/icons/visa-master.png') no-repeat center top
+						//background: url('../img/icons/visa-master.png') no-repeat center top
+						background: url('../img/icons.png') no-repeat
+						background-position: -536px -427px
 					&.privat24logo
 						width: 78px
-						background: url('../img/icons/privat24logo.png') no-repeat center top
+						//background: url('../img/icons/privat24logo.png') no-repeat center top
+						background: url('../img/icons.png') no-repeat
+						background-position: -658px -324px
 					&.cards
 						position: relative
 						margin-left: 22px
@@ -2657,12 +2764,16 @@ footer
 							content: ''
 							width: 21px
 							height: 21px
-							background: url('../img/icons/cards.png') no-repeat left top
+							//background: url('../img/icons/cards.png') no-repeat left top
+							background: url('../img/icons.png') no-repeat
+							background-position: -167px -122px
 			&.delivery
 				&:before
 					width: 18px
 					height: 11px
-					background: url('../img/icons/delivery.png') no-repeat
+					//background: url('../img/icons/delivery.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -525px -142px
 				a
 					display: inline-block
 					margin-right: 10px
@@ -2674,21 +2785,31 @@ footer
 						height: 23px
 					&.new-mail:before
 						width: 60px
-						background: url('../img/icons/new-mail.png') no-repeat
+						//background: url('../img/icons/new-mail.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -536px -324px
 					&.intime:before
 						width: 54px
-						background: url('../img/icons/intime.png') no-repeat
+						//background: url('../img/icons/intime.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -107px -324px
 					&.autolux:before
 						width: 84px
-						background: url('../img/icons/autolux.png') no-repeat
+						//background: url('../img/icons/autolux.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -143px -73px
 					&.delivery-icon:before
 						width: 19px
 						height: 20px
-						background: url('../img/icons/delivery-icon.png') no-repeat
+						//background: url('../img/icons/delivery-icon.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -263px -163px
 			&.guarantee:before
 				width: 21px
 				height: 19px
-				background: url('../img/icons/guarantee.png') no-repeat
+				//background: url('../img/icons/guarantee.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -647px -246px
 		a, span
 			font-size: 14px
 			color: #282828
@@ -2861,7 +2982,9 @@ footer
 				height: 47px
 				width: 47px
 				line-height: 47px
-				background: url('../img/icons/discont.png') no-repeat
+				//background: url('../img/icons/discont.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -407px -176px
 				text-align: center
 				font-size: 15px
 				font-weight: 700
@@ -2934,8 +3057,12 @@ footer
 				top: 5px
 				right: 5px
 // THANKYOU
+.content.thankyou
+	margin-left: 0
 .thankyou
 	text-align: center
+	.main-content
+		margin-left: 0
 	&-block
 		max-width: 1130px
 		height: 900px
@@ -3051,7 +3178,9 @@ footer
 					content: ''
 					width: 8px
 					height: 6px
-					background: url('../img/icons/arrow-closed.png') no-repeat		
+					//background: url('../img/icons/arrow-closed.png') no-repeat		
+					background: url('../img/icons.png') no-repeat
+					background-position: -314px -5px
 		&.gift
 			position: relative
 			width: 490px
@@ -3067,7 +3196,9 @@ footer
 				content: ''
 				width: 231px
 				height: 231px
-				background: url('../img/gift.jpg') no-repeat
+				//background: url('../img/icons/gift.jpg') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -554px -5px
 			[name="name"]
 				width: 220px
 			.sex
@@ -3104,7 +3235,9 @@ footer
 						right: 10px
 						width: 8px
 						height: 6px
-						background: url('../img/icons/arrow-closed.png') no-repeat
+						//background: url('../img/icons/arrow-closed.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -314px -5px
 				ul
 					top: 23px
 				li
@@ -3140,7 +3273,9 @@ footer
 					content: ''
 					width: 5px
 					height: 17px
-					background: url('../img/icons/info.png') no-repeat
+					//background: url('../img/icons/info.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -708px -246px
 		&:last-child
 			float: right
 			margin-top: -306px
@@ -3266,11 +3401,15 @@ footer
 	&:before
 		top: -6px
 		right: -6px
-		background: url('../img/icons/corner-tr.png') no-repeat
+		//background: url('../img/icons/corner-tr.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -213px -176px
 	&:after
 		bottom: -6px
 		left: -6px
-		background: url('../img/icons/corner-bl.png') no-repeat
+		//background: url('../img/icons/corner-bl.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -179px -176px
 	&-name
 		position: relative
 		height: 18px
@@ -3284,7 +3423,9 @@ footer
 			content: ''
 			width: 21px
 			height: 21px
-			background: url('../img/icons/quotes.png') no-repeat
+			//background: url('../img/icons/quotes.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -198px -386px
 		&:before
 			top: 55px
 			left: 0
@@ -3296,6 +3437,12 @@ footer
 		margin: 0
 		i
 			width: 15px
+			&.on
+				background: url('../img/icons.png') no-repeat
+				background-position: -107px -246px
+			&.off
+				background: url('../img/icons.png') no-repeat
+				background-position: -287px -246px
 	&-text
 		margin: 90px 0 35px
 		height: 160px
@@ -3440,6 +3587,10 @@ footer
 		&-rating
 			i
 				width: 15px
+				&.on
+					background-position: -107px -246px
+				&.off
+					background-position: -287px -246px
 		&-buy
 			margin-top: 10px
 			font-size: 13px
@@ -3602,7 +3753,9 @@ footer
 				width: 25px
 				height: 19px
 				margin-right: 2px
-				background: url('../img/icons/eye.png') no-repeat
+				//background: url('../img/icons/eye.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -320px -192px
 		&-date
 			margin-top: 4px
 			font-size: 18px
@@ -3655,9 +3808,13 @@ footer
 					color: #fff
 					background: rgb(161, 32, 36)
 			&.prev:hover:before
-				background: url(../img/icons/arrow-left-red.png) no-repeat
+				//background: url(../img/icons/arrow-left-red.png) no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -472px -5px
 			&.next:hover:before
-				background: url(../img/icons/arrow-right-red.png) no-repeat
+				//background: url(../img/icons/arrow-right-red.png) no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -407px -27px
 		button.button-brown
 			background: #c12227
 			&:hover
@@ -3688,7 +3845,7 @@ footer
 		.side-social
 			width: 300px
 			height: 70px
-			background: url('../img//blog/social.png') no-repeat center
+			background: url('../img/blog/social.png') no-repeat center
 			font-weight: 700
 			font-size: 20px
 			color: #485259
@@ -3749,9 +3906,11 @@ footer
 				margin-right: 5px
 				width: 19px
 				height: 13px
-				background: url('../img/icons/respond.png') no-repeat
+				//background: url('../img/icons/respond.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -746px -334px
 		.review-nav
-			width: 174px
+			width: 175px
 		.product-reviews
 			margin-top: 40px
 
@@ -3864,11 +4023,15 @@ footer
 	&-responds:before
 		width: 28px
 		height: 21px
-		background: url('../img/icons/forum-respond.png') no-repeat
+		//background: url('../img/icons/forum-respond.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -423px -240px
 	&-views:before
 		width: 23px
 		height: 17px
-		background: url('../img/icons/forum-view.png') no-repeat
+		//background: url('../img/icons/forum-view.png') no-repeat
+		background: url('../img/icons.png') no-repeat
+		background-position: -489px -240px
 	&-date
 		display: block
 		float: right
@@ -3888,7 +4051,9 @@ footer
 				width: 27px
 				height: 27px
 				margin-right: 8px
-				background: url('../img/icons/time.png') no-repeat
+				//background: url('../img/icons/time.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -267px -427px
 	&-author
 		color: #282828
 		font-size: 18px
@@ -3900,7 +4065,9 @@ footer
 			width: 20px
 			height: 18px
 			margin-right: 7px
-			background: url('../img/icons/forum-author.png') no-repeat
+			//background: url('../img/icons/forum-author.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -286px -217px
 	&-functional
 		>*
 			height: 80px
@@ -3993,7 +4160,9 @@ footer
 			content: ''
 			width: 19px
 			height: 13px
-			background: url('../img/icons/respond.png') no-repeat
+			//background: url('../img/icons/respond.png') no-repeat
+			background: url('../img/icons.png') no-repeat
+			background-position: -746px -334px
 
 .content.forum-page
 	margin-left: 0
@@ -4057,8 +4226,9 @@ footer
 						top: 0
 						width: 31px
 						height: 26px
-						background: url('../img/icons/menu.png') no-repeat
-						background-size: contain
+						//background: url('../img/icons/menu.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -313px -334px
 						margin: 0
 				a
 					font-size: 0
@@ -4090,13 +4260,21 @@ footer
 								left: 0
 								top: 6px
 					li:nth-child(2) a:before
-						background: url('../img/icons/menu-about.png') no-repeat center
+						//background: url('../img/icons/menu-about.png') no-repeat center
+						background: url('../img/icons.png') no-repeat
+						background-position: -777px -246px
 					li:nth-child(3) a:before
-						background: url('../img/icons/menu-credit.png') no-repeat center
+						//background: url('../img/icons/menu-credit.png') no-repeat center
+						background: url('../img/icons.png') no-repeat
+						background-position: -260px -294px
 					li:nth-child(4) a:before
-						background: url('../img/icons/menu-back.png') no-repeat center
+						//background: url('../img/icons/menu-back.png') no-repeat center
+						background: url('../img/icons.png') no-repeat
+						background-position: -233px -294px
 					li:nth-child(5) a:before
-						background: url('../img/icons/menu-deliver.png') no-repeat center
+						//background: url('../img/icons/menu-deliver.png') no-repeat center
+						background: url('../img/icons.png') no-repeat
+						background-position: -288px -294px
 					li.close
 						position: absolute
 						display: block
@@ -4104,7 +4282,9 @@ footer
 						top: 5px
 						width: 21px
 						height: 19px
-						background: url('../img/icons/close-menu.png') no-repeat
+						//background: url('../img/icons/close-menu.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -198px -142px
 			form
 				width: 365px
 				p
@@ -4133,7 +4313,9 @@ footer
 					width: 16px
 					height: 15px
 					content: ""
-					background: url("../img/icons/tel.png") center no-repeat
+					//background: url("../img/icons/tel.png") center no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -83px -357px
 				&:after
 					position: absolute
 					top: 15px
@@ -4141,7 +4323,9 @@ footer
 					content: ''
 					width: 8px
 					height: 4px
-					background: url("../img/icons/arrow-down.png") no-repeat
+					//background: url("../img/icons/arrow-down.png") no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -350px -5px
 			.header-tel
 				position: absolute
 				z-index: -1
@@ -4194,7 +4378,10 @@ footer
 					left: 5px
 					top: 5px
 					width: 13px
-					height: 12px
+					height: 13px
+					//background: url('../img/icons/call-tablet.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -279px -97px
 		.header-personal
 			margin-top: -66px
 			width: 140px
@@ -4208,13 +4395,11 @@ footer
 					top: 0
 					right: 0
 			.header-like:before
-				background: url("../img/icons/like.png") center no-repeat
-				background-size: contain
+				background: url("../img/icons/header-like-tablet.png") center no-repeat
 				top: 10px
 				height: 21px
 			.header-basket:before
 				background: url("../img/icons/basket.png") center no-repeat
-				background-size: contain
 				top: 4px
 				height: 32px
 			div.description
@@ -4280,7 +4465,7 @@ footer
 	.news-feed
 		width: 525px
 		.carousel-block
-			width: 163px
+			width: 164px
 			height: 220px
 			margin-left: 9px
 			h4
@@ -4305,7 +4490,7 @@ footer
 				&:before
 					left: 27px
 		.carousel-nav
-			width: 77px
+			width: 75px
 	.all
 		display: none
 	h3.head
@@ -4328,11 +4513,13 @@ footer
 				top: -7px
 				right: -7px
 				width: 43px
-				background-size: contain
+				//background: url('../img/icons/discont-tablet.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -464px -176px
 		&-img
 			height: 160px
 		.carousel-nav
-			width: 78px
+			width: 77px
 	.special 
 		width: 100%
 		.carousel
@@ -4519,9 +4706,6 @@ footer
 				.goods-rating
 					top: 3px
 					right: 40px
-					i
-						width: 15px
-						height: 15px
 				.goods-text
 					margin-left: 120px
 					h4
@@ -4535,8 +4719,7 @@ footer
 					width: 68px
 					height: 68px
 					&:before
-						height: 25px
-						top: 24px
+						top: 20px
 				.goods-buy
 					width: 70px
 					height: 28px
@@ -4653,9 +4836,11 @@ footer
 					&.discont:before
 						top: -5px
 						right: -5px
-						width: 42px
-						height: 42px
-						background-size: contain
+						width: 43px
+						height: 43px
+						//background: url('../img/icons/discont-tablet.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -464px -176px
 				&-nav
 					width: 76px
 		.special
@@ -4811,7 +4996,7 @@ footer
 	// THANKYOU
 	.thankyou
 		.main-navigation
-			left: -110px
+			left: 90px
 		&-block
 			height: 900px
 			margin: 30px auto 0
@@ -4834,7 +5019,8 @@ footer
 				[type="submit"]
 					font-size: 12px
 	// ORDER
-
+	.content.order
+		margin-left: 0
 	.order:not(.main)
 		margin: -10px auto 0
 	.bill
@@ -4878,7 +5064,10 @@ footer
 					top: -15px
 					left: -6px
 					width: 45px
-					background-size: contain !important
+					height: 45px
+					//background: url('../img/icons/gift-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -152px -246px
 				.sex
 					margin-right: 50px
 				input
@@ -5046,7 +5235,7 @@ footer
 			top: 450px
 		&.forum-main .breadcrumbs
 			top: 400px
-	.main-navigation.blog-list, .main-navigation.forum-main
+	.main-navigation.blog-list, .main-navigation.forum-main, .main-navigation.forum-page
 		left: -110px
 	.content.blog-page
 		.breadcrumbs
@@ -5117,6 +5306,8 @@ footer
 			left: 4px
 			font-size: 12px
 	.blog
+		&-list-container
+			margin-top: 0
 		&-aside
 			float: none
 			width: 100%
@@ -5235,7 +5426,9 @@ footer
 						width: 14px
 						height: 14px
 						margin-right: 3px
-						background: url('../img/icons/time-mobile.png') no-repeat
+						//background: url('../img/icons/time-mobile.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -107px -357px
 		&-respond-link
 			margin-top: 30px
 		&-posts-container
@@ -5294,7 +5487,9 @@ footer
 					top: 7px
 					width: 19px
 					height: 21px
-					background: url("../img/icons/tel-mobile.png") center no-repeat
+					//background: url("../img/icons/tel-mobile.png") center no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -238px -427px
 			.header-tel
 				left: -45px
 				top: 40px
@@ -5314,7 +5509,10 @@ footer
 						border-bottom: none
 				li.close
 					width: 20px
-					height: 16px
+					height: 18px
+					//background: url('../img/icons/menu-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -354px -334px
 				&.mobile
 					width: 320px
 					height: auto
@@ -5337,27 +5535,45 @@ footer
 								content: ''
 								position: absolute
 								top: 7px
-								left: -7px
-								width: 23px
-								height: 17px
+								left: 2px
+								width: 16px
+								height: 22px
 							&.header-info:before
-								background: url('../img/icons/footer-info.png') no-repeat center
+								//background: url('../img/icons/footer-info.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -135px -217px
 							&.header-rules:before
-								background: url('../img/icons/footer-rules.png') no-repeat center
+								//background: url('../img/icons/footer-rules.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -260px -217px
 							&.header-gifts:before
-								background: url('../img/icons/footer-gifts.png') no-repeat center
+								//background: url('../img/icons/footer-gifts.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -111px -217px
 							&.header-ok:before
-								background: url('../img/icons/footer-ok.png') no-repeat center
+								//background: url('../img/icons/footer-ok.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -177px -217px
 							&.header-agreement:before
-								background: url('../img/icons/footer-agreement.png') no-repeat center
+								//background: url('../img/icons/footer-agreement.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -375px -192px
 							&.header-close:before
-								background: url('../img/icons/footer-close.png') no-repeat center
+								//background: url('../img/icons/footer-close.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -517px -192px
 							&.header-public:before
-								background: url('../img/icons/footer-public.png') no-repeat center
+								//background: url('../img/icons/footer-public.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -237px -217px
 							&.header-partners:before
-								background: url('../img/icons/footer-partners.png') no-repeat center
+								//background: url('../img/icons/footer-partners.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -204px -217px
 							&.header-loyalty:before
-								background: url('../img/icons/footer-loyalty.png') no-repeat center
+								//background: url('../img/icons/footer-loyalty.png') no-repeat center
+								background: url('../img/icons.png') no-repeat
+								background-position: -152px -217px
 			form
 				position: absolute
 				width: 232px
@@ -5387,7 +5603,9 @@ footer
 					left: 3px
 					width: 16px
 					height: 21px
-					background-size: contain
+					//background: url('../img/icons/cab-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -486px -97px
 			[class*="header"]
 				margin-top: 5px
 				height: 35px
@@ -5477,7 +5695,7 @@ footer
 		margin-left: 0
 	.slider
 		position: relative
-		width: 100%
+		width: calc(100% - 2px)
 		height: 200px
 		margin-top: 0
 		transition: margin .3s ease-out
@@ -5491,7 +5709,7 @@ footer
 	.news-feed
 		width: 100%
 		.carousel-block
-			width: calc(48vw - 7px)
+			width: calc(50vw - 14px)
 			margin-left: 9px
 			&:first-child
 				margin-left: 0
@@ -5503,6 +5721,8 @@ footer
 				display: none
 			.blog-more:before
 				left: 20px
+		.carousel-nav
+			width: 76px
 	h3.head
 		font-size: 15px
 	.goods
@@ -5520,19 +5740,21 @@ footer
 				margin-left: 0
 			figure
 				height: 140px
-			&.discont:before
-				height: 42px
-				width: 42px
-				top: -8px
-				right: -8px
-				background-size: contain
 		&-img
 			height: 100px
 		&-rating
 			margin: 5px 8px 0 0
 			i
-				height: 13px
+				height: 15px
 				width: 13px
+				&.on
+					//background: url('../img/icons/goods-star-active-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -107px -246px
+				&.off
+					//background: url('../img/icons/goods-star-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -287px -246px
 		&-review
 			width: 48px
 			height: 20px
@@ -5559,19 +5781,14 @@ footer
 				top: 18px
 				width: 23px
 				height: 23px
+				//background: url('../img/icons/goods-like-mobile.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -550px -246px
 		&-buy
 			width: calc(100% - 62px)
 			height: 23px
 			line-height: 23px
 			font-size: 10px
-			&.discont:before
-				top: -8px
-				right: -8px
-				height: 35px
-				line-height: 35px
-				width: 35px
-				background-size: contain
-				font-size: 12px
 		.carousel-nav
 			width: 79px
 	.special
@@ -5579,10 +5796,11 @@ footer
 		width: calc(100%)
 		.carousel
 			margin-left: 0
+			width: calc(100% - 5px)
 			&:first-child
 				display: none
 			&-block
-				width: calc(100vw - 22px)
+				width: calc(100vw - 20px)
 				figure
 					height: 100% !important
 				img
@@ -5636,6 +5854,7 @@ footer
 		right: 15px
 		width: 55px
 		margin: 0
+		z-index: 1
 		transition-duration: .3s
 		transition-timing-function: ease-out
 		&.add-margin
@@ -5651,7 +5870,9 @@ footer
 				top: 3px
 				right: -7px
 				content: ''
-				background: url('../img/icons/arrow-filter.png') no-repeat
+				//background: url('../img/icons/arrow-filter.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -422px -5px
 				width: 4px
 				height: 6px
 		.close
@@ -5680,8 +5901,9 @@ footer
 				top: 4px
 				width: 12px
 				height: 12px
-				background: url('../img/icons/close-menu.png') no-repeat
-				background-size: contain
+				//background: url('../img/icons/close-menu-mobile.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -279px -122px
 			.filter-block
 				display: block
 			.num.min
@@ -5724,10 +5946,7 @@ footer
 			height: 27px
 			margin: 10px 0
 		.goods-rating
-			margin: 5px 5px 0 0 
-			i
-				width: 13px
-				height: 13px
+			margin: 5px 5px 0 0
 		.goods-review
 			width: 48px
 			height: 20px
@@ -5748,10 +5967,6 @@ footer
 		.goods-like
 			width: 55px
 			height: 55px
-			&:before
-				width: 30px
-				height: 30px
-				top: 15px
 		.goods-choose
 			display: none
 		&:hover
@@ -5819,7 +6034,14 @@ footer
 				> *
 					height: 60px
 					width: 21px
-					background-size: contain !important
+					&.prev
+						//background: url('../img/icons/arrow-slider-left-mobile.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -517px -27px
+					&.next
+						//background: url('../img/icons/arrow-slider-right-mobile.png') no-repeat
+						background: url('../img/icons.png') no-repeat
+						background-position: -111px -97px
 
 	.product
 		margin-top: 20px
@@ -6126,8 +6348,9 @@ footer
 				h2 ~ *
 					margin-right: 40px
 				&:before
-					top: -28px
-					width: 65px
+					top: -18px
+					width: 45px
+					height: 45px
 				[name="name"]
 					width: calc(100% - 80px)
 				.sex
@@ -6190,7 +6413,9 @@ footer
 				content: ''
 				width: 21px
 				height: 21px
-				background: url('../img/icons/quotes.png') no-repeat
+				//background: url('../img/icons/quotes.png') no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -198px -386px
 			&:before
 				top: -30px
 				left: 0
@@ -6286,9 +6511,6 @@ footer
 				font-size: 12px
 				width: auto
 				float: none
-			&-rating
-				i
-					width: 10px
 	// BLOG
 
 	.content
@@ -6301,7 +6523,8 @@ footer
 			.banner
 				background: url('../img/forum-banner.jpg') no-repeat
 				background-size: contain
-	.main-navigation.blog-page, .main-navigation.forum-main
+	.main-navigation.blog-page, .main-navigation.forum-main,
+	.main-navigation.forum-page, .main-navigation.blog-list
 		left: 0
 	.banner
 		margin: auto
@@ -6328,6 +6551,8 @@ footer
 		&-cloud
 			display: none
 	.blog
+		&-list-container
+			margin-top: 0
 		.blog-aside
 			float: none
 			width: 100%
@@ -6367,8 +6592,9 @@ footer
 					top: 1px
 					width: 10px
 					height: 9px
-					background: url('../img/icons/eye.png') no-repeat
-					background-size: contain
+					//background: url('../img/icons/eye-mobile.png') no-repeat
+					background: url('../img/icons.png') no-repeat
+					background-position: -355px -192px
 			&-date
 				font-size: 7px
 		&-ad
@@ -6425,7 +6651,9 @@ footer
 				width: 14px
 				height: 15px
 				margin-right: 5px
-				background: url(../img/icons/forum-author-mobile.png) no-repeat
+				//background: url(../img/icons/forum-author-mobile.png) no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -517px -217px
 		&-date
 			position: static
 			margin-top: 8px
@@ -6438,7 +6666,9 @@ footer
 				height: 14px
 				top: 2px
 				margin-right: 3px
-				background: url("../img/icons/time-mobile.png") no-repeat
+				//background: url("../img/icons/time-mobile.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -107px -357px
 		&-responds-block
 			margin-top: 12px
 			width: 150px
@@ -6447,13 +6677,17 @@ footer
 				top: 2px
 				width: 18px
 				height: 14px
-				background: url("../img/icons/forum-view-mobile.png") no-repeat
+				//background: url("../img/icons/forum-view-mobile.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -522px -240px
 		.forum-responds
 			&:before
 				top: 2px
 				width: 18px
 				height: 14px
-				background: url("../img/icons/forum-respond-mobile.png") no-repeat
+				//background: url("../img/icons/forum-respond-mobile.png") no-repeat
+				background: url('../img/icons.png') no-repeat
+				background-position: -461px -240px
 		&-functional 
 			.button-gray, .button-brown
 				margin: 20px 20px 0
