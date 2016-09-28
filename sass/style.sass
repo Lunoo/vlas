@@ -1472,16 +1472,19 @@ h3.head
 		padding: 3px
 	.carousel-block
 		position: relative
+		box-sizing: border-box
 		width: 235px
 		height: 520px
 		display: inline-block
 		vertical-align: top
 		border: none
-		outline: 1px solid #cad2d9
-		transition: outline .1s ease
+		//outline: 1px solid #cad2d9
+		border: 1px solid #cad2d9
+		transition: border .1s ease
 		cursor: pointer
 		&:hover
-			outline: 2px solid #de9813
+			//outline: 2px solid #de9813
+			border: 1px solid #de9813
 		&.discont
 			&:before
 				position: absolute
@@ -1563,7 +1566,7 @@ h3.head
 		float: right
 		width: 90px
 		height: 90px
-		margin-left: 7px
+		margin-left: 6px
 		display: inline-block
 		background: #fff
 		border: 1px solid #e09c1b
@@ -2323,7 +2326,7 @@ footer
 			margin-top: 0
 			background: none
 		&-block:hover
-			outline: none 
+			outline: none
 			.carousel-inner
 				background: #fff
 				position: absolute
