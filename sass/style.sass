@@ -140,20 +140,26 @@ textarea
 			background-position: -404px -5px
 
 .logo
-	width: 155px
-	height: 50px
+	position: relative
+	top: 3px
+	margin: 0 0 0 33px
+	width: 120px
+	height: 40px
 	display: block
 	float: left
-	background: url('../img/logo-text.png') no-repeat center right
-	background-size: 110px
+	background: url('../img/logotext.svg') no-repeat
+	background-size: contain
 
 	&:before
-		content: ''
-		display: inline-block
-		width: 40px
+		position: absolute
+		left: -43px
+		top: -10px
 		height: 50px
-		background: url("../img/logo.png") no-repeat
+		width: 43px
+		content: ''
+		background: url('../img/logoimg.svg') no-repeat
 		background-size: contain
+
 .close-button
 	display: block
 	width: 25px
@@ -660,19 +666,27 @@ header
 
 
 	.wrapper
-		max-width: 1500px
+		max-width: 1520px
 
 	.header-logo
-		margin-top: 12px
-		width: 240px
-		height: 100px
+		position: relative
+		margin: 50px 0 0 100px
+		width: 140px
+		height: 50px
 		display: block
 		float: left
-		background: url('../img/logo-text.png') no-repeat center right
+		background: url('../img/logotext.svg') no-repeat
+		background-size: contain
 
 		&:before
-			content: url('../img/logo.png')
-			display: inline-block
+			position: absolute
+			left: -90px
+			top: -40px
+			height: 100px
+			width: 88px
+			content: ''
+			background: url('../img/logoimg.svg') no-repeat
+			background-size: contain
 	.header-nav
 		padding-top: 12px
 		margin-left: 40px
@@ -1028,9 +1042,9 @@ header
 			width: 1245px
 			height: 652px
 			box-sizing: border-box
-			// display: flex
-			// flex-direction: column
-			// flex-wrap: wrap
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
 			position: absolute
 			top: 0
 			right: -1244px
@@ -1213,6 +1227,7 @@ header
 		width: 10000px
 		position: relative
 	&-block
+		position: relative
 		float: left
 		width: 220px
 		height: 302px
@@ -1227,6 +1242,7 @@ header
 			margin: 18px 15px 15px
 			font-size: 14px
 			font-weight: 700
+			height: 32px
 
 		.blog-date
 			margin-bottom: 13px
@@ -1243,18 +1259,23 @@ header
 		.blog-img
 			width: 100%
 			height: 75px
+		figure
+			height: 75px
 		.blog-text
 			font-size: 12px
 			margin: 15px
-			height: 146px
+			height: 145px
 			overflow: hidden
 		figure + .blog-text
-			height: 56px
+			height: 59px
 			overflow: hidden
 			margin-bottom: 13px
 		.blog-more
-			position: relative
+			position: absolute
+			bottom: 0
+			margin: 0
 			display: block
+			width: 100%
 			height: 30px
 			text-align: center
 			background: #ecf0f5
@@ -1566,7 +1587,7 @@ h3.head
 		float: right
 		width: 90px
 		height: 90px
-		margin-left: 6px
+		margin-left: 5px
 		display: inline-block
 		background: #fff
 		border: 1px solid #e09c1b
@@ -1623,6 +1644,8 @@ h3.head
 		width: 495px
 	.carousel-block
 		width: 495px
+	&-img
+		width: 100%
 	figure, .carousel-block img
 		height: auto
 	figure.brands
@@ -1905,10 +1928,10 @@ footer
 				border-right: 0
 	.footer-logo
 		display: inline-block
-		width: 130px
+		width: 140px
 		height: 120px
 		margin-top: 20px
-		background: url('../img/footer-logo.png') no-repeat
+		background: url('../img/logo.svg') no-repeat
 		background-size: contain
 		&-text
 			margin: 13px 0 50px
@@ -2404,6 +2427,7 @@ footer
 			width: 100%
 			height: auto
 			outline: none
+			border: none
 			border-bottom: 1px solid #cad2d9
 			.carousel-inner
 				position: relative
@@ -3047,7 +3071,7 @@ footer
 		clear: none
 		margin-top: 0
 		&.button-green
-			margin-right: 5px
+			margin-right: 4px
 	.carousel
 		width: auto
 		&-block
@@ -3588,6 +3612,7 @@ footer
 			background: #fff4c2
 			float: left
 		&-rating
+			margin-top: 10px
 			i
 				width: 15px
 				&.on
@@ -4196,16 +4221,14 @@ footer
 			position: relative
 			max-width: 800px
 		.header-logo
-			margin-left: 57px
-			width: 175px
-			height: 85px
-			background-size: 110px
+			margin-left: 140px
+			width: 100px
+			height: 30px
 			&:before
-				content: ''
-				height: 85px
-				width: 100px
-				background: url("../img/logo.png") no-repeat
-				background-size: 60px
+				left: -65px
+				top: -30px
+				height: 78px
+				width: 67px
 		.header-nav
 			margin-left: 15px
 			ul
@@ -4451,7 +4474,7 @@ footer
 		position: absolute
 		left: -35px
 		top: -30px
-		width: 555px
+		width: 572px
 		li
 			width: auto !important
 			a:hover
@@ -4749,7 +4772,7 @@ footer
 		width: 190px
 		.carousel
 			&-block
-				height: 245px
+				height: 255px
 				width: auto
 				h4
 					font-size: 12px
@@ -4765,7 +4788,7 @@ footer
 					height: 111px
 				figure + p
 					margin: 2px 11px 4px
-					height: 43px
+					height: 42px
 				.more
 					font-size: 12px
 					&:before
@@ -5462,20 +5485,15 @@ footer
 			z-index: 1
 		.header-logo
 			position: absolute
-			top: 125px
+			top: 87px
 			left: 9px
-			margin-left: 0
-			width: 73px
-			height: 25px
-			background: url('../img/logo-text.png') no-repeat
+			margin: 0
+			width: 76px
+			height: 70px
+			background: url('../img/logo.svg') no-repeat
 			background-size: contain
 			&:before
-				position: absolute
-				top: -50px
-				left: 15px
-				width: 40px
-				height: 45px
-				background-size: 36px
+				display: none
 		.header-contacts
 			margin-left: 165px
 			margin-top: 15px
